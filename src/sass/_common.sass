@@ -1,0 +1,79 @@
+body
+	background-color: #071e39
+	line-height: 1.4
+	font-size: 18px
+	+roboto-reg
+	color: #fff
+
+a
+	text-decoration: none
+	color: inherit
+	+roboto-reg
+	+trans
+
+.btn-menu
+	+hide-text
+	width: 28px
+	height: 20px
+	position: relative
+	overflow: hidden
+	top: 1px
+	background-color: transparent
+	display: inline-block
+	vertical-align: middle
+	margin-left: 14px
+	span
+		position: absolute
+		left: 0
+		right: 0
+		top: 50%
+		margin-top: -1px
+		height: 3px
+		background-color: #fff
+		display: block
+		transition: transform 0.2s
+		&::after,
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			height: 3px
+			background-color: #fff
+			left: 0
+			right: 0
+		&::before
+			top: -8px
+			transform-origin: top right
+			transition: transform 0.2s, width 0.2s, top 0.2s
+		&::after
+			top: 8px
+			transform-origin: bottom right
+			transition: transform 0.2s, width 0.2s, bottom 0.2s
+	&.is-active
+		span
+			+rotate(180)
+			&::before,
+			&::after
+				width: 40%
+			&::before
+				transform: translateX(15px) translateY(9px) rotate(-45deg)
+			&::after
+				transform: translateX(14px) translateY(-9px) rotate(45deg)
+
+.btn
+	display: inline-block
+	vertical-align: top
+	background-color: #00aaff
+	position: relative
+	color: #fff
+	+roboto-bold
+	border-radius: 3px
+	line-height: 1
+	padding: 18px 25px
+	transition: background-color 0.3s
+	text-transform: uppercase
+	&:hover,
+	&:focus
+		background-color: lighten(#00aaff, 10%)
+	&:active
+		background-color: darken(#00aaff, 5%)

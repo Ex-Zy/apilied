@@ -1,0 +1,29 @@
+.inner
+	position: relative
+	max-width: 1880px
+	margin: auto
+	padding: 0 15px
+	+clr
+.section1
+	background-color: #7200d4
+	height: 100vh
+	min-height: 800px 
+.logo
+	+panton
+	font-size: 36px
+	line-height: 1
+	display: inline-block
+	vertical-align: middle
+.entry
+	font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: middle
+		+ .entry__item
+			margin-left: 40px
+	a
+		color: #fafafc
+		font-size: 18px
+		&:hover,
+		&:focus
+			color: darken(#fafafc, 15%)
