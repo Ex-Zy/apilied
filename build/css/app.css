@@ -179,6 +179,13 @@ a {
   transition: all 0.3s ease;
 }
 
+.title-h2 {
+  line-height: 1;
+  font-family: "Roboto Medium", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+}
+
 .btn-menu {
   font: 0/0 a;
   text-shadow: none;
@@ -402,6 +409,16 @@ a {
   align-items: center;
 }
 
+.section6 {
+  text-align: center;
+  background-color: #071E39;
+}
+
+.section6 .inner {
+  padding-top: 86px;
+  padding-bottom: 97px;
+}
+
 .topper {
   position: fixed;
   top: 0;
@@ -434,6 +451,7 @@ a {
 .footer {
   position: relative;
   background-color: #03162d;
+  text-align: left;
 }
 
 .footer__in {
@@ -553,6 +571,121 @@ a {
   width: 72px;
   padding-right: 10px;
   color: #ff1799;
+}
+
+.brands {
+  background-color: #fff;
+}
+
+.brands-list {
+  font-size: 0;
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+}
+
+.brands-list:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.brands-list__item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.brands-list__item:not(:last-child) {
+  padding-right: 10px;
+}
+
+.brands-list img {
+  display: block;
+  max-width: 100%;
+}
+
+.comments {
+  font-size: 0;
+  margin-top: 82px;
+}
+
+.comments__item {
+  width: 33.3333%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 50px;
+}
+
+.profile {
+  max-width: 411px;
+  display: block;
+  margin: auto;
+  padding: 45px 32px 50px;
+  border: 2px solid #27344d;
+}
+
+.profile__media {
+  width: 112px;
+  height: 112px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.profile__media img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.profile__name {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.profile__site {
+  font-size: 14px;
+  color: #ff1799;
+  margin-top: 10px;
+  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: normal;
+}
+
+.profile__circle {
+  margin-top: 32px;
+}
+
+.profile__circle span {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background-color: #fb1d95;
+}
+
+.profile__circle span + span {
+  margin-left: 23px;
+}
+
+.profile__desc {
+  font-size: 16px;
+  margin-top: 32px;
+  font-family: "Roboto Light", Arial, sans-serif;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=app.css.map */

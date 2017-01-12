@@ -1,69 +1,19 @@
 <!-- BEGIN section section6 -->
 <section class="section section6">
+	
+	<!-- BEGIN inner -->
+	<div class="inner">
+		<h2 class="title-h2">Почитай, что о нас пишут!</h2>
+		{# comments #}
+		{% include "../_comments.html" %}
+	</div>
+	<!-- END inner -->
 
-	<!-- BEGIN footer -->
-	<footer class="footer">
+	{# brands #}
+	{% include "../_brands.html" %}
 
-		<!-- BEGIN footer__in -->
-		<div class="footer__in">
-			
-			<!-- BEGIN footer__col1 -->
-			<div class="footer__col1">
-				<div class="footer__content">
-					<div class="footer__content-head">
-						<h1 class="footer__logo">APILEAD.COM</h1>
-						<ul class="payments">
-							<li class="payments__item"><img src="img/pay1.png" alt=""></li>
-							<li class="payments__item"><img src="img/pay2.png" alt=""></li>
-						</ul>
-					</div>
-					<div class="footer__content-text">
-						Consortium Group ltd. 3rd Floor of C&H Towers Corner of Great Marlborough and Great George Streets Roseau, 00152.  Commonwealth of Dominica
-					</div>
-				</div>
-			</div>
-			<!-- END footer__col1 -->
-
-			<!-- BEGIN footer__col2 -->
-			<div class="footer__col2">
-				<ul class="info-list">
-					<li class="info-list__item">
-						<div class="info-list__title">Для рекламодателей</div>
-						<ul class="contact-list">
-							<li class="contact-list__item">
-								<span>ICQ:</span> <p>687682738</p>
-							</li>
-							<li class="contact-list__item">
-								<span>Skype:</span> <p>adv.apilead</p>
-							</li>
-							<li class="contact-list__item">
-								<span>Email:</span> <p>adv.apilead@gmail.com </p>
-							</li>
-						</ul>
-					</li>
-					<li class="info-list__item info-list__item_blue">
-						<div class="info-list__title">Для рекламодателей</div>
-						<ul class="contact-list">
-							<li class="contact-list__item">
-								<span>ICQ:</span> <p>687682738</p>
-							</li>
-							<li class="contact-list__item">
-								<span>Skype:</span> <p>adv.apilead</p>
-							</li>
-							<li class="contact-list__item">
-								<span>Email:</span> <p>adv.apilead@gmail.com </p>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<!-- END footer__col2 -->
-
-		</div>
-		<!-- END footer__in -->
-
-	</footer>
-	<!-- END footer -->
+	{# footer #}
+	{% include "../_footer.html" %}
 
 </section>
 <!-- END section section6 -->
