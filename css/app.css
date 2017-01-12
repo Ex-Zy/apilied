@@ -74,84 +74,84 @@ html {
 
 @font-face {
   font-family: "Bebas Bold";
-  src: url("../fonts/bebasneue_bold.woff2") format("woff2"), url("../fonts/bebasneue_bold.woff") format("woff");
+  src: url("fonts/bebasneue_bold.woff2") format("woff2"), url("fonts/bebasneue_bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Bebas Regular";
-  src: url("../fonts/bebasneue_regular.woff2") format("woff2"), url("../fonts/bebasneue_regular.woff") format("woff");
+  src: url("fonts/bebasneue_regular.woff2") format("woff2"), url("fonts/bebasneue_regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Panton";
-  src: url("../fonts/panton.woff2") format("woff2"), url("../fonts/panton.woff") format("woff");
+  src: url("fonts/panton.woff2") format("woff2"), url("fonts/panton.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy Extrabold";
-  src: url("../fonts/gilroy-extrabold.woff2") format("woff2"), url("../fonts/gilroy-extrabold.woff") format("woff");
+  src: url("fonts/gilroy-extrabold.woff2") format("woff2"), url("fonts/gilroy-extrabold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto Bold";
-  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  src: url("fonts/roboto-bold.woff2") format("woff2"), url("fonts/roboto-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto Light";
-  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  src: url("fonts/roboto-light.woff2") format("woff2"), url("fonts/roboto-light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto Medium";
-  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  src: url("fonts/roboto-medium.woff2") format("woff2"), url("fonts/roboto-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto Regular";
-  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  src: url("fonts/roboto-regular.woff2") format("woff2"), url("fonts/roboto-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Robotocondensed";
-  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff");
+  src: url("fonts/robotocondensed-regular.woff2") format("woff2"), url("fonts/robotocondensed-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Robotomono Bold";
-  src: url("../fonts/robotomono-bold.woff2") format("woff2"), url("../fonts/robotomono-bold.woff") format("woff");
+  src: url("fonts/robotomono-bold.woff2") format("woff2"), url("fonts/robotomono-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Robotomono Light";
-  src: url("../fonts/robotomono-light.woff2") format("woff2"), url("../fonts/robotomono-light.woff") format("woff");
+  src: url("fonts/robotomono-light.woff2") format("woff2"), url("fonts/robotomono-light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Robotomono Regular";
-  src: url("../fonts/robotomono-regular.woff2") format("woff2"), url("../fonts/robotomono-regular.woff") format("woff");
+  src: url("fonts/robotomono-regular.woff2") format("woff2"), url("fonts/robotomono-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
