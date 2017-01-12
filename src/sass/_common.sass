@@ -60,20 +60,35 @@ a
 			&::after
 				transform: translateX(14px) translateY(-9px) rotate(45deg)
 
-.btn
+%button
 	display: inline-block
 	vertical-align: top
-	background-color: #00aaff
 	position: relative
-	color: #fff
-	+roboto-bold
 	border-radius: 3px
-	line-height: 1
-	padding: 18px 25px
-	transition: background-color 0.3s
 	text-transform: uppercase
+	transition: background-color 0.3s
+	text-align: center
+.btn
+	@extend %button
+	color: #fff
+	line-height: 1
+	background-color: #00aaff
+	+roboto-bold
+	padding: 18px 25px
 	&:hover,
 	&:focus
 		background-color: lighten(#00aaff, 10%)
 	&:active
 		background-color: darken(#00aaff, 5%)
+.btn-primary
+	@extend %button
+	background-color: #ff1799
+	padding: 27px 60px
+	color: #fafafc
+	font-size: 20px
+	+robotomono-bold
+	&:hover,
+	&:focus
+		background-color: lighten(#ff1799, 5%)
+	&:active
+		background-color: darken(#ff1799, 5%)
