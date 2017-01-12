@@ -95,3 +95,31 @@ a
 		background-color: lighten(#ff1799, 5%)
 	&:active
 		background-color: darken(#ff1799, 5%)
+.btn-secondary
+	@extend %button
+	line-height: 1
+	color: #0ca8fd
+	font-size: 20px
+	+robotomono-bold
+	border: 2px solid #0ca8fd
+	border-radius: 37px
+	padding: 25px 70px
+	overflow: hidden
+	&:hover,
+	&:focus
+		border-color: #fb1d95
+		.btn-secondary__in
+			right: 0
+	&__in
+		position: absolute
+		top: -2px
+		bottom: -2px
+		width: 100%
+		top: 0
+		right: 120%
+		background-color: #fb1d95
+		display: block
+		transition: right 0.3s
+	&__text
+		position: relative
+		z-index: 2
