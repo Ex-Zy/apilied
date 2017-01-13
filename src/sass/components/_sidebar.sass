@@ -1,0 +1,43 @@
+.sidebar
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	z-index: 90
+	overflow-x: hidden
+	overflow-y: auto
+	background: #10192b
+	+trans(transform, 0.3s, ease-in-out)
+	transform: translate3d(-100%, 0, 0)
+	&.is-active
+		transform: translate3d(0, 0, 0)
+	&__in
+		width: 251px
+		min-height: 100vh
+		padding: 100px 0
+.navigation
+	a
+		font-size: 18px
+		color: #afafaf
+		line-height: 52px
+		display: block
+		padding-left: 32px
+		+roboto-light
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 2px
+			top: 0
+			bottom: 0
+			left: 0
+			background-color: #0CA8FD
+			+scale(0)
+			+trans(transform, 0.25s, ease-in-out) 
+		&:hover,
+		&:focus,
+		&.is-active
+			color: #fff
+			&:after
+				+scale(1)
