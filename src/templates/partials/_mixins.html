@@ -1,3 +1,24 @@
 {% macro icon(i) %}
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{# profile #}
+{% macro profile(config) %}
+<div class="profile {% if config.classes %} {{config.classes}} {% endif %}">
+	<div class="profile__media">
+		<img src="img/{{config.img}}" alt="">
+	</div>
+	<div class="profile__name">{{config.name}}</div>
+	<div class="profile__site">{{config.site}}</div>
+	<ul class="profile__circle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</ul>
+	<div class="profile__desc">{{config.description}}</div>
+	<div class="border border1"></div>
+	<div class="border border2"></div>
+	<div class="border border3"></div>
+	<div class="border border4"></div>
+</div>
+{% endmacro %}

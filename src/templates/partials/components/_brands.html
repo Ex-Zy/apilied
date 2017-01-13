@@ -1,0 +1,33 @@
+<!-- BEGIN brands -->
+<div class="brands">
+{% set brandList = [
+	'brand1.png',
+	'brand2.png',
+	'brand3.png',
+	'brand4.png',
+	'brand5.png',
+	'brand6.png',
+	'brand7.png',
+	'brand8.png',
+	'brand9.png',
+	'brand10.png'
+] %}
+	
+	<!-- BEGIN brands__in -->
+	<div class="brands__in">
+	
+		<!-- BEGIN brands-list -->
+		<ul class="brands-list">
+
+			{% for brand in brandList %}
+				<li class="brands-list__item"><img src="img/brand/{{brand}}" alt=""></li>
+			{% endfor %}
+
+		</ul>
+		<!-- END brands-list -->
+
+	</div>
+	<!-- END brands__in -->
+
+</div>
+<!-- END brands -->

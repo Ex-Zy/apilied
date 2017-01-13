@@ -1,0 +1,61 @@
+{% import '../../data/dataAdvertiserList.html' as units %}
+
+<!-- BEGIN section4 -->
+<section class="section4">
+	
+	<!-- BEGIN inner -->
+	<div class="inner">
+		
+		<h2 class="title-h1">Рекламодателям</h2>
+
+		<!-- BEGIN advertiser -->
+		<div class="advertiser">
+			<div class="advertiser__col">
+				<ul class="list">
+					{% for item in units.advertiserList.unit1 %}
+						{% if loop.index0  === 0 %} 
+							<li class="list__item list__item_top-vertical">
+								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+								<div class="list__item-text">
+									{{item.text}}
+								</div>
+							</li>
+						{% else %}
+							<li class="list__item">
+								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+								<div class="list__item-text">
+									{{item.text}}
+								</div>
+							</li>
+						{% endif %}
+						
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="advertiser__col">
+				<ul class="list">
+					{% for item in units.advertiserList.unit2 %}
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<a href="#" class="btn-primary advertiser__btn">РЕГИСТРАЦИЯ</a>
+			</div>
+		</div>
+		<!-- END advertiser -->
+		
+	</div>
+	<!-- END inner -->
+	
+	<!-- BEGIN diagram3 -->
+	<div class="diagram3">
+		
+	</div>
+	<!-- END diagram3 -->
+
+</section>
+<!-- END section4 -->

@@ -1,0 +1,20 @@
+{% import "../../data/dataComments.html" as list %}
+
+<!-- BEGIN comments -->
+<ul class="comments">
+	{% for comment in list.comments %}
+		<!-- BEGIN comments__item -->
+		<li class="comments__item">
+			<!-- BEGIN profile -->
+			{{mixins.profile({
+				img: comment.img,
+				name: comment.name,
+				site: comment.site,
+				description: comment.description
+			})}}
+			<!-- END profile -->
+		</li>
+		<!-- END comments__item -->
+	{% endfor %}
+</ul>
+<!-- END comments -->

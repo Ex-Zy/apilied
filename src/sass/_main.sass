@@ -50,6 +50,58 @@
 	flex-direction: row
 	justify-content: space-around
 	align-items: center
+.section4
+	background-color: #17233B
+	height: 100vh
+	min-height: 800px
+	position: relative
+	overflow: hidden
+	.inner
+		padding-top: 112px
+		padding-bottom: 112px
+	.title-h1
+		margin-bottom: 81px
+		text-align: center
+.advertiser
+	position: relative
+	z-index: 5
+	font-size: 0
+	margin-left: (316px / 1850px) * 100% // делим на ширину контейнера минус padding
+	&__col
+		display: inline-block
+		vertical-align: top
+		max-width: 384px
+		+ .advertiser__col
+			margin-left: 56px
+	&__btn
+		line-height: 1
+		padding: 27px 72px
+		margin: 56px 0 0 47px
+.list
+	&__item
+		&:not(:last-child)
+			margin-bottom: 22px
+	&__item_top-vertical
+		.list__item-icon,
+		.list__item-text
+			vertical-align: top
+	&__item-icon,
+	&__item-text
+		display: table-cell
+		vertical-align: middle
+	&__item-text
+		padding-left: 20px
+		+roboto-light
+		font-size: 18px
+		line-height: 1.2
+.diagram3
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	height: 1218px
+	background: url(../img/diagrams/diagram3.png) no-repeat center bottom
+	background-size: contain
 .section5
 	background: #131d31 url(../img/bg-sec5.jpg) no-repeat center top
 	background-size: cover
