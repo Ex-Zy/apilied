@@ -2317,14 +2317,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	}
 })();
 $(function () {
-	$('.js-menu').click(function () {
-		var hasActive = $(this).hasClass('is-active');
+	// $('.js-menu').click(function() {
+	// 	var hasActive = $(this).hasClass('is-active');
 
-		if (!hasActive) {
-			$(this).addClass('is-active');
-		} else {
-			$(this).removeClass('is-active');
-		}
+	// 	if(!hasActive) {
+	// 		$(this).addClass('is-active');
+	// 	} else {
+	// 		$(this).removeClass('is-active');
+	// 	}
+	// });
+
+	$('.js-menu').hover(function () {
+		$(this).add('.js-sidebar').addClass('is-active');
+	}, function () {
+		// $(this).add('.js-sidebar').removeClass('is-active');
 	});
 	$(window).scroll(function () {
 		var top = $(window).scrollTop();
