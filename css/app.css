@@ -360,6 +360,11 @@ a {
   fill: #fff;
 }
 
+.out {
+  min-height: 320px;
+  overflow: hidden;
+}
+
 .inner {
   position: relative;
   max-width: 1880px;
@@ -463,7 +468,6 @@ a {
   height: 100vh;
   min-height: 800px;
   position: relative;
-  overflow: hidden;
 }
 
 .section4 .inner {
@@ -521,14 +525,121 @@ a {
   line-height: 1.2;
 }
 
+.board {
+  padding: 7px 16px;
+  background-color: #00aaff;
+  text-transform: uppercase;
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  left: -38px;
+  bottom: 73px;
+  white-space: nowrap;
+}
+
+.board:before, .board:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.board:after {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 9px 9px 0 9px;
+  border-color: #00aaff transparent transparent transparent;
+}
+
+.board:before {
+  width: 1px;
+  height: 52px;
+  background-color: #00aaff;
+}
+
 .diagram3 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 1218px;
-  background: url(../img/diagrams/diagram3.png) no-repeat center bottom;
-  background-size: contain;
+  bottom: -105px;
+}
+
+.diagram3 img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.points-wrp {
+  position: absolute;
+  bottom: 105px;
+  right: 0;
+  left: 3.77953%;
+  padding-top: 23.67454%;
+}
+
+.point {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.point_1 {
+  left: 0;
+  top: 94.67849%;
+}
+
+.point_2 {
+  left: 11.94111%;
+  bottom: 8.42572%;
+}
+
+.point_3 {
+  left: 469px;
+  bottom: 75px;
+}
+
+.point_4 {
+  left: 640px;
+  bottom: 139px;
+}
+
+.point_5 {
+  left: 879px;
+  bottom: 153px;
+}
+
+.point_6 {
+  left: 1055px;
+  bottom: 223px;
+}
+
+.point_7 {
+  left: 1280px;
+  bottom: 238px;
+}
+
+.point_8 {
+  left: 1477px;
+  bottom: 294px;
+}
+
+.point_9 {
+  left: 1694px;
+  bottom: 406px;
+}
+
+.point_10 {
+  right: 0;
+  bottom: 448px;
 }
 
 .section5 {
