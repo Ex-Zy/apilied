@@ -567,7 +567,12 @@ a {
   position: absolute;
   left: 0;
   right: 0;
+  width: 1920px;
+  margin: auto;
   bottom: -105px;
+  height: 564px;
+  background: url(../img/diagrams/diagram3.png) no-repeat center bottom;
+  background-size: cover;
 }
 
 .diagram3 img {
@@ -579,9 +584,9 @@ a {
 .points-wrp {
   position: absolute;
   bottom: 105px;
-  right: 0;
-  left: 3.77953%;
-  padding-top: 23.67454%;
+  left: 72px;
+  height: 451px;
+  width: 1848px;
 }
 
 .point {
@@ -594,12 +599,12 @@ a {
 
 .point_1 {
   left: 0;
-  top: 94.67849%;
+  bottom: 12px;
 }
 
 .point_2 {
-  left: 11.94111%;
-  bottom: 8.42572%;
+  left: 219px;
+  bottom: 38px;
 }
 
 .point_3 {
