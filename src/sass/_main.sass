@@ -1,3 +1,6 @@
+.out
+	min-height: 320px
+	overflow: hidden
 .inner
 	position: relative
 	max-width: 1880px
@@ -55,7 +58,6 @@
 	height: 100vh
 	min-height: 800px
 	position: relative
-	overflow: hidden
 	.inner
 		padding-top: 112px
 		padding-bottom: 112px
@@ -94,14 +96,99 @@
 		+roboto-light
 		font-size: 18px
 		line-height: 1.2
+.board
+	padding: 7px 16px 
+	background-color: #00aaff
+	text-transform: uppercase
+	+gilroy
+	text-align: center
+	font-size: 18px
+	position: absolute
+	left: -38px
+	bottom: 73px
+	white-space: nowrap
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		margin: auto
+	&:after
+		+arr(18, 9, #00aaff, b)
+	&:before
+		width: 1px
+		height: 52px
+		background-color: #00aaff
 .diagram3
 	position: absolute
 	left: 0
 	right: 0
-	bottom: 0
-	height: 1218px
-	background: url(../img/diagrams/diagram3.png) no-repeat center bottom
-	background-size: contain
+	// width: 1920px
+	// margin: auto
+	bottom: -105px
+	// height: 564px
+	// background: url(../img/diagrams/diagram3.png) no-repeat center bottom
+	// background-size: cover
+	img
+		display: block
+		height: auto
+		width: 100%
+.points-wrp
+	position: absolute
+	// right: 0
+	bottom: 105px
+	right: 0
+	left: (72px / 1905px) * 100%  // ширина секции минус скроллбар = 1905px
+	padding-top: (451px / 1905px) * 100% // ширина секции минус скроллбар = 1905px
+	// left: 72px
+	// right: 0
+	// height: 451px
+	// width: 1848px
+.point
+	width: 14px
+	height: 14px
+	border-radius: 50%
+	background-color: #fff
+	position: absolute
+	&_1
+		left: 0
+		// bottom: 12px
+		// bottom: (12px / 451px) * 100%
+		// top: 427px
+		top: (427px / 451px) * 100%
+	&_2
+		// left: 219px
+		left: (219px / 1834px) * 100% 
+		// bottom: 38px
+		bottom: (38px / 451px) * 100%
+	&_3
+		left: 541px - 72px
+		bottom: 75px
+	&_4
+		left: 712px - 72px
+		bottom: 139px
+	&_5
+		left: 951px - 72px
+		bottom: 153px
+	&_6
+		left: 1127px - 72px
+		bottom: 223px 
+	&_7
+		left: 1352px - 72px
+		bottom: 238px
+	&_8
+		left: 1549px - 72px
+		bottom: 294px
+	&_9
+		left: 1766px - 72px
+		bottom: 406px
+	&_10
+		right: 0
+		bottom: 448px
+
 .section5
 	background: #131d31 url(../img/bg-sec5.jpg) no-repeat center top
 	background-size: cover
