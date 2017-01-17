@@ -1,4 +1,4 @@
-{% import '../../data/dataPromotionList.html' as units %}
+{% import '../../data/dataCommercialList.html' as units %}
 
 <!-- BEGIN section4 -->
 <section class="section4">
@@ -6,13 +6,13 @@
 	<!-- BEGIN inner -->
 	<div class="inner">
 		
-		<h2 class="title-h1 title-h1_centered">Рекламодателям</h2>
+		<h2 class="title-primary title-primary_centered">Рекламодателям</h2>
 
-		<!-- BEGIN promotion -->
-		<div class="promotion">
-			<div class="promotion__col">
+		<!-- BEGIN commercial -->
+		<div class="commercial">
+			<div class="commercial__col">
 				<ul class="list">
-					{% for item in units.promotionList.unit1 %}
+					{% for item in units.commercialList.unit1 %}
 						{% if loop.index0  === 0 %} 
 							<li class="list__item list__item_top-vertical">
 								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
@@ -32,9 +32,9 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div class="promotion__col">
+			<div class="commercial__col">
 				<ul class="list">
-					{% for item in units.promotionList.unit2 %}
+					{% for item in units.commercialList.unit2 %}
 						<li class="list__item">
 							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
 							<div class="list__item-text">
@@ -43,23 +43,23 @@
 						</li>
 					{% endfor %}
 				</ul>
-				<a href="#" class="btn-primary promotion__btn">РЕГИСТРАЦИЯ</a>
+				<a href="#" class="btn-primary commercial__btn">РЕГИСТРАЦИЯ</a>
 			</div>
 		</div>
-		<!-- END promotion -->
+		<!-- END commercial -->
 		
 	</div>
 	<!-- END inner -->
 
-	<!-- BEGIN human-wrp -->
-	<div class="human-wrp">
-		<!-- BEGIN human -->
-		<div class="human">
+	<!-- BEGIN picture-wrp -->
+	<div class="picture-wrp">
+		<!-- BEGIN picture-human -->
+		<div class="picture-human">
 			<img src="img/human.png" alt="">
 		</div>	
-		<!-- END human -->
+		<!-- END picture-human -->
 	</div>
-	<!-- END human-wrp -->
+	<!-- END picture-wrp -->
 	
 	<!-- BEGIN diagram-commercial -->
 	<div class="diagram-commercial">

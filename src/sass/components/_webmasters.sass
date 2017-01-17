@@ -1,0 +1,17 @@
+.webmasters
+	position: relative
+	z-index: 5
+	font-size: 0
+	margin-left: (590px / 1850px) * 100% // делим на ширину контейнера минус padding
+	&__col
+		display: inline-block
+		vertical-align: top
+		max-width: 534px
+		&:nth-of-type(1)
+			max-width: 380px
+		+ .webmasters__col
+			margin-left: 66px
+	&__btn
+		line-height: 1
+		padding: 27px 72px
+		margin: 56px 0 0 47px

@@ -1,0 +1,17 @@
+.list
+	&__item
+		&:not(:last-child)
+			margin-bottom: 22px
+	&__item_top-vertical
+		.list__item-icon,
+		.list__item-text
+			vertical-align: top
+	&__item-icon,
+	&__item-text
+		display: table-cell
+		vertical-align: middle
+	&__item-text
+		padding-left: 20px
+		+roboto-light
+		font-size: 18px
+		line-height: 1.2

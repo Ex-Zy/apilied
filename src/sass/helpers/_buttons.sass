@@ -1,0 +1,107 @@
+.btn
+	@extend %button
+	color: #fff
+	line-height: 1
+	background-color: $blue
+	+roboto-bold
+	padding: 18px 25px
+	&:hover,
+	&:focus
+		background-color: lighten($blue, 10%)
+	&:active
+		background-color: darken($blue, 5%)
+.btn-primary
+	@extend %button
+	background-color: $pink
+	padding: 27px 60px
+	color: #fafafc
+	font-size: 20px
+	+robotomono-bold
+	&:hover,
+	&:focus
+		background-color: lighten($pink, 5%)
+	&:active
+		background-color: darken($pink, 5%)
+	&_blue
+		background-color: $blue
+		&:hover,
+		&:focus
+			background-color: lighten($blue, 10%)
+		&:active
+			background-color: darken($blue, 5%)
+.btn-secondary
+	@extend %button
+	line-height: 1
+	color: #0ca8fd
+	font-size: 20px
+	+robotomono-bold
+	border: 2px solid #0ca8fd
+	border-radius: 37px
+	padding: 25px 70px
+	overflow: hidden
+	&:hover,
+	&:focus
+		border-color: #fb1d95
+		.btn-secondary__in
+			right: 0
+	&__in
+		position: absolute
+		top: -2px
+		bottom: -2px
+		width: 100%
+		top: 0
+		right: 120%
+		background-color: #fb1d95
+		display: block
+		transition: right 0.3s
+	&__text
+		position: relative
+		z-index: 2
+.btn-menu
+	+hide-text
+	width: 28px
+	height: 20px
+	position: relative
+	overflow: hidden
+	top: 1px
+	background-color: transparent
+	display: inline-block
+	vertical-align: middle
+	margin-left: 14px
+	span
+		position: absolute
+		left: 0
+		right: 0
+		top: 50%
+		margin-top: -1px
+		height: 3px
+		background-color: #fff
+		display: block
+		transition: transform 0.2s
+		&::after,
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			height: 3px
+			background-color: #fff
+			left: 0
+			right: 0
+		&::before
+			top: -8px
+			transform-origin: top right
+			transition: transform 0.2s, width 0.2s, top 0.2s
+		&::after
+			top: 8px
+			transform-origin: bottom right
+			transition: transform 0.2s, width 0.2s, bottom 0.2s
+	&.is-active
+		span
+			+rotate(180)
+			&::before,
+			&::after
+				width: 40%
+			&::before
+				transform: translateX(15px) translateY(9px) rotate(-45deg)
+			&::after
+				transform: translateX(14px) translateY(-9px) rotate(45deg)

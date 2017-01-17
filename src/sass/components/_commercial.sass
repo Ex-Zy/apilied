@@ -1,0 +1,15 @@
+.commercial
+	position: relative
+	z-index: 5
+	font-size: 0
+	margin-left: (316px / 1850px) * 100% // делим на ширину контейнера минус padding
+	&__col
+		display: inline-block
+		vertical-align: top
+		max-width: 384px
+		+ .commercial__col
+			margin-left: 56px
+	&__btn
+		line-height: 1
+		padding: 27px 72px
+		margin: 56px 0 0 47px
