@@ -1,4 +1,4 @@
-{% import '../../data/dataAdvertiserList.html' as units %}
+{% import '../../data/dataPromotionList.html' as units %}
 
 <!-- BEGIN section4 -->
 <section class="section4">
@@ -6,13 +6,13 @@
 	<!-- BEGIN inner -->
 	<div class="inner">
 		
-		<h2 class="title-h1">Рекламодателям</h2>
+		<h2 class="title-h1 title-h1_centered">Рекламодателям</h2>
 
-		<!-- BEGIN advertiser -->
-		<div class="advertiser">
-			<div class="advertiser__col">
+		<!-- BEGIN promotion -->
+		<div class="promotion">
+			<div class="promotion__col">
 				<ul class="list">
-					{% for item in units.advertiserList.unit1 %}
+					{% for item in units.promotionList.unit1 %}
 						{% if loop.index0  === 0 %} 
 							<li class="list__item list__item_top-vertical">
 								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
@@ -32,9 +32,9 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div class="advertiser__col">
+			<div class="promotion__col">
 				<ul class="list">
-					{% for item in units.advertiserList.unit2 %}
+					{% for item in units.promotionList.unit2 %}
 						<li class="list__item">
 							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
 							<div class="list__item-text">
@@ -43,50 +43,61 @@
 						</li>
 					{% endfor %}
 				</ul>
-				<a href="#" class="btn-primary advertiser__btn">РЕГИСТРАЦИЯ</a>
+				<a href="#" class="btn-primary promotion__btn">РЕГИСТРАЦИЯ</a>
 			</div>
 		</div>
-		<!-- END advertiser -->
+		<!-- END promotion -->
 		
 	</div>
 	<!-- END inner -->
+
+	<!-- BEGIN human-wrp -->
+	<div class="human-wrp">
+		<!-- BEGIN human -->
+		<div class="human">
+			<img src="img/human.png" alt="">
+		</div>	
+		<!-- END human -->
+	</div>
+	<!-- END human-wrp -->
 	
-	<!-- BEGIN diagram3 -->
-	<div class="diagram3">
+	<!-- BEGIN diagram-commercial -->
+	<div class="diagram-commercial">
+		<img src="img/diagrams/diagram-commercial.png" alt="">
 		<div class="points-wrp">
-			<div class="point point_1">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-1 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_2">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-2 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_3">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-3 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_4">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-4 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_5">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-5 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_6">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-6 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_7">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-7 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_8">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-8 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_9">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-9 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
-			<div class="point point_10">
-				<div class="board board_1 diagram3__board">+ LEAD</div>
+			<div class="point point-10 diagram-commercial_point">
+				<div class="board board_1">+ LEAD</div>
 			</div>
 		</div>
 	</div>
-	<!-- END diagram3 -->
+	<!-- END diagram-commercial -->
 
 </section>
 <!-- END section4 -->

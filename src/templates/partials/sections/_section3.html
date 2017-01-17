@@ -1,0 +1,141 @@
+{% import '../../data/dataWebmastersList.html' as units %}
+
+<!-- BEGIN section3 -->
+<section class="section3">
+
+	<!-- BEGIN inner -->
+	<div class="inner">
+		
+		<h2 class="title-h1 title-h1_centered">Вебмастерам</h2>
+
+		<!-- BEGIN webmasters -->
+		<div class="webmasters">
+			<div class="webmasters__col">
+				<ul class="list">
+					{% for item in units.webmastersList.unit1 %}
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>					
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="webmasters__col">
+				<ul class="list">
+					{% for item in units.webmastersList.unit2 %}
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
+				<a href="#" class="btn-primary btn-primary_blue webmasters__btn">РЕГИСТРАЦИЯ</a>
+			</div>
+		</div>
+		<!-- END webmasters -->
+
+	</div>
+	<!-- END inner -->
+
+	<!-- BEGIN man-wrp -->
+	<div class="man-wrp">
+		<!-- BEGIN man -->
+		<div class="man">
+			<img src="img/man.png" alt="">
+		</div>	
+		<!-- END man -->
+	</div>
+	<!-- END man-wrp -->
+
+	<!-- BEGIN diagram-webmaster -->
+	<div class="diagram-webmaster">
+		<img src="img/diagrams/diagram-webmaster.png" alt="">
+		<div class="points-wrp">
+			<div class="point point-1">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-2">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-3">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-4">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-5">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-6">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-7">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-8">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-9">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-10">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-11">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-12">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+			<div class="point point-13">
+				<div class="board board_1 board_pink diagram-webmaster__board">
+					<span>выплачено</span>
+					+600руб
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END diagram-commercial -->
+
+</section>
+<!-- END section3 -->

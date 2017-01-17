@@ -1,11 +1,13 @@
 .out
 	min-height: 320px
 	overflow: hidden
-.inner
-	position: relative
+%inner
 	max-width: 1880px
 	margin: auto
 	padding: 0 15px
+.inner
+	@extend %inner
+	position: relative
 	+clr
 .section1
 	background-color: #7200d4
@@ -53,18 +55,143 @@
 	flex-direction: row
 	justify-content: space-around
 	align-items: center
-.section4
-	background-color: #17233B
-	height: 100vh
-	min-height: 800px
-	position: relative
+.section3
+	background-color: #03162d
+	position: relative 
+	min-height: 948px
+	// z-index: 2
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background: url(../img/lines-bg.png) no-repeat center
+		background-size: cover
+		top: 0
+		right: 0
+		left: 38px
+		height: 1218px
+		z-index: 2
 	.inner
-		padding-top: 112px
+		padding-top: 84px
 		padding-bottom: 112px
 	.title-h1
 		margin-bottom: 81px
-		text-align: center
-.advertiser
+.webmasters
+	position: relative
+	z-index: 5
+	font-size: 0
+	margin-left: (590px / 1850px) * 100% // делим на ширину контейнера минус padding
+	&__col
+		display: inline-block
+		vertical-align: top
+		max-width: 534px
+		&:nth-of-type(1)
+			max-width: 380px
+		+ .webmasters__col
+			margin-left: 66px
+	&__btn
+		line-height: 1
+		padding: 27px 72px
+		margin: 56px 0 0 47px
+.diagram-webmaster
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 2
+	img
+		display: block
+		height: auto
+		width: 100%
+	&__board
+		span
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 100%
+			text-transform: uppercase
+			color: #fb1d95
+			font-size: 14px
+			+robotocondensed
+	.point-1
+		left: (72px / 1897px) * 100% // ширину контейнера посмотрел в браузере
+		top: 78.8%
+	.point-2
+		left: (274px / 1897px) * 100%
+		top: 26.8%
+	.point-3
+		left: (395px / 1897px) * 100%
+		top: 84.2%
+	.point-4
+		left: (471px / 1897px) * 100%
+		top: 3.8%
+	.point-5
+		left: (599px / 1897px) * 100%
+		top: 52.7%
+	.point-6
+		left: (754px / 1897px) * 100%
+		top: 63%
+	.point-7
+		left: (952px / 1897px) * 100%
+		top: 20.6%
+	.point-8
+		left: (1113px / 1897px) * 100%
+		top: 53.5%
+	.point-9
+		left: (1233px / 1897px) * 100%
+		top: 43%
+	.point-10
+		left: (1392px / 1897px) * 100%
+		top: 28.7%
+	.point-11
+		left: (1513px / 1897px) * 100%
+		top: 46.7%
+	.point-12
+		left: (1679px / 1897px) * 100%
+		top: 31.7%
+	.point-13
+		left: (1836px / 1897px) * 100%
+		top: 32.7%
+.man-wrp
+	@extend %inner
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1
+.man
+	width: 560px
+	height: 547px
+	position: absolute
+	top: 82px
+	left: 211px - 40px
+	z-index: 1
+	img
+		max-width: 100%
+		max-height: 100%
+		display: block
+.section4
+	background-color: #121c30
+	min-height: 949px
+	position: relative
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		background: url(../img/lines-bg.png) no-repeat center
+		background-size: cover
+		top: 0
+		right: 0
+		left: 38px
+		height: 1218px
+		z-index: 1
+	.inner
+		padding-top: 112px
+		padding-bottom: 112px
+		z-index: 4
+	.title-h1
+		margin-bottom: 81px
+.promotion
 	position: relative
 	z-index: 5
 	font-size: 0
@@ -73,7 +200,7 @@
 		display: inline-block
 		vertical-align: top
 		max-width: 384px
-		+ .advertiser__col
+		+ .promotion__col
 			margin-left: 56px
 	&__btn
 		line-height: 1
@@ -104,9 +231,11 @@
 	text-align: center
 	font-size: 18px
 	position: absolute
-	left: -38px
-	bottom: 73px
+	left: 0
+	bottom: 0
 	white-space: nowrap
+	transform: translate3d(-50%, -50%, 0)
+	margin-bottom: 62px
 	&:before,
 	&:after
 		content: ''
@@ -122,66 +251,90 @@
 		width: 1px
 		height: 52px
 		background-color: #00aaff
-.diagram3
+	&_pink
+		background-color: #ff1799
+		&:after
+			+arr(18, 9, #ff1799, b)
+		&:before
+			background-color: #ff1799
+.diagram-commercial
 	position: absolute
 	left: 0
 	right: 0
-	width: 1920px
-	margin: auto
-	bottom: -105px
-	height: 564px
-	background: url(../img/diagrams/diagram3.png) no-repeat center bottom
-	background-size: cover
+	bottom: 0
+	z-index: 2
 	img
 		display: block
 		height: auto
 		width: 100%
+	.point-1
+		left: (72px / 1897px) * 100% // ширину контейнера посмотрел в браузере
+		top: 96.8%
+	.point-2
+		left: (291px / 1897px) * 100%
+		top: 90.8%
+	.point-3
+		left: (541px / 1897px) * 100%
+		top: 83.2%
+	.point-4
+		left: (712px / 1897px) * 100%
+		top: 68.8%
+	.point-5
+		left: (951px / 1897px) * 100%
+		top: 65.7%
+	.point-6
+		left: (1127px / 1897px) * 100%
+		top: 50%
+	.point-7
+		left: (1352px / 1897px) * 100%
+		top: 47.6%
+	.point-8
+		left: (1549px / 1897px) * 100%
+		top: 33.5%
+	.point-9
+		left: (1766px / 1897px) * 100%
+		top: 9%
+	.point-10
+		right: 0
+		top: 0.7%
 .points-wrp
 	position: absolute
-	// right: 0
-	bottom: 105px
-	// left: (72px / 1905px) * 100%  // ширина секции минус скроллбар = 1905px
-	// padding-top: (451px / 1905px) * 100% // ширина секции минус скроллбар = 1905px
-	left: 72px
-	// right: 0
-	height: 451px
-	width: 1848px
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
 .point
-	width: 14px
-	height: 14px
-	border-radius: 50%
-	background-color: #fff
+	width: 1px
+	height: 1px
 	position: absolute
-	&_1
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
 		left: 0
-		bottom: 12px
-	&_2
-		left: 291px - 72px
-		bottom: 38px
-	&_3
-		left: 541px - 72px
-		bottom: 75px
-	&_4
-		left: 712px - 72px
-		bottom: 139px
-	&_5
-		left: 951px - 72px
-		bottom: 153px
-	&_6
-		left: 1127px - 72px
-		bottom: 223px 
-	&_7
-		left: 1352px - 72px
-		bottom: 238px
-	&_8
-		left: 1549px - 72px
-		bottom: 294px
-	&_9
-		left: 1766px - 72px
-		bottom: 406px
-	&_10
-		right: 0
-		bottom: 448px
+		margin: -7px 0 0 -7px
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		background-color: #fff
+.human-wrp
+	@extend %inner
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1
+.human
+	width: 560px
+	height: 556px
+	position: absolute
+	top: 93px
+	right: 102px
+	img
+		max-width: 100%
+		max-height: 100%
+		display: block
 .section5
 	background: #131d31 url(../img/bg-sec5.jpg) no-repeat center top
 	background-size: cover

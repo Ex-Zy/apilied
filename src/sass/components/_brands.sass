@@ -1,8 +1,13 @@
 .brands
 	background-color: #fff
+	&__in
+		@extend %inner
 .brands-list
 	font-size: 0
-	+justify
+	+rmin(1499)
+		+justify
+	+r(1499)
+		text-align: left
 	&__item
 		display: inline-block
 		vertical-align: middle
