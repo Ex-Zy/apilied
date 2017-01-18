@@ -162,7 +162,8 @@ html {
   background-color: #00aaff;
   font-family: "Roboto Bold", Arial, sans-serif;
   font-weight: normal;
-  padding: 18px 25px;
+  padding: 17px 19px;
+  font-size: 14px;
 }
 
 .btn:hover, .btn:focus {
@@ -320,6 +321,28 @@ html {
   transform: translateX(14px) translateY(-9px) rotate(45deg);
 }
 
+.btn-close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 10px;
+  background: transparent;
+  font-family: "Roboto Medium", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: #0ca8fd;
+  padding-right: 32px;
+}
+
+.btn-close i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .inner, .brands__in, .picture-wrp {
   max-width: 1880px;
   margin: auto;
@@ -336,7 +359,7 @@ html {
   text-align: center;
 }
 
-.picture-wrp img, .company img {
+.picture-wrp img, .company img, .advantages-graph__basic img {
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -357,6 +380,10 @@ body {
   color: #fff;
 }
 
+body.is-hidden {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -369,6 +396,7 @@ a {
   font-family: "Roboto Light", Arial, sans-serif;
   font-weight: normal;
   font-size: 72px;
+  font-size: calc(40px + (72 - 40) * ((100vw - 900px) / (1920 - 900)));
   line-height: 1;
 }
 
@@ -381,6 +409,7 @@ a {
   font-family: "Roboto Medium", Arial, sans-serif;
   font-weight: normal;
   font-size: 48px;
+  font-size: calc(32px + (48 - 32) * ((100vw - 900px) / (1920 - 900)));
 }
 
 .icon-check {
@@ -418,7 +447,7 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 39px;
-  background-position: -55px -110px;
+  background-position: 0px -110px;
 }
 
 .i-icon-guard {
@@ -432,14 +461,14 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: 0px 0px;
+  background-position: -110px 0px;
 }
 
 .i-icon-link {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: -110px 0px;
+  background-position: 0px 0px;
 }
 
 .i-icon-profile {
@@ -453,7 +482,7 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: -55px -55px;
+  background-position: 0px -55px;
 }
 
 .i-icon-worker {
@@ -467,14 +496,49 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: 0px -55px;
+  background-position: -55px -55px;
 }
 
 .i-icon-help-new {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 39px;
-  background-position: 0px -110px;
+  background-position: -55px -110px;
+}
+
+.i-icon-ru {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 11px;
+  background-position: -165px -110px;
+}
+
+.i-icon-sw {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 11px;
+  background-position: -210px -101px;
+}
+
+.i-icon-rum {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 11px;
+  background-position: -210px -80px;
+}
+
+.i-icon-uk {
+  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 11px;
+  background-position: -210px -122px;
+}
+
+.i-icon-close {
+  background-image: url("../img/sprite.png");
+  width: 15px;
+  height: 15px;
+  background-position: -210px -55px;
 }
 
 .out {
@@ -573,7 +637,7 @@ a {
 
 .section6 {
   text-align: center;
-  background-color: #071E39;
+  background-color: #071e39;
 }
 
 .section6 .inner {
@@ -1402,6 +1466,69 @@ a {
   padding: 0 10px;
 }
 
+.advantages-top {
+  *zoom: 1;
+  padding-top: 186px;
+}
+
+.advantages-top:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.advantages-text {
+  position: relative;
+  max-width: 400px;
+  line-height: 1;
+  margin-top: 50px;
+  margin-right: 9.18919%;
+  margin-bottom: 220px;
+  float: right;
+}
+
+.advantages-text:before, .advantages-text:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.advantages-text:before {
+  width: 149px;
+  height: 186px;
+  background: url(../img/tail.png) no-repeat center;
+  top: 100%;
+  right: 37px;
+  margin-top: 34px;
+}
+
+.advantages-text:after {
+  height: 1px;
+  width: 193px;
+  top: 100%;
+  right: -62px;
+  margin-top: 220px;
+  background: #071e39;
+  z-index: 1;
+}
+
+.advantages-text__title {
+  font-family: "Roboto Medium", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  font-size: calc(28px + (48 - 28) * ((100vw - 900px) / (1920 - 900)));
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-bottom: calc(10px + (20 - 10) * ((100vw - 900px) / (1920 - 900)));
+}
+
+.advantages-text__bottom {
+  font-size: 28px;
+  font-size: calc(20px + (28 - 20) * ((100vw - 900px) / (1920 - 900)));
+  line-height: 1.2;
+}
+
 .advantage {
   margin: auto;
   max-width: 260px;
@@ -1454,6 +1581,167 @@ a {
   text-align-last: center;
 }
 
+.advantages-graph {
+  position: relative;
+  float: right;
+  width: 51.35135135135135%;
+  min-width: 780px;
+  margin-right: 6.48649%;
+}
+
+.advantages-graph__main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100px;
+  margin-right: -6.84211%;
+}
+
+.advantages-graph__point {
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 1px;
+  height: 1px;
+}
+
+.advantages-graph__point:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #FFF;
+  margin: -2px 0 0 -2px;
+}
+
+.advantages-graph__point_1 {
+  left: 0;
+}
+
+.advantages-graph__point_2 {
+  left: 7.76471%;
+}
+
+.advantages-graph__point_3 {
+  left: 15.52941%;
+}
+
+.advantages-graph__point_4 {
+  left: 23.29412%;
+}
+
+.advantages-graph__point_5 {
+  left: 31.05882%;
+}
+
+.advantages-graph__point_6 {
+  left: 38.82353%;
+}
+
+.advantages-graph__point_7 {
+  left: 46.58824%;
+}
+
+.advantages-graph__point_8 {
+  left: 54.35294%;
+}
+
+.advantages-graph__point_9 {
+  left: 62.11765%;
+}
+
+.advantages-graph__point_10 {
+  left: 69.88235%;
+}
+
+.advantages-graph__point_11 {
+  left: 77.64706%;
+}
+
+.advantages-graph__point_12 {
+  left: 85.41176%;
+}
+
+.tringle {
+  width: 3.47918vw;
+  left: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+.tringle img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  background-color: #000;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.overlay.is-active {
+  visibility: visible;
+  opacity: 0.76;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  text-align: center;
+  font-size: 0;
+}
+
+.popup:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.popup__window {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 808px;
+  width: 100%;
+  box-shadow: 0 0 21px #000000;
+  border: 1px solid #29293c;
+  background-color: #1b1b28;
+}
+
+.popup__body {
+  font-size: 16px;
+}
+
+.popup__top {
+  background-color: #181823;
+  text-align: left;
+  padding: 9px 44px;
+  position: relative;
+}
+
+.popup__top-title {
+  font-size: 30px;
+  font-family: "Roboto Light", Arial, sans-serif;
+  font-weight: normal;
+}
+
 @media only screen and (min-width: 1499px) {
 
   .brands-list {
@@ -1476,10 +1764,56 @@ a {
   }
 }
 
+@media (min-width: 1920px) {
+
+  .title-primary {
+    font-size: 72px;
+  }
+
+  .title-secondary {
+    font-size: 48px;
+  }
+
+  .advantages-text__title {
+    font-size: 48px;
+  }
+
+  .advantages-text__title {
+    margin-bottom: 20px;
+  }
+
+  .advantages-text__bottom {
+    font-size: 28px;
+  }
+}
+
 @media only screen and (max-width: 1499px) {
 
   .brands-list {
     text-align: left;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .title-primary {
+    font-size: 40px;
+  }
+
+  .title-secondary {
+    font-size: 32px;
+  }
+
+  .advantages-text__title {
+    font-size: 28px;
+  }
+
+  .advantages-text__title {
+    margin-bottom: 10px;
+  }
+
+  .advantages-text__bottom {
+    font-size: 20px;
   }
 }
 
