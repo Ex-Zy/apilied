@@ -40,6 +40,49 @@
 		width: 16% 
 		margin-top: 69px
 		padding: 0 10px
+.advantages-top
+	+clr
+	padding-top: 186px
+.advantages-text
+	position: relative
+	max-width: 400px
+	line-height: 1
+	margin-top: 50px
+	margin-right: (170px / 1850px) * 100%
+	margin-bottom: 220px
+	float: right
+	&:before,
+	&:after
+		content: ''
+		display: block
+		position: absolute
+	&:before
+		width: 149px
+		height: 186px
+		background: url(../img/tail.png) no-repeat center
+		top: 100%
+		right: 37px
+		margin-top: 34px
+	&:after
+		height: 1px
+		width: 193px
+		top: 100%
+		right: -62px
+		margin-top: 220px
+		background: $section-bg-dark
+		z-index: 1
+	&__title
+		+roboto-med
+		font-size: 48px
+		+css-lock(28, 48, 900, 1920)
+		letter-spacing: -0.01em
+		text-transform: capitalize
+		margin-bottom: 20px
+		+css-lock(10, 20, 900, 1920, margin-bottom)
+	&__bottom
+		font-size: 28px
+		+css-lock(20, 28, 900, 1920)
+		line-height: 1.2
 .advantage
 	margin: auto
 	max-width: 260px
@@ -78,3 +121,66 @@
 		font-size: 18px
 		line-height: 1.2
 		text-align-last: center
+.advantages-graph
+	position: relative
+	float: right
+	width: 51.35135135135135%
+	min-width: 780px
+	margin-right: (120px / 1850px) * 100%
+	&__basic
+		img
+			@extend %img
+	&__main
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 100px
+		margin-right: -(65px / 950px) * 100%
+	&__point
+		position: absolute
+		left: 0
+		bottom: 3px
+		width: 1px
+		height: 1px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 4px
+			height: 4px
+			background-color: #FFF
+			margin: -2px 0 0 -2px
+		&_1
+			left: 0
+		&_2
+			left: (66px / 850px) * 100%
+		&_3
+			left: (132px / 850px) * 100%
+		&_4
+			left: (198px / 850px) * 100%
+		&_5
+			left: (264px / 850px) * 100%
+		&_6
+			left: (330px / 850px) * 100%
+		&_7
+			left: (396px / 850px) * 100% 
+		&_8
+			left: (462px / 850px) * 100%
+		&_9
+			left: (528px / 850px) * 100%
+		&_10
+			left: (594px / 850px) * 100%
+		&_11
+			left: (660px / 850px) * 100%
+		&_12
+			left: (726px / 850px) * 100%
+.tringle
+	width: (66px / 1897px) * 100vw
+	left: 100%
+	bottom: 0
+	position: absolute
+	img
+		display: block
+		width: 100%
+		height: auto

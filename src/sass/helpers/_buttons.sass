@@ -4,7 +4,8 @@
 	line-height: 1
 	background-color: $blue
 	+roboto-bold
-	padding: 18px 25px
+	padding: 17px 19px
+	font-size: 14px
 	&:hover,
 	&:focus
 		background-color: lighten($blue, 10%)
@@ -105,3 +106,21 @@
 				transform: translateX(15px) translateY(9px) rotate(-45deg)
 			&::after
 				transform: translateX(14px) translateY(-9px) rotate(45deg)
+
+.btn-close
+	position: absolute
+	top: 0
+	bottom: 0
+	margin: auto
+	right: 10px
+	background: transparent
+	+roboto-med
+	font-size: 14px
+	color: #0ca8fd
+	padding-right: 32px
+	i
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		margin: auto 
