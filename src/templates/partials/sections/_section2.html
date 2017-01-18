@@ -1,0 +1,47 @@
+{% import '../../data/dataAdvantagesList.html' as items %}
+
+<!-- BEGIN section2 -->
+<section class="section2">
+
+	<!-- BEGIN inner -->
+	<div class="inner">
+		
+		<!-- BEGIN advantages-wrp -->
+		<div class="advantages-wrp">
+
+			<div class="advantages-tringle advantages-tringle_1"></div>
+			<div class="advantages-tringle advantages-tringle_2"></div>
+			<div class="advantages-tringle advantages-tringle_3"></div>
+			<div class="advantages-tringle advantages-tringle_4"></div>
+			
+			<!-- BEGIN advantages-list -->
+			<ul class="advantages-list">
+				
+				{% for item in items.advantagesList %}
+
+				<!-- BEGIN advantages-list__item -->
+				<li class="advantages-list__item">
+					<div class="advantage">
+						<div class="advantage__media">
+							<i class="{{item.icon}}"></i>
+						</div>
+						<div class="advantage__descr">
+							{{item.description}}
+						</div>
+					</div>
+				</li>
+				<!-- END advantages-list__item -->
+				
+				{% endfor %}
+
+			</ul>
+			<!-- END advantages-list -->
+
+		</div>
+		<!-- END advantages-wrp -->
+
+	</div>
+	<!-- END inner -->
+
+</section>
+<!-- END section2 -->

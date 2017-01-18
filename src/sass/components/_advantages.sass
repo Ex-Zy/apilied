@@ -1,0 +1,80 @@
+.advantages-wrp
+	position: relative
+	padding: 40px
+	border: 1px solid $blue
+.advantages-tringle
+	position: absolute
+	&_1
+		position: absolute
+		top: 0
+		left: 0
+		border: 15px solid transparent
+		border-left: 15px solid $blue
+		border-top: 15px solid $blue
+	&_2
+		position: absolute
+		top: 0
+		right: 0
+		border: 15px solid transparent
+		border-right: 15px solid $blue
+		border-top: 15px solid $blue
+	&_3
+		position: absolute
+		bottom: 0
+		right: 0
+		border: 15px solid transparent
+		border-right: 15px solid $blue
+		border-bottom: 15px solid $blue
+	&_4
+		position: absolute
+		bottom: 0
+		left: 0
+		border: 15px solid transparent
+		border-left: 15px solid $blue
+		border-bottom: 15px solid $blue
+.advantages-list
+	+justify
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 16% 
+		margin-top: 69px
+		padding: 0 10px
+.advantage
+	margin: auto
+	max-width: 260px
+	text-align: center
+	&__media
+		position: relative
+		width: 82px
+		height: 82px
+		border: 2px solid #af25eb
+		border-radius: 50%
+		margin: 0 auto 62px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			width: 3px
+			height: 22px
+			background-color: #af25eb
+			left: 0
+			right: 0
+			margin: auto
+		&:before
+			bottom: 100%
+			margin-bottom: 13px
+		&:after
+			top: 100%
+			margin-top: 13px
+		i
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+	&__descr
+		font-size: 18px
+		line-height: 1.2
+		text-align-last: center
