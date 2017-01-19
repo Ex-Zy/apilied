@@ -5,5 +5,5 @@ $(function() {
 	//=include partial/menu.js
 	//=include partial/fixedTopper.js
 	//=include partial/popup.js
-
+	//=include partial/animation.js
 })
