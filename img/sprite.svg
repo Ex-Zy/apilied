@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-check" viewBox="0 0 20 20">
     <title/>
     <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zM8 15l-5-5 1.4-1.4L8 12.2l7.6-7.6L17 6l-9 9z" fill-rule="evenodd"/>
+</symbol><symbol id="icon-close" viewBox="0 0 290.1 290">
+    <style>
+        .st0{fill:#231f20}
+    </style>
+    <path class="st0" d="M173.3 145.1L284.2 34.2c7.8-7.8 7.8-20.5 0-28.3s-20.5-7.8-28.3 0L145.1 116.8 34.2 5.9C26.4-2 13.7-2 5.9 5.9s-7.8 20.5 0 28.3l110.9 110.9L6 255.8c-7.8 7.8-7.8 20.5 0 28.3 3.9 3.9 9 5.9 14 5.9 5.1 0 10.2-2 14.1-5.9L145 173.2l110.9 110.9c3.9 3.9 9 5.9 14.1 5.9s10.2-2 14.1-5.9c7.8-7.8 7.8-20.5 0-28.3L173.3 145.1z"/>
 </symbol></svg>

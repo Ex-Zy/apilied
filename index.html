@@ -451,7 +451,7 @@
             <div class="offer__media"> <img src="img/donut.svg" alt="" width="392" height="386"> </div>
             <div class="offer__title">СОЧНЫЕ ОФФЕРЫ</div>
             <div class="offer__button">
-              <a href="#" class="btn-secondary"> <span class="btn-secondary__in"></span> <span class="btn-secondary__text">ОТКРЫТЬ ТОП</span> </a>
+              <a href="#" class="btn-secondary js-open-popup" data-link="offers"> <span class="btn-secondary__in"></span> <span class="btn-secondary__text">ОТКРЫТЬ ТОП</span> </a>
             </div>
           </div>
         </div>
@@ -606,36 +606,164 @@
     </div>
     <!-- END content -->
     <!-- BEGIN overlay -->
-    <div class="overlay is-active js-overlay"></div>
+    <div class="overlay js-overlay"></div>
     <!-- END overlay -->
     <!-- BEGIN popup -->
-    <div class="popup js-popup is-open">
+    <div class="popup js-popup" data-popup="offers">
       <!-- BEGIN popup__window -->
       <div class="popup__window">
         <div class="popup__top">
           <div class="popup__top-title">Топ офферов</div>
-          <div class="popup__top-button"> <button type="button" class="btn-close js-close">
+          <div class="popup__top-button"> <button type="button" class="btn-close js-close-popup">
 					ЗАКРЫТЬ
-					<i class="i-icon-close"></i>
+					
+<svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
+
 				</button> </div>
         </div>
         <div class="popup__body">
           <div class="popup__caption">
-            <div class="popup__caption-name">НАЗВАНИЕ</div>
-            <div class="popup__caption-name">ГЕО</div>
-            <div class="popup__caption-name">ОТЧИСЛЕНИЯ</div>
+            <div class="popup__caption-col popup__caption-col_1">НАЗВАНИЕ</div>
+            <div class="popup__caption-col popup__caption-col_2">ГЕО</div>
+            <div class="popup__caption-col popup__caption-col_3">ОТЧИСЛЕНИЯ</div>
           </div>
           <div class="popup__row">
-            <div class="popup__col popup__col1">
+            <div class="popup__col popup__col_1">
               <div class="product">
                 <div class="product__media"> <img src="img/product.png" alt=""> </div>
                 <div class="product__desc"> Chocolate slim </div>
               </div>
             </div>
-            <div class="popup__col popup__col2">
+            <div class="popup__col popup__col_2">
               <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
             </div>
-            <div class="popup__col popup__col3">
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
+              <div class="price">700 руб</div>
+            </div>
+          </div>
+          <div class="popup__row">
+            <div class="popup__col popup__col_1">
+              <div class="product">
+                <div class="product__media"> <img src="img/product.png" alt=""> </div>
+                <div class="product__desc"> Chocolate slim </div>
+              </div>
+            </div>
+            <div class="popup__col popup__col_2">
+              <div class="flags"> <i class="i-icon-ru"></i> <i class="i-icon-sw"></i> <i class="i-icon-rum"></i> <i class="i-icon-uk"></i> </div>
+            </div>
+            <div class="popup__col popup__col_3">
               <div class="price">700 руб</div>
             </div>
           </div>

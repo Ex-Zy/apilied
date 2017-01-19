@@ -326,21 +326,31 @@ html {
   top: 0;
   bottom: 0;
   margin: auto;
-  right: 10px;
+  right: 5px;
   background: transparent;
   font-family: "Roboto Medium", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
   color: #0ca8fd;
   padding-right: 32px;
+  transition: color 0.3s;
 }
 
-.btn-close i {
+.btn-close:hover {
+  color: #58c3fe;
+}
+
+.btn-close:hover .icon {
+  fill: #58c3fe;
+}
+
+.btn-close .icon {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto;
+  transition: fill 0.3s;
 }
 
 .inner, .brands__in, .picture-wrp {
@@ -369,6 +379,12 @@ html {
   width: 1em;
   height: 1em;
   fill: #000;
+}
+
+.icon-close {
+  width: 1em;
+  height: 1em;
+  fill: initial;
 }
 
 body {
@@ -417,6 +433,11 @@ a {
   fill: #fff;
 }
 
+.icon-close {
+  font-size: 15px;
+  fill: #0ca8fd;
+}
+
 [class^="i-icon"] {
   display: inline-block;
   vertical-align: middle;
@@ -461,14 +482,14 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: -110px 0px;
+  background-position: 0px -55px;
 }
 
 .i-icon-link {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: 0px 0px;
+  background-position: -55px -55px;
 }
 
 .i-icon-profile {
@@ -482,21 +503,21 @@ a {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: 0px -55px;
+  background-position: -110px 0px;
 }
 
 .i-icon-worker {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: -55px 0px;
+  background-position: 0px 0px;
 }
 
 .i-icon-discount {
   background-image: url("../img/sprite.png");
   width: 45px;
   height: 45px;
-  background-position: -55px -55px;
+  background-position: -55px 0px;
 }
 
 .i-icon-help-new {
@@ -510,35 +531,28 @@ a {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 11px;
-  background-position: -165px -110px;
+  background-position: -210px -76px;
 }
 
 .i-icon-sw {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 11px;
-  background-position: -210px -101px;
+  background-position: -210px -97px;
 }
 
 .i-icon-rum {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 11px;
-  background-position: -210px -80px;
+  background-position: -210px -55px;
 }
 
 .i-icon-uk {
   background-image: url("../img/sprite.png");
   width: 16px;
   height: 11px;
-  background-position: -210px -122px;
-}
-
-.i-icon-close {
-  background-image: url("../img/sprite.png");
-  width: 15px;
-  height: 15px;
-  background-position: -210px -55px;
+  background-position: -210px -118px;
 }
 
 .out {
@@ -1698,13 +1712,24 @@ a {
 
 .popup {
   position: fixed;
+  padding: 60px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 300;
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
   text-align: center;
   font-size: 0;
+}
+
+.popup.is-active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .popup:before {
@@ -1729,6 +1754,14 @@ a {
   font-size: 16px;
 }
 
+.popup__caption {
+  padding: 22px 0;
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
 .popup__top {
   background-color: #181823;
   text-align: left;
@@ -1740,6 +1773,70 @@ a {
   font-size: 30px;
   font-family: "Roboto Light", Arial, sans-serif;
   font-weight: normal;
+}
+
+.popup__row {
+  background-color: #1B1B28;
+  padding: 12px 0px;
+  display: table;
+  width: 100%;
+}
+
+.popup__row:nth-child(even) {
+  background-color: #181823;
+}
+
+.popup__col, .popup__caption-col {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.popup__col_1, .popup__caption-col_1 {
+  width: 46%;
+  padding-left: 44px;
+}
+
+.popup__col_2, .popup__caption-col_2 {
+  width: 35%;
+}
+
+.popup__col_3, .popup__caption-col_3 {
+  width: 19%;
+  padding-right: 52px;
+}
+
+.product {
+  display: table;
+}
+
+.product__media {
+  display: table-cell;
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.product__media img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.product__desc {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 22px;
+}
+
+.flags {
+  font-size: 0;
+}
+
+.flags i + i {
+  margin-left: 16px;
 }
 
 @media only screen and (min-width: 1499px) {
