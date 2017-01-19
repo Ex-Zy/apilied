@@ -15,11 +15,20 @@
 		opacity: 0.76
 .popup
 	position: fixed
+	padding: 60px
 	top: 0
 	right: 0
 	bottom: 0
 	left: 0
 	z-index: 300
+	overflow-x: hidden
+	overflow-y: auto
+	visibility: hidden
+	opacity: 0
+	transition: all 0.3s
+	&.is-active
+		visibility: visible
+		opacity: 1
 	+vertical
 	&__window
 		display: inline-block
@@ -31,6 +40,12 @@
 		background-color: #1b1b28
 	&__body
 		font-size: 16px
+	&__caption
+		padding: 22px 0
+		display: table
+		width: 100%
+		font-size: 14px
+		line-height: 1.2
 	&__top
 		background-color: #181823
 		text-align: left
@@ -39,4 +54,44 @@
 	&__top-title
 		font-size: 30px
 		+roboto-light
-	
+	&__row
+		background-color: #1B1B28
+		padding: 12px 0px 
+		display: table
+		width: 100%
+		&:nth-child(even)
+			background-color: #181823
+	&__col,
+	&__caption-col
+		display: table-cell
+		vertical-align: middle
+		text-align: left
+		&_1
+			width: 46%
+			padding-left: 44px
+		&_2
+			width: 35%
+		&_3
+			width: 19%
+			padding-right: 52px
+.product
+	display: table
+	&__media
+		display: table-cell
+		vertical-align: middle
+		width: 36px
+		height: 36px
+		overflow: hidden
+		img
+			display: block
+			max-width: 100%
+			max-height: 100%
+			margin: auto
+	&__desc
+		display: table-cell
+		vertical-align: middle
+		padding-left: 22px
+.flags
+	font-size: 0
+	i + i
+		margin-left: 16px
