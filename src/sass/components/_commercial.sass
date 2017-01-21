@@ -2,14 +2,29 @@
 	position: relative
 	z-index: 5
 	font-size: 0
-	margin-left: (316px / 1850px) * 100% // делим на ширину контейнера минус padding
+	+rmin(1601)
+		padding-left: (316px / 1850px) * 100%
 	&__col
 		display: inline-block
 		vertical-align: top
-		max-width: 384px
+		+lg
+			text-align: right
+			width: 50%
 		+ .commercial__col
-			margin-left: 56px
+			padding-left: 56px
+			+lg
+				text-align: left
 	&__btn
-		line-height: 1
-		padding: 27px 72px
-		margin: 56px 0 0 47px
+		margin-top: 56px
+		padding-left: 47px
+		+lg
+			padding-left: 0
+		.btn-primary
+			line-height: 1
+			padding: 27px 72px
+	.list
+		max-width: 384px
+		display: inline-block
+		text-align: left
+		+lg
+			max-width: 500px

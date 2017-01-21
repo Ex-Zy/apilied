@@ -4,10 +4,18 @@
 	right: 0
 	bottom: 0
 	z-index: 2
+	+md
+		background: url(../img/diagrams/diagram-webmaster-bg.png) no-repeat center
+		height: 300px
+		background-size: cover
+		.points-wrp
+			display: none
 	img
 		display: block
 		height: auto
 		width: 100%
+		+md
+			display: none
 	&__board
 		span
 			position: absolute

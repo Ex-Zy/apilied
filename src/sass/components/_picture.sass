@@ -13,10 +13,18 @@
 	position: absolute
 	top: 93px
 	right: 102px
+	+lg
+		right: -180px
+	+md
+		display: none
 .picture-man
 	width: 560px
 	height: 547px
 	position: absolute
 	top: 82px
-	left: 211px - 40px
+	left: (191px / 1850px) * 100%
 	z-index: 1
+	+lg
+		left: -80px
+	+md
+		display: none

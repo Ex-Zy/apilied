@@ -1,13 +1,17 @@
 .columns
 	height: 100%
-	// display: flex
-	// flex-direction: row
-	// justify-content: space-around
-	// align-items: center
+	padding: 100px 0
 	+vertical
 .col1,
 .col2
 	display: inline-block
 	vertical-align: middle
+.col1
+	width: 35%
+	text-align: right
 .col2
-	margin-left: 50px
+	width: 65%
+	padding-left: 10%
+.figure
+	img
+		@extend %img
