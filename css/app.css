@@ -369,7 +369,7 @@ html {
   text-align: center;
 }
 
-.picture-wrp img, .company img, .advantages-graph__basic img {
+.figure img, .picture-wrp img, .company img, .advantages-graph__basic img {
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -581,7 +581,8 @@ a {
 .section1 {
   background-color: #7200d4;
   height: 100vh;
-  min-height: 1000px;
+  min-height: 830px;
+  max-height: 1200px;
 }
 
 .section1 .inner {
@@ -711,6 +712,7 @@ a {
 
 .columns {
   height: 100%;
+  padding: 100px 0;
   text-align: center;
   font-size: 0;
 }
@@ -729,8 +731,14 @@ a {
   vertical-align: middle;
 }
 
+.col1 {
+  width: 35%;
+  text-align: right;
+}
+
 .col2 {
-  margin-left: 50px;
+  width: 65%;
+  padding-left: 10%;
 }
 
 .footer {
@@ -1027,27 +1035,31 @@ a {
   position: relative;
   z-index: 5;
   font-size: 0;
-  margin-left: 31.89189%;
 }
 
 .webmasters__col {
   display: inline-block;
   vertical-align: top;
-  max-width: 534px;
-}
-
-.webmasters__col:nth-of-type(1) {
-  max-width: 380px;
+  width: 50%;
 }
 
 .webmasters__col + .webmasters__col {
-  margin-left: 66px;
+  padding-left: 66px;
+}
+
+.webmasters__col .list {
+  text-align: left;
+  display: inline-block;
 }
 
 .webmasters__btn {
-  line-height: 1;
+  margin-top: 56px;
+  padding-left: 47px;
+}
+
+.webmasters__btn .btn-primary {
   padding: 27px 72px;
-  margin: 56px 0 0 47px;
+  line-height: 1;
 }
 
 .diagram-webmaster {
@@ -1145,23 +1157,31 @@ a {
   position: relative;
   z-index: 5;
   font-size: 0;
-  margin-left: 17.08108%;
 }
 
 .commercial__col {
   display: inline-block;
   vertical-align: top;
-  max-width: 384px;
 }
 
 .commercial__col + .commercial__col {
-  margin-left: 56px;
+  padding-left: 56px;
 }
 
 .commercial__btn {
+  margin-top: 56px;
+  padding-left: 47px;
+}
+
+.commercial__btn .btn-primary {
   line-height: 1;
   padding: 27px 72px;
-  margin: 56px 0 0 47px;
+}
+
+.commercial .list {
+  max-width: 384px;
+  display: inline-block;
+  text-align: left;
 }
 
 .diagram-commercial {
@@ -1345,7 +1365,7 @@ a {
   height: 547px;
   position: absolute;
   top: 82px;
-  left: 171px;
+  left: 10.32432%;
   z-index: 1;
 }
 
@@ -1375,6 +1395,7 @@ a {
   text-align: center;
   line-height: 1;
   max-width: 433px;
+  display: inline-block;
 }
 
 .company__logo {
@@ -1385,6 +1406,7 @@ a {
 
 .company__text {
   font-size: 32px;
+  font-size: calc(24px + (32 - 24) * ((100vw - 900px) / (1920 - 900)));
   margin-top: 5px;
 }
 
@@ -1895,6 +1917,25 @@ a {
   }
 }
 
+@media only screen and (min-width: 1601px) {
+
+  .webmasters {
+    padding-left: 38%;
+  }
+
+  .webmasters__col {
+    max-width: 534px;
+  }
+
+  .webmasters__col:nth-of-type(1) {
+    max-width: 380px;
+  }
+
+  .commercial {
+    padding-left: 17.08108%;
+  }
+}
+
 @media (min-width: 1920px) {
 
   .title-primary {
@@ -1903,6 +1944,10 @@ a {
 
   .title-secondary {
     font-size: 48px;
+  }
+
+  .company__text {
+    font-size: 32px;
   }
 
   .advantages-text__title {
@@ -1918,10 +1963,80 @@ a {
   }
 }
 
+@media only screen and (max-width: 1600px) {
+
+  .webmasters__col:nth-of-type(1) {
+    text-align: right;
+  }
+
+  .webmasters__col .list {
+    max-width: 450px;
+  }
+
+  .webmasters__btn {
+    padding-left: 0;
+  }
+
+  .commercial__col {
+    text-align: right;
+    width: 50%;
+  }
+
+  .commercial__col + .commercial__col {
+    text-align: left;
+  }
+
+  .commercial__btn {
+    padding-left: 0;
+  }
+
+  .commercial .list {
+    max-width: 500px;
+  }
+
+  .picture-human {
+    right: -180px;
+  }
+
+  .picture-man {
+    left: -80px;
+  }
+
+  .company img {
+    width: 80%;
+    margin: auto;
+  }
+}
+
 @media only screen and (max-width: 1499px) {
 
   .brands-list {
     text-align: left;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .diagram-webmaster {
+    background: url(../img/diagrams/diagram-webmaster-bg.png) no-repeat center;
+    height: 300px;
+    background-size: cover;
+  }
+
+  .diagram-webmaster .points-wrp {
+    display: none;
+  }
+
+  .diagram-webmaster img {
+    display: none;
+  }
+
+  .picture-human {
+    display: none;
+  }
+
+  .picture-man {
+    display: none;
   }
 }
 
@@ -1933,6 +2048,10 @@ a {
 
   .title-secondary {
     font-size: 32px;
+  }
+
+  .company__text {
+    font-size: 24px;
   }
 
   .advantages-text__title {
