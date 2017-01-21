@@ -1,4 +1,4 @@
-{# {% import '../../data/dataOffersList.html' as items %} #}
+{% import '../../data/dataOffersList.html' as items %}
 
 <!-- BEGIN popup -->
 <div class="popup js-popup" data-popup="offers">
@@ -20,236 +20,37 @@
 				<div class="popup__caption-col popup__caption-col_2">ГЕО</div>
 				<div class="popup__caption-col popup__caption-col_3">ОТЧИСЛЕНИЯ</div>
 			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
+
+			{% for item in items.offersList %}
+
+				<div class="popup__row">
+
+					<div class="popup__col popup__col_1">
+						<div class="product">
+							<div class="product__media">
+								<img src="img/{{item.prodImg}}" alt="">
+							</div>
+							<div class="product__desc">
+								{{item.prodDesc}}
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
+
+					<div class="popup__col popup__col_2">
+						<div class="flags">
+							{% for unit in item.flagsIconClass %}
+								<i class="{{unit}}"></i>
+							{% endfor %}
 						</div>
 					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
+
+					<div class="popup__col popup__col_3">
+						<div class="price">{{item.prodPrice}}</div>
 					</div>
+					
 				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
-			<div class="popup__row">
-				<div class="popup__col popup__col_1">
-					<div class="product">
-						<div class="product__media">
-							<img src="img/product.png" alt="">
-						</div>
-						<div class="product__desc">
-							Chocolate slim
-						</div>
-					</div>
-				</div>
-				<div class="popup__col popup__col_2">
-					<div class="flags">
-						<i class="i-icon-ru"></i>
-						<i class="i-icon-sw"></i>
-						<i class="i-icon-rum"></i>
-						<i class="i-icon-uk"></i>
-					</div>
-				</div>
-				<div class="popup__col popup__col_3">
-					<div class="price">700 руб</div>
-				</div>
-			</div>
+
+			{% endfor %}
 		</div>
 	</div>
 	<!-- END popup__window -->
