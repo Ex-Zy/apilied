@@ -1,5 +1,5 @@
 .overlay
-	background-color: #000
+	background-color: $violet
 	opacity: 0
 	position: fixed
 	top: 0
@@ -12,7 +12,7 @@
 	transition: all 0.3s
 	&.is-active
 		visibility: visible
-		opacity: 0.76
+		opacity: 1
 .popup
 	position: fixed
 	padding: 60px
@@ -95,3 +95,16 @@
 	font-size: 0
 	i + i
 		margin-left: 16px
+.popup-reg
+	&__window
+		display: inline-block
+		vertical-align: middle
+		max-width: 864px
+	&__top
+		text-align: left
+	&__body
+		padding-top: 126px
+	&__sub
+		padding-top: 8px
+	&__title
+		font-size: 48px

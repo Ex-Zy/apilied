@@ -1,18 +1,16 @@
-// $('.js-menu').click(function() {
-// 	var hasActive = $(this).hasClass('is-active');
+function showSidebar() {
+	var menu = $('.js-menu');
+	var sidebar = $('.js-sidebar');
 
-// 	if(!hasActive) {
-// 		$(this).addClass('is-active');
-// 	} else {
-// 		$(this).removeClass('is-active');
-// 	}
-// });
+	menu.add(sidebar).on('mouseenter', function() {
+		sidebar.addClass('is-active');
+	});
 
-$('.js-menu').hover(
-  function() {
-    $(this).add('.js-sidebar').addClass('is-active');
-  },
-  function() {
-    // $(this).add('.js-sidebar').removeClass('is-active');
-  }
-);
+	menu.add(sidebar).on('mouseleave', function() {
+		sidebar.removeClass('is-active');
+	});
+
+
+}
+
+showSidebar();

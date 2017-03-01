@@ -3,7 +3,7 @@
 function showAnimation() {
 	var scroll = $(window).scrollTop();
 	var section = $('.js-animate');
-	var win = $(window).scrollTop() + $(window).outerHeight() - 200;
+	var win = $(window).scrollTop() + $(window).outerHeight() / 2;
 
 	section.each(function () {
 		var top = $(this).offset().top;
