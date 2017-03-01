@@ -2317,21 +2317,20 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	}
 })();
 $(function () {
-	// $('.js-menu').click(function() {
-	// 	var hasActive = $(this).hasClass('is-active');
+	function showSidebar() {
+		var menu = $('.js-menu');
+		var sidebar = $('.js-sidebar');
 
-	// 	if(!hasActive) {
-	// 		$(this).addClass('is-active');
-	// 	} else {
-	// 		$(this).removeClass('is-active');
-	// 	}
-	// });
+		menu.add(sidebar).on('mouseenter', function () {
+			sidebar.addClass('is-active');
+		});
 
-	$('.js-menu').hover(function () {
-		$(this).add('.js-sidebar').addClass('is-active');
-	}, function () {
-		// $(this).add('.js-sidebar').removeClass('is-active');
-	});
+		menu.add(sidebar).on('mouseleave', function () {
+			sidebar.removeClass('is-active');
+		});
+	}
+
+	showSidebar();
 	$(window).scroll(function () {
 		var top = $(window).scrollTop();
 		var isFixed = $('.js-scroll').hasClass('is-fixed');
@@ -2353,6 +2352,8 @@ $(function () {
 
 		popup.add('.js-overlay').addClass('is-active');
 		$("body").addClass("is-hidden");
+
+		console.log(popup, link);
 	});
 	$(".js-close-popup").click(function () {
 		$(this).parents(".js-popup").add('.js-overlay').removeClass('is-active');
@@ -2363,7 +2364,7 @@ $(function () {
 	function showAnimation() {
 		var scroll = $(window).scrollTop();
 		var section = $('.js-animate');
-		var win = $(window).scrollTop() + $(window).outerHeight() - 200;
+		var win = $(window).scrollTop() + $(window).outerHeight() / 2;
 
 		section.each(function () {
 			var top = $(this).offset().top;
