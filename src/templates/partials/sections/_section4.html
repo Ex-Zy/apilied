@@ -1,4 +1,5 @@
 {% import '../../data/dataCommercialList.html' as units %}
+{% import '../../data/dataCommercialPoints.html' as items %}
 
 <!-- BEGIN section4 -->
 <section class="section4 js-animate">
@@ -67,36 +68,11 @@
 	<div class="diagram-commercial">
 		<img src="img/diagrams/diagram-commercial.png" alt="">
 		<div class="points-wrp">
-			<div class="point point-1 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-2 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-3 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-4 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-5 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-6 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-7 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-8 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-9 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
-			<div class="point point-10 diagram-commercial_point">
-				<div class="board board_1">+ LEAD</div>
-			</div>
+			{% for points in items.pointsCommercialList %}
+				<div class="{{points.pointClasses}}">
+					<div class="{{points.boardClasses}}">{{points.boardText}}</div>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 	<!-- END diagram-commercial -->

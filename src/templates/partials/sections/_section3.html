@@ -1,4 +1,5 @@
 {% import '../../data/dataWebmastersList.html' as units %}
+{% import '../../data/dataWebmasterPoints.html' as items %}
 
 <!-- BEGIN section3 -->
 <section class="section3 js-animate">
@@ -57,84 +58,14 @@
 	<div class="diagram-webmaster">
 		<img src="img/diagrams/diagram-webmaster.png" alt="">
 		<div class="points-wrp">
-			<div class="point point-1">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
+			{% for points in items.pointsWebmasterList %}
+				<div class="{{points.pointClasses}}">
+					<div class="{{points.boardClasses}}">
+						<span>{{points.infoText}}</span>
+						{{points.boardText}}
+					</div>
 				</div>
-			</div>
-			<div class="point point-2">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-3">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-4">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-5">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-6">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-7">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-8">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-9">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-10">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-11">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-12">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
-			<div class="point point-13">
-				<div class="board board_1 board_pink diagram-webmaster__board">
-					<span>выплачено</span>
-					+600руб
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 	<!-- END diagram-commercial -->
