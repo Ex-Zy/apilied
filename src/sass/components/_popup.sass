@@ -113,3 +113,63 @@
 		font-size: 48px
 		+sm
 			font-size: 32px
+.form
+	position: relative
+	&__bottom
+		text-align: right
+		margin-top: 40px
+.form-step-1
+	.form__row
+		counter-reset: list
+		&:not(:first-of-type)
+			padding-top: 60px
+		.btn-category
+			&__inner
+				&:before
+					counter-increment: list
+					content: '0' counter(list)
+					position: absolute
+					top: 0
+					left: 20px
+					z-index: 1
+					background-color: $violet
+					font-size: 18px
+					padding: 0 18px
+					margin-top: -6px
+	&__info
+		+roboto-bold
+		font-size: 24px
+		max-width: 380px
+		text-align: right
+		display: inline-block
+		position: absolute
+		right: 0
+		top: -210px
+		+sm
+			top: -263px
+.form-step-2
+	.form__row
+		&:not(:first-of-type)
+			margin-top: 12px
+.field
+	position: relative
+	border-bottom: 4px solid rgba(255, 255, 255, 0.4)
+	&:before
+		content: '*'
+		font-size: 30px
+		line-height: 1
+		position: absolute
+		top: 15px
+		right: 100%
+		margin-right: 14px
+		color: rgba(#fff, 0.4)
+.input
+	background: none
+	+roboto-bold
+	font-size: 30px
+	line-height: 1.2
+	padding: 12px 0
+	display: block
+	width: 100%
+	color: rgba(#fff, 0.4)
+	+placeholder-color(rgba(#fff, 0.4))

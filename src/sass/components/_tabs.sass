@@ -22,6 +22,10 @@
 		+sm-min
 			float: right
 			width: 592px
+	&__content-item
+		display: none
+		&.is-active
+			display: block
 	&__link
 		font-size: 24px
 		line-height: 1.2
@@ -49,14 +53,3 @@
 			&:after
 				transform: scaleY(1)
 				background-color: #fff
-.info
-	+roboto-bold
-	font-size: 24px
-	max-width: 380px
-	text-align: right
-	display: inline-block
-	position: absolute
-	right: 0
-	top: -210px
-	+sm
-		top: -263px

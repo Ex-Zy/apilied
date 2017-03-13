@@ -6,7 +6,7 @@
 		<div class="popup-reg__top">
 			<div class="popup-reg__title">Регистрация</div>
 			<div class="popup-reg__sub">
-				<a href="#" class="btn-back">вернуться на главную</a>
+				<a href="#" class="btn-back js-close-popup">вернуться на главную</a>
 			</div>
 		</div>
 		<div class="popup-reg__body">
@@ -22,34 +22,53 @@
 						<a href="#" class="tabs__link" data-link="step-3">ШАГ 3</a>
 					</li>
 				</ul>
-				<ul class="tabs__content">
-					<li class="tabs__content-item" data-content="step-1">
-						<span class="info">Выберите тип аккаунта</span>
-						<div class="buttons-row">
-							<a href="#" class="btn-category">
-								<div class="btn-category__inner">
-									<span>вебмастер</span>
-								</div>
-							</a>
-							<a href="#" class="btn-category">
-								<div class="btn-category__inner">
-									<span>рекламодатель</span>
-								</div>
-							</a>
+				<div class="tabs__content">
+					<form action="/" method="GET">
+						<div class="tabs__content-item form-step-1" data-content="step-1">
+							<div class="form__row">
+								<span class="form-step-1__info">Выберите тип аккаунта</span>
+								<button type="button" name="webmaster" class="btn-category">
+									<div class="btn-category__inner">
+										<span>вебмастер</span>
+									</div>
+								</button>
+								<button type="button" name="advertiser" class="btn-category">
+									<div class="btn-category__inner">
+										<span>рекламодатель</span>
+									</div>
+								</button>
+							</div>
+							<div class="form__bottom">
+								<button type="button" class="btn-main" disabled>
+									<span>Далее</span>
+								</button>
+							</div>
 						</div>
-						<div class="buttons-row buttons-row_right">
-							<a href="#" class="btn-main">
-								<span>Далее</span>
-							</a>
+						<div class="tabs__content-item form-step-2 is-active" data-content="step-2">
+							<div class="form__row">
+								<div class="field">
+									<input type="email" name="mail" class="input" placeholder="email" required>
+									<div class="input__failed">Не верно введен email</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="field">
+									<input type="password" name="password" class="input" placeholder="пароль" required>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="field">
+									<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
+								</div>
+							</div>
+							<div class="form__bottom">
+								<button type="button" class="btn-main" disabled>
+									<span>Далее</span>
+								</button>
+							</div>
 						</div>
-					</li>
-					<li class="tabs__content-item" data-content="step-2">
-						
-					</li>
-					<li class="tabs__content-item" data-content="step-3">
-						
-					</li>
-				</ul>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -109,7 +109,6 @@
 				transform: translateX(15px) translateY(9px) rotate(-45deg)
 			&::after
 				transform: translateX(14px) translateY(-9px) rotate(45deg)
-
 .btn-close
 	position: absolute
 	top: 0
@@ -142,11 +141,13 @@
 	font-size: 30px
 	line-height: 1
 	color: #fff
-	&:hover,
-	&:focus
-		top: 5px
-		&:after
-			display: none
+	background: transparent
+	&:not([disabled])
+		&:hover,
+		&:focus
+			top: 5px
+			&:after
+				display: none
 	&:after
 		content: ''
 		display: block
@@ -168,6 +169,7 @@
 	line-height: 1
 	color: rgba(#fff, 0.4)
 	word-break: break-word
+	background: transparent
 	+sm
 		margin-top: 40px
 	&:hover,
@@ -205,28 +207,6 @@
 		padding: 26px 15px
 		+sm
 			padding: 20px
-.buttons-row
-	counter-reset: list
-	&_right
-		+sm-min
-			text-align: right
-	&:not(:first-of-type)
-		padding-top: 40px
-		+sm-min
-			padding-top: 60px
-	.btn-category
-		&__inner
-			&:before
-				counter-increment: list
-				content: '0' counter(list)
-				position: absolute
-				top: 0
-				left: 20px
-				z-index: 1
-				background-color: $violet
-				font-size: 18px
-				padding: 0 18px
-				margin-top: -6px
 .btn-back
 	@extend %button-basic
 	font-size: 24px
