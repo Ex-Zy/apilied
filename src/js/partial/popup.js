@@ -7,8 +7,6 @@ $('.js-open-popup').click(function(e) {
 
 	popup.add('.js-overlay').addClass('is-active');
 	$("body").addClass("is-hidden");
-
-	console.log(popup, link);	
 });
 $(".js-close-popup").click(function (){
 	$(this).parents(".js-popup").add('.js-overlay').removeClass('is-active');

@@ -158,6 +158,38 @@ html {
   font-style: normal;
 }
 
+.inner, .picture-wrp {
+  max-width: 1880px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.btn, .btn-primary, .btn-secondary, .btn-variation {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.btn-main, .btn-category, .btn-back, .btn-change {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.picture-wrp img, .company img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
 .btn {
   color: #fff;
   line-height: 1;
@@ -466,8 +498,8 @@ html {
 .btn-back {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.4);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   padding-left: 30px;
   line-height: 1.4;
 }
@@ -489,44 +521,69 @@ html {
   border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
 }
 
-.btn-back:hover, .btn-back:focus {
+.btn-back:hover {
   color: #fff;
 }
 
-.btn-back:hover:before, .btn-back:focus:before {
+.btn-back:hover:before {
   border-right-color: #fff;
 }
 
-.inner, .picture-wrp {
-  max-width: 1880px;
+.btn-variation {
+  background: transparent;
+  min-width: 162px;
+  padding: 10px 15px;
+  color: #fff;
+  border: 4px solid #fff;
+  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-variation:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-variation:active {
+  top: 1px;
+}
+
+.btn-change {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-right: 50px;
+  line-height: 1.4;
+}
+
+.btn-change:hover {
+  color: #fff;
+}
+
+.btn-change:hover .icon {
+  fill: #fff;
+}
+
+.btn-change .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  padding: 0 15px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.btn, .btn-primary, .btn-secondary {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  text-align: center;
-}
-
-.btn-main, .btn-category, .btn-back {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-}
-
-.picture-wrp img, .company img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+.icon-change {
+  width: 1.13em;
+  height: 1em;
+  fill: initial;
 }
 
 .icon-check {
@@ -594,6 +651,11 @@ a {
 .icon-close {
   font-size: 15px;
   fill: #0ca8fd;
+}
+
+.icon-change {
+  font-size: 21px;
+  fill: rgba(255, 255, 255, 0.4);
 }
 
 [class^="i-icon"] {
@@ -2066,6 +2128,17 @@ a {
   color: rgba(255, 255, 255, 0.4);
 }
 
+.control {
+  position: absolute;
+  top: -226px;
+  right: 0;
+  text-align: right;
+}
+
+.control__bottom {
+  padding-top: 22px;
+}
+
 .tabs {
   text-align: left;
   *zoom: 1;
@@ -2233,7 +2306,7 @@ a {
 
   .tabs__content {
     float: right;
-    width: 592px;
+    width: 564px;
   }
 }
 

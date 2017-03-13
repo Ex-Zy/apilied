@@ -2316,6 +2316,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	}
 })();
 $(function () {
+	var touch = 'ontouchstart' in window;
+
+	!touch ? $('body').addClass('is-no-touch') : $('body').addClass('is-touch');
 	function showSidebar() {
 		var menu = $('.js-menu');
 		var sidebar = $('.js-sidebar');
@@ -2351,8 +2354,6 @@ $(function () {
 
 		popup.add('.js-overlay').addClass('is-active');
 		$("body").addClass("is-hidden");
-
-		console.log(popup, link);
 	});
 	$(".js-close-popup").click(function () {
 		$(this).parents(".js-popup").add('.js-overlay').removeClass('is-active');
