@@ -1,76 +1,35 @@
 .advantages
 	position: relative
 	padding: 40px
-	border: 1px solid $blue
-.tringle
-	position: absolute
-	&_1
-		position: absolute
-		top: 0
-		left: 0
-		border: 15px solid transparent
-		border-left: 15px solid $blue
-		border-top: 15px solid $blue
-	&_2
-		position: absolute
-		top: 0
-		right: 0
-		border: 15px solid transparent
-		border-right: 15px solid $blue
-		border-top: 15px solid $blue
-	&_3
-		position: absolute
-		bottom: 0
-		right: 0
-		border: 15px solid transparent
-		border-right: 15px solid $blue
-		border-bottom: 15px solid $blue
-	&_4
-		position: absolute
-		bottom: 0
-		left: 0
-		border: 15px solid transparent
-		border-left: 15px solid $blue
-		border-bottom: 15px solid $blue
+	+md
+		padding: 0
 .advantages-list
-	+justify
+	text-align: center
 	&__item
 		display: inline-block
 		vertical-align: top
 		width: 16% 
 		margin-top: 69px
 		padding: 0 10px
+		min-width: 220px
+		+xs
+			margin-top: 40px
+			width: 100%
 .advantages-top
 	+clr
-	padding-top: 178px
+	padding: 120px 0 60px
+	+vertical
+	+md
+		padding: 0
 .advantages-text
 	position: relative
 	max-width: 400px
 	line-height: 1.2
-	margin-top: 50px
 	margin-right: (170px / 1850px) * 100%
-	margin-bottom: 220px
-	float: right
-	&:before,
-	&:after
-		content: ''
-		display: block
-		position: absolute
-	&:before
-		width: 149px
-		height: 186px
-		background: url(../img/tail.png) no-repeat center
-		top: 100%
-		right: 37px
-		margin-top: 34px
-	&:after
-		height: 1px
-		width: 193px
-		top: 100%
-		right: -62px
-		margin-top: 220px
-		background: $section-bg-dark
-		z-index: 1
+	display: inline-block
+	vertical-align: middle
+	+md
+		margin-right: 0
 	&__title
 		+roboto-med
 		font-size: 48px
@@ -87,6 +46,8 @@
 	margin: auto
 	max-width: 260px
 	text-align: center
+	+xs
+		max-width: 320px
 	&__media
 		position: relative
 		width: 82px
@@ -94,6 +55,8 @@
 		border: 2px solid #af25eb
 		border-radius: 50%
 		margin: 0 auto 62px
+		+xs
+			display: none
 		&:before,
 		&:after
 			content: ''
@@ -123,67 +86,22 @@
 		text-align-last: center
 .advantages-graph
 	position: relative
-	float: right
-	width: 51.35135135135135%
-	min-width: 780px
-	margin-right: 6%
-	&__basic
-		img
-			@extend %img
-	&__main
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 100px
-		margin-right: -(65px / 950px) * 100%
-	&__point
-		position: absolute
-		left: 0
-		bottom: 3px
-		width: 1px
-		height: 1px
-		&:before
-			content: ''
+	width: 54%
+	display: inline-block
+	vertical-align: middle
+	+md
+		display: none
+	&__small
+		display: none
+		+lg
 			display: block
-			position: absolute
-			width: 4px
-			height: 4px
-			background-color: #FFF
-			margin: -2px 0 0 -2px
-		&_1
-			left: 0
-		&_2
-			left: (66px / 850px) * 100%
-		&_3
-			left: (132px / 850px) * 100%
-		&_4
-			left: (198px / 850px) * 100%
-		&_5
-			left: (264px / 850px) * 100%
-		&_6
-			left: (330px / 850px) * 100%
-		&_7
-			left: (396px / 850px) * 100% 
-		&_8
-			left: (462px / 850px) * 100%
-		&_9
-			left: (528px / 850px) * 100%
-		&_10
-			left: (594px / 850px) * 100%
-		&_11
-			left: (660px / 850px) * 100%
-		&_12
-			left: (726px / 850px) * 100%
-	&__tringle
-		width: (66px / 1897px) * 100vw
-		left: 100%
-		bottom: 0
-		position: absolute
-		img
-			display: block
-			width: 100%
+	&__big
+		+lg
+			display: none
+	img
+		max-width: 100%
 		height: auto
+		margin: auto
 .graph-board
 	width: 139px
 	border: 1px solid #fb1d95

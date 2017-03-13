@@ -8,19 +8,34 @@
 		position: relative
 		padding: 63px 15px
 		+clr
+		+md
+			padding: 20px 15px
+		+sm
+			padding: 40px 15px
 	&__col1
 		float: left
 		padding-top: 36px
+		+md
+			padding-top: 30px
+		+sm
+			padding: 0
 	&__col2
 		float: right
+		+sm
+			float: none
+			clear: both
 	&__logo
 		+bebas-bold
 		font-size: 60px
 		line-height: 1
 		display: inline-block
 		vertical-align: top
+		+md
+			font-size: 42px
 	&__content
 		max-width: 460px
+		+md
+			max-width: 370px
 	&__content-text
 		opacity: 0.36
 		+bebas-reg
@@ -36,18 +51,30 @@
 		display: inline-block
 		vertical-align: top
 		margin-left: 20px
+		+md
+			margin-left: 10px
 		+ .payments__item
-			margin-left: 22px
+			+md-min
+				margin-left: 22px
 .info-list
 	font-size: 0
 	line-height: 1
-	padding: 26px 0 36px
 	+bebas-reg
+	+sm-min
+		padding: 26px 0 36px
 	&__item
 		display: inline-block
 		vertical-align: top
 		position: relative
 		padding: 0 70px
+		+lg
+			padding: 0 20px
+		+md
+			padding: 0 30px 0 0
+			&:last-of-type
+				padding-right: 0
+		+sm
+			padding: 20px 20px 0 0
 		&:not(:first-child)
 			&::before
 				content: ''
@@ -66,9 +93,13 @@
 	&__title
 		color: $pink
 		font-size: 24px
+		+md
+			font-size: 20px
 .contact-list
 	font-size: 24px
 	margin-top: 18px
+	+md
+		font-size: 20px
 	&__item
 		&:not(:first-child)
 			margin-top: 12px
@@ -79,3 +110,5 @@
 		width: 72px
 		padding-right: 10px
 		color: $pink
+		+md
+			max-width: 55px

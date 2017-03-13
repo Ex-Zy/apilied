@@ -1,8 +1,25 @@
 .comments
 	font-size: 0
-	margin-top: 82px
+	max-width: 1434px
+	margin: 82px -50px 0
+	display: inline-block
+	+md
+		margin: 30px -20px 0
+	+sm
+		max-width: none
+		margin: 0 -30px
+		text-align: left
 	&__item
 		width: 33.3333%
 		display: inline-block
 		vertical-align: top
 		padding: 0 50px
+		outline: none
+		+md
+			padding: 0 20px
+		+sm
+			width: 50%
+			margin-top: 30px
+			padding: 0 15px
+		+xs
+			width: 100%

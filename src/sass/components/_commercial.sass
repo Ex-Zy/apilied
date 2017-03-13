@@ -2,7 +2,7 @@
 	position: relative
 	z-index: 5
 	font-size: 0
-	+rmin(1601)
+	+lg-min
 		padding-left: (316px / 1850px) * 100%
 	&__col
 		display: inline-block
@@ -10,21 +10,37 @@
 		+lg
 			text-align: right
 			width: 50%
+		+md
+			text-align: left
+		+sm
+			width: 100%
+			text-align: center
 		+ .commercial__col
-			padding-left: 56px
+			+sm-min
+				padding-left: 56px
 			+lg
 				text-align: left
+			+sm
+				margin-top: 22px
+				text-align: center
 	&__btn
 		margin-top: 56px
-		padding-left: 47px
-		+lg
-			padding-left: 0
+		+lg-min
+			padding-left: 47px
+		+sm
+			text-align: center
+			margin-top: 40px
 		.btn-primary
 			line-height: 1
 			padding: 27px 72px
+			+xs
+				font-size: 20px
+				padding: 20px 30px
 	.list
 		max-width: 384px
 		display: inline-block
 		text-align: left
 		+lg
 			max-width: 500px
+		+sm
+			width: 100%

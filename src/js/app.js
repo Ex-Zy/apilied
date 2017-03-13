@@ -1,4 +1,3 @@
-// example of simple includes for js
 //=include lib/jquery.min.js
 //=include lib/svgxuse.min.js
 $(function() {
@@ -6,4 +5,4 @@ $(function() {
 	//=include partial/fixedTopper.js
 	//=include partial/popup.js
 	//=include partial/animation.js
-})
+});

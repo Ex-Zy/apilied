@@ -1,14 +1,19 @@
 .company
-	text-align: center
 	line-height: 1
-	max-width: 433px
+	max-width: 430px
 	display: inline-block
+	vertical-align: middle
+	+md
+		max-width: 360px
+	+xs
+		max-width: 250px
 	&__logo
 		+hide-text
 	&__text
-		font-size: 32px
 		+css-lock(24, 32, 900, 1920, "font-size")
 		margin-top: 5px
+		+xs
+			font-size: 20px
 	&__button
 		margin-top: 46px
 	img

@@ -19,7 +19,8 @@
 
 =gpu
   transform: translate3d(0,0,0)
-
+  
+//max-width
 =lg
   +r(1600)
     @content
@@ -31,4 +32,18 @@
     @content
 =xs
   +r(600)
+    @content
+
+//min-width
+=lg-min
+  +rmin(1601)
+    @content
+=md-min
+  +rmin(1201)
+    @content
+=sm-min
+  +rmin(901)
+    @content
+=xs-min
+  +rmin(601)
     @content

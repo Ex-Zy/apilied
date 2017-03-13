@@ -16,8 +16,11 @@
 	background-color: $pink
 	padding: 27px 60px
 	color: #fafafc
-	+css-lock(14, 20, 900, 1920)
+	font-size: 20px
 	+robotomono-bold
+	+md
+		font-size: 16px
+		padding: 24px 34px
 	&:hover,
 	&:focus
 		background-color: lighten($pink, 5%)
@@ -34,7 +37,7 @@
 	@extend %button
 	line-height: 1
 	color: #0ca8fd
-	+css-lock(14, 20, 900, 1920)
+	+css-lock(16, 20, 900, 1920)
 	+robotomono-bold
 	border: 2px solid #0ca8fd
 	border-radius: 37px
@@ -165,6 +168,8 @@
 	line-height: 1
 	color: rgba(#fff, 0.4)
 	word-break: break-word
+	+sm
+		margin-top: 40px
 	&:hover,
 	&:focus
 		color: rgba(#fff, 1)
@@ -198,12 +203,17 @@
 	&__inner
 		border: 4px solid rgba(#fff, 0.4)
 		padding: 26px 15px
+		+sm
+			padding: 20px
 .buttons-row
 	counter-reset: list
 	&_right
-		text-align: right
+		+sm-min
+			text-align: right
 	&:not(:first-of-type)
-		padding-top: 60px
+		padding-top: 40px
+		+sm-min
+			padding-top: 60px
 	.btn-category
 		&__inner
 			&:before
