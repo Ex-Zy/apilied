@@ -6,10 +6,9 @@
 	+roboto-bold
 	padding: 17px 19px
 	font-size: 14px
-	&:hover,
-	&:focus
+	+hover
 		background-color: lighten($blue, 10%)
-	&:active
+	+active
 		background-color: darken($blue, 5%)
 .btn-primary
 	@extend %button
@@ -21,10 +20,9 @@
 	+md
 		font-size: 16px
 		padding: 24px 34px
-	&:hover,
-	&:focus
+	+hover
 		background-color: lighten($pink, 5%)
-	&:active
+	+active
 		background-color: darken($pink, 5%)
 	&_blue
 		background-color: $blue
@@ -43,8 +41,7 @@
 	border-radius: 37px
 	padding: 25px 70px
 	overflow: hidden
-	&:hover,
-	&:focus
+	+hover
 		border-color: #fb1d95
 		.btn-secondary__in
 			right: 0
@@ -66,6 +63,7 @@
 	width: 28px
 	height: 20px
 	position: relative
+	z-index: 1
 	overflow: hidden
 	top: 1px
 	background-color: transparent
@@ -81,7 +79,6 @@
 		height: 3px
 		background-color: #fff
 		display: block
-		transition: transform 0.2s
 		&::after,
 		&::before
 			content: ''
@@ -93,22 +90,11 @@
 			right: 0
 		&::before
 			top: -8px
-			transform-origin: top right
-			transition: transform 0.2s, width 0.2s, top 0.2s
 		&::after
 			top: 8px
-			transform-origin: bottom right
-			transition: transform 0.2s, width 0.2s, bottom 0.2s
-	&.is-active
-		span
-			+rotate(180)
-			&::before,
-			&::after
-				width: 40%
-			&::before
-				transform: translateX(15px) translateY(9px) rotate(-45deg)
-			&::after
-				transform: translateX(14px) translateY(-9px) rotate(45deg)
+	+hover
+		.sidebar
+			+gpu
 .btn-close
 	position: absolute
 	top: 0
@@ -121,10 +107,6 @@
 	color: #0ca8fd
 	padding-right: 32px
 	transition: color 0.3s
-	&:hover
-		color: lighten(#0ca8fd, 15%)
-		.icon
-			fill: lighten(#0ca8fd, 15%)
 	.icon
 		position: absolute
 		right: 0
@@ -132,22 +114,21 @@
 		bottom: 0
 		margin: auto
 		transition: fill 0.3s
+	+hover
+		color: lighten(#0ca8fd, 15%)
+		.icon
+			fill: lighten(#0ca8fd, 15%)
 .btn-main
 	@extend %button-basic
-	padding: 21px 51px 
+	padding: 21px 17px
+	min-width: 194px
 	border: 2px solid white
 	border-radius: 5px
 	+roboto-bold
-	font-size: 30px
+	+css-lock(22, 30, 900, 1920)
 	line-height: 1
 	color: #fff
 	background: transparent
-	&:not([disabled])
-		&:hover,
-		&:focus
-			top: 5px
-			&:after
-				display: none
 	&:after
 		content: ''
 		display: block
@@ -160,6 +141,16 @@
 		border-bottom-left-radius: 8px
 		border-bottom-right-radius: 8px
 		background-color: #fff
+	+hover
+		&:not([disabled])
+			top: 5px
+			&:after
+				display: none
+	+active
+		&:not([disabled])
+			top: 5px
+			&:after
+				display: none
 .btn-category
 	@extend %button-basic
 	min-width: 282px
@@ -170,15 +161,14 @@
 	color: rgba(#fff, 0.4)
 	word-break: break-word
 	background: transparent
-	+sm
-		margin-top: 40px
-	&:hover,
-	&:focus
+	+hover 
 		color: rgba(#fff, 1)
 		&:before
 			width: 100%
 		&:after
 			height: 100%
+	+sm
+		margin-top: 40px
 	&:before,
 	&:after
 		content: ''
@@ -224,7 +214,7 @@
 		margin: auto
 		transition: all 0.3s
 		+arr(14, 20, rgba(#fff, 0.4), l)
-	&:hover
+	+hover
 		color: #fff
 		&:before
 			border-right-color: #fff
@@ -240,7 +230,7 @@
 	line-height: 1
 	text-transform: none
 	+trans
-	&:hover
+	+hover
 		border-color: rgba(#fff, 0.4)
 		color: rgba(#fff, 0.4)
 	&:active
@@ -252,7 +242,7 @@
 	+trans
 	padding-right: 50px
 	line-height: 1.4
-	&:hover
+	+hover
 		color: #fff
 		.icon
 			fill: #fff

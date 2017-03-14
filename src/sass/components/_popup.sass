@@ -1,18 +1,3 @@
-.overlay
-	background-color: $violet
-	opacity: 0
-	position: fixed
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	z-index: 200
-	visibility: hidden
-	opacity: 0
-	transition: all 0.3s
-	&.is-active
-		visibility: visible
-		opacity: 1
 .popup
 	position: fixed
 	padding: 60px
@@ -26,6 +11,7 @@
 	visibility: hidden
 	opacity: 0
 	transition: all 0.3s
+	background-color: $violet
 	&.is-active
 		visibility: visible
 		opacity: 1
@@ -118,6 +104,27 @@
 	&__bottom
 		text-align: right
 		margin-top: 40px
+	&__row
+		position: relative
+		+clr
+	&__row_required
+		&:before
+			content: '*'
+			font-size: 30px
+			line-height: 1
+			position: absolute
+			top: 15px
+			right: 100%
+			margin-right: 14px
+			color: rgba(#fff, 0.4)
+	&__capcha
+		margin-top: 31px
+	&__col-1
+		width: 37%
+		float: left
+	&__col-2
+		width: 59%
+		float: right
 .form-step-1
 	.form__row
 		counter-reset: list
@@ -154,15 +161,9 @@
 .field
 	position: relative
 	border-bottom: 4px solid rgba(255, 255, 255, 0.4)
-	&:before
-		content: '*'
-		font-size: 30px
-		line-height: 1
-		position: absolute
-		top: 15px
-		right: 100%
-		margin-right: 14px
-		color: rgba(#fff, 0.4)
+	&.is-error
+		.error
+			display: inline-block
 .input
 	background: none
 	+roboto-bold
@@ -171,8 +172,17 @@
 	padding: 12px 0
 	display: block
 	width: 100%
-	color: rgba(#fff, 0.4)
+	color: #fff
 	+placeholder-color(rgba(#fff, 0.4))
+.error
+	display: none
+	padding: 10px 28px 
+	background-color: #eb2121
+	border-radius: 19px
+	+roboto-bold
+	font-size: 16px
+	color: #fff
+	+trans
 .control
 	position: absolute
 	top: -226px
@@ -180,3 +190,53 @@
 	text-align: right
 	&__bottom
 		padding-top: 22px
+.select-default
+	display: none
+.select
+	position: relative
+	+roboto-bold
+	font-size: 30px
+	position: relative
+	border-bottom: 4px solid #fff
+	&.is-open .select__list
+		display: block
+
+.select__text
+	background-color: transparent
+	color: #fff
+	padding: 9px 0
+	display: block
+	position: relative
+	cursor: pointer
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		margin-top: -3px
+		right: 20px
+		border: 6px solid transparent
+		border-top: 6px solid #fff
+		z-index: 1
+		user-select: none
+.select__list
+	display: none
+	list-style: none
+	position: absolute
+	left: 0
+	right: 0
+	top: 100%
+	margin-top: 4px
+	box-shadow: 0 0 60px rgba(1, 2, 4, 0.13);
+	overflow-x: hidden
+	overflow-y: auto
+	z-index: 10
+.select li
+	padding: 8px 20px
+	cursor: pointer
+	background-color: $violet
+	transition: background-color 0.3s
+	font-size: 24px
+	color: rgba(#fff, 0.4)
+	+hover
+		color: #fff

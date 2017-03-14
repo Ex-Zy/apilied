@@ -25,8 +25,63 @@
           <!-- BEGIN topper__left -->
           <div class="topper__left">
             <h1 class="logo">apilead</h1> <button type="button" class="btn-menu js-menu">
-				<span></span>
-				Menu
+				<span>Menu</span>
+				
+				<!-- BEGIN sidebar -->
+<div class="sidebar js-sidebar">
+	
+	<!-- BEGIN sidebar__in -->
+	<div class="sidebar__in">
+		<ul class="navigation">
+			
+			<li class="navigation__item">
+				
+					<a href="#" class="is-active">Преимущества</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Вебмастерам</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Рекламодателям</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Топ офферов</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Отзывы</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Партнеры</a>
+				
+			</li>
+			
+			<li class="navigation__item">
+				
+					<a href="#">Контакты</a>
+				
+			</li>
+			
+		</ul>
+	</div>
+	<!-- END sidebar__in -->
+
+</div>
+<!-- END sidebar -->
 			</button> </div>
           <!-- END topper__left -->
           <!-- BEGIN topper__right -->
@@ -41,23 +96,6 @@
         <!-- END inner -->
       </div>
       <!-- END topper -->
-      <!-- BEGIN sidebar -->
-      <div class="sidebar js-sidebar">
-        <!-- BEGIN sidebar__in -->
-        <div class="sidebar__in">
-          <ul class="navigation">
-            <li class="navigation__item"> <a href="#" class="is-active">Преимущества</a> </li>
-            <li class="navigation__item"> <a href="#">Вебмастерам</a> </li>
-            <li class="navigation__item"> <a href="#">Рекламодателям</a> </li>
-            <li class="navigation__item"> <a href="#">Топ офферов</a> </li>
-            <li class="navigation__item"> <a href="#">Отзывы</a> </li>
-            <li class="navigation__item"> <a href="#">Партнеры</a> </li>
-            <li class="navigation__item"> <a href="#">Контакты</a> </li>
-          </ul>
-        </div>
-        <!-- END sidebar__in -->
-      </div>
-      <!-- END sidebar -->
       <!-- BEGIN perfomance -->
       <section class="perfomance">
         <!-- BEGIN inner -->
@@ -511,8 +549,12 @@
                 <div class="footer__content-head">
                   <h1 class="footer__logo">APILEAD.COM</h1>
                   <ul class="payments">
-                    <li class="payments__item"><img src="img/pay1.png" alt=""></li>
-                    <li class="payments__item"><img src="img/pay2.png" alt=""></li>
+                    <li class="payments__item">
+                      <a href="#"><img src="img/pay1.png" alt=""></a>
+                    </li>
+                    <li class="payments__item">
+                      <a href="#"><img src="img/pay2.png" alt=""></a>
+                    </li>
                   </ul>
                 </div>
                 <div class="footer__content-text"> Consortium Group ltd. 3rd Floor of C&H Towers Corner of Great Marlborough and Great George Streets Roseau, 00152. Commonwealth of Dominica </div>
@@ -561,9 +603,6 @@
       <!-- END section6 -->
     </div>
     <!-- END content -->
-    <!-- BEGIN overlay -->
-    <div class="overlay js-overlay"></div>
-    <!-- END overlay -->
     <!-- BEGIN popup -->
     <div class="popup popup-reg js-popup" data-popup="registration">
       <!-- BEGIN popup-reg__window -->
@@ -576,27 +615,27 @@
           <div class="tabs">
             <ul class="tabs__control">
               <li class="tabs__control-item"> <a href="#" class="tabs__link is-active" data-link="step-1">ШАГ 1</a> </li>
-              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-2">ШАГ 2</a> </li>
-              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-3">ШАГ 3</a> </li>
+              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-2" disabled>ШАГ 2</a> </li>
+              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-3" disabled>ШАГ 3</a> </li>
             </ul>
             <div class="tabs__content">
-              <form action="/" method="GET">
-                <div class="tabs__content-item form-step-1" data-content="step-1">
-                  <div class="form__row"> <span class="form-step-1__info">Выберите тип аккаунта</span> <button type="button" name="webmaster" class="btn-category">
+              <form action="/" method="GET" id="main-form">
+                <div class="tabs__content-item form-step-1 is-active" data-content="step-1">
+                  <div class="form__row"> <span class="form-step-1__info">Выберите тип аккаунта</span> <button type="button" class="btn-category js-category" data-user-name="webmaster">
 									<div class="btn-category__inner">
 										<span>вебмастер</span>
 									</div>
-								</button> <button type="button" name="advertiser" class="btn-category">
+								</button> <button type="button" class="btn-category js-category" data-user-name="advertiser">
 									<div class="btn-category__inner">
 										<span>рекламодатель</span>
 									</div>
-								</button> </div>
-                  <div class="form__bottom"> <button type="button" class="btn-main" disabled>
-									<span>Далее</span>
-								</button> </div>
+								</button> <input type="text" name="user" id="form-user" style="display: none;"> </div>
+                  <div class="form__bottom">
+                    <a href="#" class="btn-main js-next-step" data-step="step-2" disabled> <span>Далее</span> </a>
+                  </div>
                 </div>
-                <div class="tabs__content-item form-step-2 is-active" data-content="step-2">
-                  <div class="form__row">
+                <div class="tabs__content-item form-step-2" data-content="step-2">
+                  <div class="form__row form__row_required">
                     <div class="control">
                       <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
                       <div class="control__bottom"> <a href="#" class="btn-change">
@@ -607,18 +646,50 @@
 										</a> </div>
                     </div>
                     <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
-                      <div class="input__failed">Не верно введен email</div>
+                      <div class="error">Не верно введен email</div>
                     </div>
                   </div>
-                  <div class="form__row">
+                  <div class="form__row form__row_required">
                     <div class="field"> <input type="password" name="password" class="input" placeholder="пароль" required> </div>
                   </div>
-                  <div class="form__row">
+                  <div class="form__row form__row_required">
                     <div class="field"> <input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required> </div>
                   </div>
-                  <div class="form__bottom"> <button type="button" class="btn-main" disabled>
-									<span>Далее</span>
-								</button> </div>
+                  <div class="form__bottom">
+                    <a href="#" type="button" class="btn-main js-next-step" data-step="step-3" disabled> <span>Далее</span> </a>
+                  </div>
+                </div>
+                <div class="tabs__content-item form-step-3" data-content="step-3">
+                  <div class="form__row">
+                    <div class="control">
+                      <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
+                      <div class="control__bottom"> <a href="#" class="btn-change">
+											Изменить тип аккаунта 
+											
+<svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
+
+										</a> </div>
+                    </div>
+                  </div>
+                  <div class="form__row form__row_required">
+                    <div class="form__col-1"> <select class="select-default">
+										<option value="Skype" selected>Skype</option>
+										<option value="Jabber">Jabber</option>
+										<option value="ICQ">ICQ</option>
+									</select> </div>
+                    <div class="form__col-2">
+                      <div class="field"> <input type="text" name="contact" class="input" placeholder="контакт"> </div>
+                    </div>
+                  </div>
+                  <div class="form__row form__row_required">
+                    <div class="field"> <input type="text" name="webmoney" class="input" placeholder="Webmoney (WMR)"> </div>
+                  </div>
+                  <div class="form__capcha">
+                    <div class="capcha" style="max-width: 274px"> <img src="img/capcha.png" alt=""> </div>
+                  </div>
+                  <div class="form__bottom">
+                    <a href="#" class="btn-main" disabled> <span>Регистрация</span> </a>
+                  </div>
                 </div>
               </form>
             </div>

@@ -47,3 +47,21 @@
 =xs-min
   +rmin(601)
     @content
+
+//states
+=hover
+  .is-no-touch &
+    &:hover
+      @content
+  &.is-active
+    @content
+=active
+  .is-no-touch &
+    &:active
+      @content
+  &:active
+    @content
+=no-touch
+  .is-no-touch &
+    @content
+  @content
