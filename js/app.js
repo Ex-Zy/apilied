@@ -2322,9 +2322,6 @@ $(function () {
 		$('body').addClass('is-no-touch');
 	} else {
 		$('body').addClass('is-touch');
-		$('.js-menu').click(function () {
-			$('.js-sidebar').toggleClass('is-active');
-		});
 	}
 	$(window).scroll(function () {
 		var top = $(window).scrollTop();
@@ -2526,5 +2523,8 @@ $(function () {
 			scrollTop: $(section).offset().top
 		}, 500);
 		return false;
+	});
+	$('.js-menu').click(function () {
+		$('.js-sidebar').toggleClass('is-active');
 	});
 });
