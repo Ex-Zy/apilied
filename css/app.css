@@ -521,10 +521,6 @@ html {
   height: 0;
 }
 
-.btn-category:nth-of-type(even) {
-  margin-left: 28px;
-}
-
 .btn-category span {
   position: relative;
   z-index: 2;
@@ -2086,6 +2082,24 @@ a {
 
 .popup-reg__top {
   text-align: left;
+  *zoom: 1;
+}
+
+.popup-reg__top:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.popup-reg__col-1 {
+  float: left;
+  max-width: 400px;
+}
+
+.popup-reg__col-2 {
+  float: right;
+  text-align: right;
+  max-width: 350px;
 }
 
 .popup-reg__body {
@@ -2171,18 +2185,6 @@ a {
   margin-top: -6px;
 }
 
-.form-step-1__info {
-  font-family: "Roboto Bold", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 24px;
-  max-width: 380px;
-  text-align: right;
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: -210px;
-}
-
 .form-step-2 .form__row:not(:first-of-type) {
   margin-top: 12px;
 }
@@ -2238,14 +2240,15 @@ a {
   transition: all 0.3s ease;
 }
 
-.control {
-  position: absolute;
-  top: -226px;
-  right: 0;
-  text-align: right;
+.change {
+  float: right;
 }
 
-.control__bottom {
+.change__top {
+  padding-top: 8px;
+}
+
+.change__bottom {
   padding-top: 22px;
 }
 
@@ -2328,6 +2331,16 @@ a {
   max-width: 274px;
   display: inline-block;
   vertical-align: top;
+}
+
+.info {
+  font-family: "Roboto Bold", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  max-width: 380px;
+  text-align: right;
+  display: inline-block;
+  padding-top: 17px;
 }
 
 .tabs {
@@ -2507,6 +2520,10 @@ a {
 }
 
 @media only screen and (min-width: 601px) {
+
+  .btn-category:nth-of-type(even) {
+    margin-left: 28px;
+  }
 
   .list__item:not(:last-child) {
     margin-bottom: 22px;
@@ -3125,10 +3142,6 @@ a {
     margin-top: 30px;
   }
 
-  .form-step-1__info {
-    top: -263px;
-  }
-
   .input {
     font-size: 20px;
   }
@@ -3143,6 +3156,11 @@ a {
   }
 
   .select li {
+    font-size: 18px;
+  }
+
+  .info {
+    padding-top: 8px;
     font-size: 18px;
   }
 
@@ -3224,6 +3242,12 @@ a {
 
 @media only screen and (max-width: 600px) {
 
+  .btn-category {
+    min-width: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+
   .title-primary {
     font-size: 32px;
   }
@@ -3286,6 +3310,10 @@ a {
   }
 
   .unit__media {
+    display: none;
+  }
+
+  .info {
     display: none;
   }
 }

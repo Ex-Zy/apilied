@@ -567,8 +567,21 @@
       <!-- BEGIN popup-reg__window -->
       <div class="popup-reg__window">
         <div class="popup-reg__top">
-          <div class="popup-reg__title">Регистрация</div>
-          <div class="popup-reg__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
+          <div class="popup-reg__col-1">
+            <div class="popup-reg__title">Регистрация</div>
+            <div class="popup-reg__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
+          </div>
+          <div class="popup-reg__col-2"> <span class="info">Выберите тип аккаунта</span>
+            <div class="change" style="display: none;">
+              <div class="change__top"> <button type="button" class="btn-variation js-account-btn" data-account="Рекламодатель">Вебмастер</button> </div>
+              <div class="change__bottom"> <a href="#" class="btn-change js-account-link">
+							Изменить тип аккаунта 
+							
+<svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
+
+						</a> </div>
+            </div>
+          </div>
         </div>
         <div class="popup-reg__body">
           <!-- BEGIN tabs -->
@@ -581,7 +594,7 @@
             <div class="tabs__content">
               <form action="/" method="GET" id="main-form">
                 <div class="tabs__content-item form-step-1 is-active" data-content="step-1">
-                  <div class="form__row form__row_right"> <span class="form-step-1__info">Выберите тип аккаунта</span> <button type="button" class="btn-category js-category" data-user-name="webmaster">
+                  <div class="form__row form__row_right"> <button type="button" class="btn-category js-category" data-user-name="webmaster">
 						<div class="btn-category__inner">
 							<span>вебмастер</span>
 						</div>
@@ -596,15 +609,6 @@
                 </div>
                 <div class="tabs__content-item form-step-2" data-content="step-2">
                   <div class="form__row form__row_required">
-                    <div class="control">
-                      <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
-                      <div class="control__bottom"> <a href="#" class="btn-change">
-								Изменить тип аккаунта 
-								
-<svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
-
-							</a> </div>
-                    </div>
                     <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
                       <div class="error">Не верно введен email</div>
                     </div>
@@ -620,17 +624,6 @@
                   </div>
                 </div>
                 <div class="tabs__content-item form-step-3" data-content="step-3">
-                  <div class="form__row">
-                    <div class="control">
-                      <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
-                      <div class="control__bottom"> <a href="#" class="btn-change">
-								Изменить тип аккаунта 
-								
-<svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
-
-							</a> </div>
-                    </div>
-                  </div>
                   <div class="form__row form__row_required">
                     <div class="form__col-1"> <select class="select-default">
 							<option value="Skype" selected>Skype</option>
