@@ -76,16 +76,17 @@
 		+sm
 			padding: 20px 20px 0 0
 		&:not(:first-child)
-			&::before
-				content: ''
-				position: absolute
-				top: 0
-				bottom: 0
-				left: 0
-				box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11)
-				width: 2px
-				background-color: #ffffff
-				opacity: 0.05
+			+sm-min
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11)
+					width: 2px
+					background-color: #ffffff
+					opacity: 0.05
 	&__item_blue
 		.contact-list span,
 		.info-list__title
