@@ -7,4 +7,5 @@ $(function() {
 	//=include partial/select.js
 	//=include partial/form.js
 	//=include partial/scrolling.js
+	//=include partial/menu.js
 });
