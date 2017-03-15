@@ -1,6 +1,6 @@
 "use strict";
 
-;(function () {
+(function () {
 	var selectDefault = $('.select-default');
 
 	selectDefault.each(function () {

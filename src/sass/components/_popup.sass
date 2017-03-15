@@ -12,15 +12,16 @@
 	opacity: 0
 	transition: all 0.3s
 	background-color: $violet
+	text-align: center
+	font-size: 0
 	&.is-active
 		visibility: visible
 		opacity: 1
-	+vertical
 	+md
 		padding: 60px 20px
 	&__window
-		display: inline-block
-		vertical-align: middle
+		display: block
+		margin: auto
 		max-width: 808px
 		width: 100%
 		box-shadow: 0 0 21px #000000
@@ -40,7 +41,7 @@
 		padding: 9px 44px
 		position: relative 
 	&__top-title
-		font-size: 30px
+		+css-lock(22, 30, 900, 1920)
 		+roboto-light
 	&__row
 		background-color: #1B1B28
@@ -62,6 +63,22 @@
 		&_3
 			width: 19%
 			padding-right: 52px
+.popup-offers
+	+sm
+		padding: 10px
+		.popup__window
+			min-width: auto
+			overflow-x: auto
+		.popup__col_1,
+		.popup__caption-col_1
+			padding-left: 15px
+		.popup__col_3,
+		.popup__caption-col_3
+			padding-right: 15px
+		.popup__top
+			padding: 9px 15px
+		.popup__body
+			min-width: 500px
 .product
 	display: table
 	&__media
@@ -84,15 +101,33 @@
 	i + i
 		margin-left: 16px
 .popup-reg
+	padding: 100px
 	&__window
-		display: inline-block
-		vertical-align: middle
 		max-width: 864px
 		width: 100%
+		display: block
+		margin: auto
 	&__top
 		text-align: left
 	&__body
 		padding-top: 126px
+	&__sub
+		padding-top: 8px
+	&__title
+		font-size: 48px
+		+sm
+			font-size: 32px
+.popup-login
+	padding: 100px
+	&__window
+		max-width: 600px
+		display: block
+		margin: auto
+	&__top
+		text-align: left
+	&__body
+		padding-top: 40px
+		padding-left: 26px
 	&__sub
 		padding-top: 8px
 	&__title
@@ -174,6 +209,8 @@
 	width: 100%
 	color: #fff
 	+placeholder-color(rgba(#fff, 0.4))
+	+sm
+		font-size: 20px
 .error
 	display: none
 	padding: 10px 28px 

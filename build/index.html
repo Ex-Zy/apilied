@@ -27,52 +27,52 @@
             <h1 class="logo">apilead</h1> <button type="button" class="btn-menu js-menu">
 				<span>Menu</span>
 				
-				<!-- BEGIN sidebar -->
+				
+<!-- BEGIN sidebar -->
 <div class="sidebar js-sidebar">
-	
 	<!-- BEGIN sidebar__in -->
 	<div class="sidebar__in">
 		<ul class="navigation">
 			
 			<li class="navigation__item">
 				
-					<a href="#" class="is-active">Преимущества</a>
+					<a href="#perfomance" class="is-active">Преимущества</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Вебмастерам</a>
+					<a href="#web">Вебмастерам</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Рекламодателям</a>
+					<a href="#recl">Рекламодателям</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Топ офферов</a>
+					<a href="#top-offers">Топ офферов</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Отзывы</a>
+					<a href="#description">Отзывы</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Партнеры</a>
+					<a href="#brands">Партнеры</a>
 				
 			</li>
 			
 			<li class="navigation__item">
 				
-					<a href="#">Контакты</a>
+					<a href="#footer">Контакты</a>
 				
 			</li>
 			
@@ -87,7 +87,7 @@
           <!-- BEGIN topper__right -->
           <div class="topper__right">
             <ul class="entry">
-              <li class="entry__item"> <a href="#">Войти</a> </li>
+              <li class="entry__item"> <a href="#" class="js-open-popup" data-link="login">Войти</a> </li>
               <li class="entry__item"> <button type="button" class="btn js-open-popup" data-link="registration">СОЗДАТЬ АККАУНТ</button> </li>
             </ul>
           </div>
@@ -97,14 +97,14 @@
       </div>
       <!-- END topper -->
       <!-- BEGIN perfomance -->
-      <section class="perfomance">
+      <section class="perfomance" id="perfomance">
         <!-- BEGIN inner -->
         <div class="inner">
           <!-- BEGIN company -->
           <div class="company">
             <div class="company__logo"> <img src="img/company.png" alt="Apilead" title="Apilead company brand"> apilead </div>
             <div class="company__text"> центр реализации лидов </div>
-            <div class="company__button"> <a href="#" class="btn-primary">НАЧАТЬ РАБОТУ</a> </div>
+            <div class="company__button"> <a href="#" class="btn-primary js-open-popup" data-link="registration">НАЧАТЬ РАБОТУ</a> </div>
           </div>
           <!-- END company -->
         </div>
@@ -112,7 +112,7 @@
       </section>
       <!-- END perfomance -->
       <!-- BEGIN work -->
-      <section class="work js-animate">
+      <section class="work" id="work">
         <!-- BEGIN inner -->
         <div class="inner">
           <!-- BEGIN advantages-top -->
@@ -236,8 +236,8 @@
         <!-- END inner -->
       </section>
       <!-- END work -->
-      <!-- BEGIN section3 -->
-      <section class="section3 js-animate">
+      <!-- BEGIN web -->
+      <section class="web" id="web">
         <!-- BEGIN inner -->
         <div class="inner">
           <h2 class="title-primary title-primary_centered">Вебмастерам</h2>
@@ -286,7 +286,7 @@
                   <div class="list__item-text"> прозвон заявки в первые 5 минут </div>
                 </li>
               </ul>
-              <div class="webmasters__btn"> <a href="#" class="btn-primary btn-primary_blue">РЕГИСТРАЦИЯ</a> </div>
+              <div class="webmasters__btn"> <a href="#" class="btn-primary btn-primary_blue js-open-popup" data-link="registration">РЕГИСТРАЦИЯ</a> </div>
             </div>
           </div>
           <!-- END webmasters -->
@@ -345,9 +345,9 @@
         </div>
         <!-- END diagram-commercial -->
       </section>
-      <!-- END section3 -->
-      <!-- BEGIN section4 -->
-      <section class="section4 js-animate">
+      <!-- END web -->
+      <!-- BEGIN recl -->
+      <section class="recl" id="recl">
         <!-- BEGIN inner -->
         <div class="inner">
           <h2 class="title-primary title-primary_centered">Рекламодателям</h2>
@@ -384,7 +384,7 @@
                   <div class="list__item-text"> оперативный саппорт </div>
                 </li>
               </ul>
-              <div class="commercial__btn"> <a href="#" class="btn-primary">РЕГИСТРАЦИЯ</a> </div>
+              <div class="commercial__btn"> <a href="#" class="btn-primary js-open-popup" data-link="registration">РЕГИСТРАЦИЯ</a> </div>
             </div>
           </div>
           <!-- END commercial -->
@@ -434,9 +434,9 @@
         </div>
         <!-- END diagram-commercial -->
       </section>
-      <!-- END section4 -->
-      <!-- BEGIN section5 -->
-      <section class="section5">
+      <!-- END recl -->
+      <!-- BEGIN top-offers -->
+      <section class="top-offers" id="top-offers">
         <!-- BEGIN inner -->
         <div class="inner">
           <div class="offer">
@@ -451,9 +451,9 @@
         </div>
         <!-- END inner -->
       </section>
-      <!-- END section5 -->
-      <!-- BEGIN section6 -->
-      <section class="section6 js-animate">
+      <!-- END top-offers -->
+      <!-- BEGIN description -->
+      <section class="description" id="description">
         <!-- BEGIN inner -->
         <div class="inner">
           <h2 class="title-secondary">Почитай, что о нас пишут!</h2>
@@ -518,7 +518,7 @@
         </div>
         <!-- END inner -->
         <!-- BEGIN brands -->
-        <div class="brands">
+        <div class="brands" id="brands">
           <!-- BEGIN brands__in -->
           <div class="brands__in">
             <!-- BEGIN brands-list -->
@@ -540,7 +540,7 @@
         </div>
         <!-- END brands -->
         <!-- BEGIN footer -->
-        <footer class="footer">
+        <footer class="footer" id="footer">
           <!-- BEGIN footer__in -->
           <div class="footer__in">
             <!-- BEGIN footer__col1 -->
@@ -600,7 +600,7 @@
         </footer>
         <!-- END footer -->
       </section>
-      <!-- END section6 -->
+      <!-- END description -->
     </div>
     <!-- END content -->
     <!-- BEGIN popup -->
@@ -700,7 +700,37 @@
     </div>
     <!-- END popup -->
     <!-- BEGIN popup -->
-    <div class="popup js-popup" data-popup="offers">
+    <div class="popup popup-login js-popup" data-popup="login">
+      <!-- BEGIN popup-login__window -->
+      <div class="popup-login__window">
+        <div class="popup-login__top">
+          <div class="popup-login__title">Авторизация</div>
+          <div class="popup-login__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
+        </div>
+        <div class="popup-login__body">
+          <form action="/" method="POST" id="main-form">
+            <div class="form__row form__row_required">
+              <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
+                <div class="error">Не верно введен email</div>
+              </div>
+            </div>
+            <div class="form__row form__row_required">
+              <div class="field"> <input type="password" name="password" class="input" placeholder="пароль" required> </div>
+            </div>
+            <div class="form__row form__row_required">
+              <div class="field"> <input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required> </div>
+            </div>
+            <div class="form__bottom"> <button type="submit" class="btn-main">
+						<span>Войти</span>
+					</button> </div>
+          </form>
+        </div>
+      </div>
+      <!-- END popup-login__window -->
+    </div>
+    <!-- END popup -->
+    <!-- BEGIN popup-offers -->
+    <div class="popup popup-offers js-popup" data-popup="offers">
       <!-- BEGIN popup__window -->
       <div class="popup__window">
         <div class="popup__top">
@@ -890,7 +920,7 @@
       </div>
       <!-- END popup__window -->
     </div>
-    <!-- END popup -->
+    <!-- END popup-offers -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->

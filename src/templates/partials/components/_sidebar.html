@@ -1,23 +1,15 @@
+{% import '../../data/dataSidebarNav.html' as items %}
 <!-- BEGIN sidebar -->
 <div class="sidebar js-sidebar">
-	{% set navList = [
-		'Преимущества', 
-		'Вебмастерам', 
-		'Рекламодателям', 
-		'Топ офферов', 
-		'Отзывы',
-		'Партнеры', 
-		'Контакты'
-	] %}
 	<!-- BEGIN sidebar__in -->
 	<div class="sidebar__in">
 		<ul class="navigation">
-			{% for navItem in navList %}
+			{% for navItem in items.navList %}
 			<li class="navigation__item">
 				{% if loop.index0 == activeLink %}
-					<a href="#" class="is-active">{{navItem}}</a>
+					<a href="#{{navItem.id}}" class="is-active">{{navItem.link}}</a>
 				{% else %}
-					<a href="#">{{navItem}}</a>
+					<a href="#{{navItem.id}}">{{navItem.link}}</a>
 				{% endif %}
 			</li>
 			{% endfor %}

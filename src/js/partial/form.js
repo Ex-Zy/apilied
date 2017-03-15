@@ -45,6 +45,10 @@
 //     errorClass: "form-input_error",
 //     validClass: "form-input_success"
 // });
+
+
+
+
 var buttons = $('.js-category');
 var inputUser = $('#form-user');
 var form = $('#main-form');

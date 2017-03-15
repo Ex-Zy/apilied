@@ -26,10 +26,9 @@
 		background-color: darken($pink, 5%)
 	&_blue
 		background-color: $blue
-		&:hover,
-		&:focus
-			background-color: lighten($blue, 10%)
-		&:active
+		+hover
+			background-color: lighten($blue, 5%)
+		+active
 			background-color: darken($blue, 5%)
 .btn-secondary
 	@extend %button

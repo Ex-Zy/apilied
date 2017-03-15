@@ -6,4 +6,5 @@ $(function() {
 	//=include partial/popup.js
 	//=include partial/select.js
 	//=include partial/form.js
+	//=include partial/scrolling.js
 });

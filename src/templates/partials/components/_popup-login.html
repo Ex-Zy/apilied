@@ -1,0 +1,41 @@
+<!-- BEGIN popup -->
+<div class="popup popup-login js-popup" data-popup="login">
+
+	<!-- BEGIN popup-login__window -->
+	<div class="popup-login__window">
+		<div class="popup-login__top">
+			<div class="popup-login__title">Авторизация</div>
+			<div class="popup-login__sub">
+				<a href="#" class="btn-back js-close-popup">вернуться на главную</a>
+			</div>
+		</div>
+		<div class="popup-login__body">
+			<form action="/" method="POST" id="main-form">
+				<div class="form__row form__row_required">
+					<div class="field">
+						<input type="email" name="mail" class="input" placeholder="email" required>
+						<div class="error">Не верно введен email</div>
+					</div>
+				</div>
+				<div class="form__row form__row_required">
+					<div class="field">
+						<input type="password" name="password" class="input" placeholder="пароль" required>
+					</div>
+				</div>
+				<div class="form__row form__row_required">
+					<div class="field">
+						<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
+					</div>
+				</div>
+				<div class="form__bottom">
+					<button type="submit" class="btn-main">
+						<span>Войти</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- END popup-login__window -->
+
+</div>
+<!-- END popup -->
