@@ -1237,6 +1237,7 @@ a {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   z-index: -1;
+  text-align: left;
 }
 
 .sidebar.is-active {

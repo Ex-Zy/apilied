@@ -612,6 +612,7 @@
           <div class="popup-reg__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
         </div>
         <div class="popup-reg__body">
+          <!-- BEGIN tabs -->
           <div class="tabs">
             <ul class="tabs__control">
               <li class="tabs__control-item"> <a href="#" class="tabs__link is-active" data-link="step-1">ШАГ 1</a> </li>
@@ -622,14 +623,14 @@
               <form action="/" method="GET" id="main-form">
                 <div class="tabs__content-item form-step-1 is-active" data-content="step-1">
                   <div class="form__row form__row_right"> <span class="form-step-1__info">Выберите тип аккаунта</span> <button type="button" class="btn-category js-category" data-user-name="webmaster">
-									<div class="btn-category__inner">
-										<span>вебмастер</span>
-									</div>
-								</button> <button type="button" class="btn-category js-category" data-user-name="advertiser">
-									<div class="btn-category__inner">
-										<span>рекламодатель</span>
-									</div>
-								</button> <input type="text" name="user" id="form-user" style="display: none;"> </div>
+						<div class="btn-category__inner">
+							<span>вебмастер</span>
+						</div>
+					</button> <button type="button" class="btn-category js-category" data-user-name="advertiser">
+						<div class="btn-category__inner">
+							<span>рекламодатель</span>
+						</div>
+					</button> <input type="text" name="user" id="form-user" style="display: none;"> </div>
                   <div class="form__bottom">
                     <a href="#" class="btn-main js-next-step" data-step="step-2" disabled> <span>Далее</span> </a>
                   </div>
@@ -639,11 +640,11 @@
                     <div class="control">
                       <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
                       <div class="control__bottom"> <a href="#" class="btn-change">
-											Изменить тип аккаунта 
-											
+								Изменить тип аккаунта 
+								
 <svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
 
-										</a> </div>
+							</a> </div>
                     </div>
                     <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
                       <div class="error">Не верно введен email</div>
@@ -664,19 +665,19 @@
                     <div class="control">
                       <div class="control__top"> <button type="button" class="btn-variation">Вебмастер</button> </div>
                       <div class="control__bottom"> <a href="#" class="btn-change">
-											Изменить тип аккаунта 
-											
+								Изменить тип аккаунта 
+								
 <svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
 
-										</a> </div>
+							</a> </div>
                     </div>
                   </div>
                   <div class="form__row form__row_required">
                     <div class="form__col-1"> <select class="select-default">
-										<option value="Skype" selected>Skype</option>
-										<option value="Jabber">Jabber</option>
-										<option value="ICQ">ICQ</option>
-									</select> </div>
+							<option value="Skype" selected>Skype</option>
+							<option value="Jabber">Jabber</option>
+							<option value="ICQ">ICQ</option>
+						</select> </div>
                     <div class="form__col-2">
                       <div class="field"> <input type="text" name="contact" class="input" placeholder="контакт"> </div>
                     </div>
@@ -694,6 +695,7 @@
               </form>
             </div>
           </div>
+          <!-- END tabs -->
         </div>
       </div>
       <!-- END popup-reg__window -->
@@ -716,9 +718,6 @@
             </div>
             <div class="form__row form__row_required">
               <div class="field"> <input type="password" name="password" class="input" placeholder="пароль" required> </div>
-            </div>
-            <div class="form__row form__row_required">
-              <div class="field"> <input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required> </div>
             </div>
             <div class="form__bottom"> <button type="submit" class="btn-main">
 						<span>Войти</span>
