@@ -2143,16 +2143,6 @@ a {
   margin-top: 31px;
 }
 
-.form__col-1 {
-  width: 37%;
-  float: left;
-}
-
-.form__col-2 {
-  width: 59%;
-  float: right;
-}
-
 .form-step-1 .form__row {
   counter-reset: list;
 }
@@ -2325,6 +2315,12 @@ a {
 
 .select li.is-active {
   color: #fff;
+}
+
+.capcha {
+  max-width: 274px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .tabs {
@@ -2567,6 +2563,17 @@ a {
     right: 100%;
     margin-right: 14px;
     color: rgba(255, 255, 255, 0.4);
+  }
+
+  .form__col-1 {
+    width: 41%;
+    float: left;
+    padding-right: 27px;
+  }
+
+  .form__col-2 {
+    width: 59%;
+    float: right;
   }
 
   .tabs__control {
@@ -3102,6 +3109,15 @@ a {
     font-size: 26px;
   }
 
+  .form__bottom {
+    margin-top: 30px;
+  }
+
+  .form__capcha {
+    text-align: right;
+    margin-top: 30px;
+  }
+
   .form-step-1__info {
     top: -263px;
   }
@@ -3110,15 +3126,28 @@ a {
     font-size: 20px;
   }
 
+  .select {
+    font-size: 18px;
+  }
+
+  .select__text {
+    line-height: 1.6;
+    padding: 10px 0;
+  }
+
+  .select li {
+    font-size: 18px;
+  }
+
   .tabs__control {
-    margin-left: -30px;
+    margin-left: -15px;
   }
 
   .tabs__control-item {
     width: 33.3333%;
     display: inline-block;
     vertical-align: top;
-    padding-left: 30px;
+    padding-left: 15px;
   }
 
   .tabs__link {

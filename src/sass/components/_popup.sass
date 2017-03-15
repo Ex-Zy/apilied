@@ -145,6 +145,8 @@
 	&__bottom
 		text-align: right
 		margin-top: 40px
+		+sm
+			margin-top: 30px
 	&__row
 		position: relative
 		+clr
@@ -163,12 +165,18 @@
 				color: rgba(#fff, 0.4)
 	&__capcha
 		margin-top: 31px
+		+sm
+			text-align: right
+			margin-top: 30px
 	&__col-1
-		width: 37%
-		float: left
+		+sm-min
+			width: 41%
+			float: left
+			padding-right: 27px
 	&__col-2
-		width: 59%
-		float: right
+		+sm-min
+			width: 59%
+			float: right
 .form-step-1
 	.form__row
 		counter-reset: list
@@ -244,6 +252,8 @@
 	font-size: 30px
 	position: relative
 	border-bottom: 4px solid #fff
+	+sm
+		font-size: 18px
 	&.is-open .select__list
 		display: block
 
@@ -254,6 +264,9 @@
 	display: block
 	position: relative
 	cursor: pointer
+	+sm
+		line-height: 1.6
+		padding: 10px 0
 	&:after
 		content: ''
 		display: block
@@ -284,5 +297,11 @@
 	transition: background-color 0.3s
 	font-size: 24px
 	color: rgba(#fff, 0.4)
+	+sm
+		font-size: 18px
 	+hover
 		color: #fff
+.capcha
+	max-width: 274px
+	display: inline-block
+	vertical-align: top
