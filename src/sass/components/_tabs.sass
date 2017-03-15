@@ -36,6 +36,9 @@
 		transition: all 0.3s
 		position: relative
 		cursor: default
+		+sm
+			font-size: 18px
+			padding-bottom: 20px
 		&:after
 			content: ''
 			display: block
@@ -47,6 +50,8 @@
 			transform: scaleY(0.5)
 			transition: all 0.3s
 			background-color: rgba(#fff, 0.4)
+			+sm
+				height: 6px
 		&.is-active
 			color: #fff
 			&:after

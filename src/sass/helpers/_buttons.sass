@@ -128,6 +128,9 @@
 	line-height: 1
 	color: #fff
 	background: transparent
+	+sm
+		min-width: auto
+		padding: 16px 40px
 	&:after
 		content: ''
 		display: block
@@ -168,6 +171,8 @@
 			height: 100%
 	+sm
 		margin-top: 40px
+		min-width: 240px
+		font-size: 22px
 	&:before,
 	&:after
 		content: ''
@@ -186,8 +191,8 @@
 	&:after
 		border-width: 0 4px 0 4px
 		height: 0
-	&:nth-of-type(odd)
-		margin-right: 28px
+	&:nth-of-type(even)
+		margin-left: 28px
 	span
 		position: relative
 		z-index: 2
@@ -203,6 +208,9 @@
 	+trans
 	padding-left: 30px
 	line-height: 1.4
+	+sm
+		font-size: 18px
+		padding-left: 20px
 	&:before
 		content: ''
 		display: block
@@ -213,6 +221,8 @@
 		margin: auto
 		transition: all 0.3s
 		+arr(14, 20, rgba(#fff, 0.4), l)
+		+sm
+			+arr(10, 14, rgba(#fff, 0.4), l)
 	+hover
 		color: #fff
 		&:before
@@ -229,6 +239,8 @@
 	line-height: 1
 	text-transform: none
 	+trans
+	+sm
+		font-size: 18px
 	+hover
 		border-color: rgba(#fff, 0.4)
 		color: rgba(#fff, 0.4)
@@ -241,6 +253,8 @@
 	+trans
 	padding-right: 50px
 	line-height: 1.4
+	+sm
+		font-size: 18px
 	+hover
 		color: #fff
 		.icon

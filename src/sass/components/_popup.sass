@@ -111,12 +111,15 @@
 		text-align: left
 	&__body
 		padding-top: 126px
+		+sm
+			padding-top: 50px
 	&__sub
-		padding-top: 8px
+		+sm-min
+			padding-top: 8px
 	&__title
 		font-size: 48px
 		+sm
-			font-size: 32px
+			font-size: 26px
 .popup-login
 	padding: 100px
 	&__window
@@ -126,14 +129,16 @@
 	&__top
 		text-align: left
 	&__body
-		padding-top: 40px
-		padding-left: 26px
+		padding-top: 20px
+		+sm-min
+			padding-top: 40px
+			padding-left: 26px
 	&__sub
 		padding-top: 8px
 	&__title
 		font-size: 48px
 		+sm
-			font-size: 32px
+			font-size: 26px
 .form
 	position: relative
 	&__bottom
@@ -142,16 +147,19 @@
 	&__row
 		position: relative
 		+clr
+	&__row_right
+		text-align: right
 	&__row_required
-		&:before
-			content: '*'
-			font-size: 30px
-			line-height: 1
-			position: absolute
-			top: 15px
-			right: 100%
-			margin-right: 14px
-			color: rgba(#fff, 0.4)
+		+sm-min
+			&:before
+				content: '*'
+				font-size: 30px
+				line-height: 1
+				position: absolute
+				top: 15px
+				right: 100%
+				margin-right: 14px
+				color: rgba(#fff, 0.4)
 	&__capcha
 		margin-top: 31px
 	&__col-1

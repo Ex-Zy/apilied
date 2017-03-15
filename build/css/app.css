@@ -531,8 +531,8 @@ html {
   height: 0;
 }
 
-.btn-category:nth-of-type(odd) {
-  margin-right: 28px;
+.btn-category:nth-of-type(even) {
+  margin-left: 28px;
 }
 
 .btn-category span {
@@ -2108,10 +2108,6 @@ a {
   padding-top: 126px;
 }
 
-.popup-reg__sub {
-  padding-top: 8px;
-}
-
 .popup-reg__title {
   font-size: 48px;
 }
@@ -2131,8 +2127,7 @@ a {
 }
 
 .popup-login__body {
-  padding-top: 40px;
-  padding-left: 26px;
+  padding-top: 20px;
 }
 
 .popup-login__sub {
@@ -2163,15 +2158,8 @@ a {
   clear: both;
 }
 
-.form__row_required:before {
-  content: '*';
-  font-size: 30px;
-  line-height: 1;
-  position: absolute;
-  top: 15px;
-  right: 100%;
-  margin-right: 14px;
-  color: rgba(255, 255, 255, 0.4);
+.form__row_right {
+  text-align: right;
 }
 
 .form__capcha {
@@ -2571,6 +2559,26 @@ a {
     padding-left: 56px;
   }
 
+  .popup-reg__sub {
+    padding-top: 8px;
+  }
+
+  .popup-login__body {
+    padding-top: 40px;
+    padding-left: 26px;
+  }
+
+  .form__row_required:before {
+    content: '*';
+    font-size: 30px;
+    line-height: 1;
+    position: absolute;
+    top: 15px;
+    right: 100%;
+    margin-right: 14px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
   .tabs__control {
     float: left;
     width: 142px;
@@ -2958,12 +2966,40 @@ a {
 
 @media only screen and (max-width: 900px) {
 
+  .btn-main {
+    min-width: auto;
+    padding: 16px 40px;
+  }
+
   .btn-category {
     margin-top: 40px;
+    min-width: 240px;
+    font-size: 22px;
   }
 
   .btn-category__inner {
     padding: 20px;
+  }
+
+  .btn-back {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .btn-back:before {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 7px 10px 7px 0;
+    border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
+  }
+
+  .btn-variation {
+    font-size: 18px;
+  }
+
+  .btn-change {
+    font-size: 18px;
   }
 
   .inner {
@@ -3063,12 +3099,16 @@ a {
     min-width: 500px;
   }
 
+  .popup-reg__body {
+    padding-top: 50px;
+  }
+
   .popup-reg__title {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .popup-login__title {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .form-step-1__info {
@@ -3088,6 +3128,15 @@ a {
     display: inline-block;
     vertical-align: top;
     padding-left: 30px;
+  }
+
+  .tabs__link {
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+
+  .tabs__link:after {
+    height: 6px;
   }
 }
 
