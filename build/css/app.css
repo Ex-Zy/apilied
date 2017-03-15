@@ -3083,6 +3083,7 @@ a {
 
   .popup-offers .popup__top {
     padding: 9px 15px;
+    min-width: 500px;
   }
 
   .popup-offers .popup__body {
