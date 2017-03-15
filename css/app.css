@@ -1214,20 +1214,27 @@ a {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   bottom: 0;
   z-index: 90;
   overflow-x: hidden;
   overflow-y: auto;
   background: #10192b;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transition: 0.3s ease 0.5s;
+  transition: 0.3s ease 0.5s;
   z-index: 5;
   text-align: left;
 }
 
 .sidebar.is-active {
-  left: 0;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .sidebar__in {
