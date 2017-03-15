@@ -1,17 +1,19 @@
 .sidebar
 	position: fixed
 	top: 0
-	left: -100%
+	left: 0
 	bottom: 0
 	z-index: 90
 	overflow-x: hidden
 	overflow-y: auto
 	background: #10192b
-	+trans
+	transform: translate(-100%, 0)
+	transition: 0.3s ease 0.5s
 	z-index: 5
 	text-align: left
 	&.is-active
-		left: 0
+		transform: translate(0, 0)
+		transition-delay: 0s
 	&__in
 		width: 251px
 		min-height: 100vh
