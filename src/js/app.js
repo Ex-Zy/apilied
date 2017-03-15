@@ -8,4 +8,5 @@ $(function() {
 	//=include partial/form.js
 	//=include partial/scrolling.js
 	//=include partial/menu.js
+	//=include partial/doc.js
 });
