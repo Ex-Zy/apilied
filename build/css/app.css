@@ -659,6 +659,12 @@ html {
   fill: initial;
 }
 
+.icon-donut {
+  width: 1em;
+  height: 1em;
+  fill: #FFF;
+}
+
 body {
   background-color: #071e39;
   line-height: 1.4;
@@ -716,6 +722,13 @@ a {
 .icon-change {
   font-size: 21px;
   fill: rgba(255, 255, 255, 0.4);
+}
+
+.icon-donut {
+  font-size: 410px;
+  font-size: -webkit-calc(240px + (410 - 240) * ((100vw - 900px) / (1920 - 900)));
+  font-size: calc(240px + (410 - 240) * ((100vw - 900px) / (1920 - 900)));
+  fill: #fff;
 }
 
 [class^="i-icon"] {
@@ -1667,15 +1680,6 @@ a {
 
 .offer__media {
   margin: auto;
-  max-width: 410px;
-  max-width: -webkit-calc(240px + (410 - 240) * ((100vw - 900px) / (1920 - 900)));
-  max-width: calc(240px + (410 - 240) * ((100vw - 900px) / (1920 - 900)));
-}
-
-.offer__media svg {
-  width: 100%;
-  display: block;
-  height: auto;
 }
 
 .offer__button {
@@ -2688,16 +2692,16 @@ a {
     font-size: 48px;
   }
 
+  .icon-donut {
+    font-size: 410px;
+  }
+
   .offer__title {
     font-size: 48px;
   }
 
   .offer__title {
     margin-top: 40px;
-  }
-
-  .offer__media {
-    max-width: 410px;
   }
 
   .offer__button {
@@ -3144,16 +3148,16 @@ a {
     font-size: 32px;
   }
 
+  .icon-donut {
+    font-size: 240px;
+  }
+
   .offer__title {
     font-size: 32px;
   }
 
   .offer__title {
     margin-top: 20px;
-  }
-
-  .offer__media {
-    max-width: 240px;
   }
 
   .offer__button {
