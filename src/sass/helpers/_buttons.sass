@@ -91,9 +91,6 @@
 			top: -8px
 		&::after
 			top: 8px
-	// +hover
-	// 	.sidebar
-	// 		+gpu
 .btn-close
 	position: absolute
 	top: 0
@@ -173,6 +170,10 @@
 		margin-top: 40px
 		min-width: 240px
 		font-size: 22px
+	+xs
+		min-width: auto
+		width: 100%
+		margin-top: 20px
 	&:before,
 	&:after
 		content: ''
@@ -192,7 +193,8 @@
 		border-width: 0 4px 0 4px
 		height: 0
 	&:nth-of-type(even)
-		margin-left: 28px
+		+xs-min
+			margin-left: 28px
 	span
 		position: relative
 		z-index: 2

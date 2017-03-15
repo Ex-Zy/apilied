@@ -110,6 +110,14 @@
 		margin: auto
 	&__top
 		text-align: left
+		+clr
+	&__col-1
+		float: left
+		max-width: 400px
+	&__col-2
+		float: right
+		text-align: right
+		max-width: 350px
 	&__body
 		padding-top: 126px
 		+sm
@@ -195,17 +203,6 @@
 					font-size: 18px
 					padding: 0 18px
 					margin-top: -6px
-	&__info
-		+roboto-bold
-		font-size: 24px
-		max-width: 380px
-		text-align: right
-		display: inline-block
-		position: absolute
-		right: 0
-		top: -210px
-		+sm
-			top: -263px
 .form-step-2
 	.form__row
 		&:not(:first-of-type)
@@ -237,11 +234,10 @@
 	font-size: 16px
 	color: #fff
 	+trans
-.control
-	position: absolute
-	top: -226px
-	right: 0
-	text-align: right
+.change
+	float: right
+	&__top
+		padding-top: 8px
 	&__bottom
 		padding-top: 22px
 .select-default
@@ -305,3 +301,15 @@
 	max-width: 274px
 	display: inline-block
 	vertical-align: top
+.info
+	+roboto-bold
+	font-size: 24px
+	max-width: 380px
+	text-align: right
+	display: inline-block
+	padding-top: 17px
+	+sm
+		padding-top: 8px
+		font-size: 18px
+	+xs
+		display: none

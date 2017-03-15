@@ -4,9 +4,25 @@
 	<!-- BEGIN popup-reg__window -->
 	<div class="popup-reg__window">
 		<div class="popup-reg__top">
-			<div class="popup-reg__title">Регистрация</div>
-			<div class="popup-reg__sub">
-				<a href="#" class="btn-back js-close-popup">вернуться на главную</a>
+			<div class="popup-reg__col-1">
+				<div class="popup-reg__title">Регистрация</div>
+				<div class="popup-reg__sub">
+					<a href="#" class="btn-back js-close-popup">вернуться на главную</a>
+				</div>
+			</div>
+			<div class="popup-reg__col-2">
+				<span class="info">Выберите тип аккаунта</span>
+				<div class="change" style="display: none;">
+					<div class="change__top">
+						<button type="button" class="btn-variation js-account-btn" data-account="Рекламодатель">Вебмастер</button>
+					</div>
+					<div class="change__bottom">
+						<a href="#" class="btn-change js-account-link">
+							Изменить тип аккаунта 
+							{{mixins.icon("change")}}
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="popup-reg__body">
