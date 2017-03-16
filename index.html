@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -571,8 +571,8 @@
             <div class="popup-reg__title">Регистрация</div>
             <div class="popup-reg__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
           </div>
-          <div class="popup-reg__col-2"> <span class="info">Выберите тип аккаунта</span>
-            <div class="change" style="display: none;">
+          <div class="popup-reg__col-2"> <span class="info" style="display: none;">Выберите тип аккаунта</span>
+            <div class="change">
               <div class="change__top"> <button type="button" class="btn-variation js-account-btn" data-account="Рекламодатель">Вебмастер</button> </div>
               <div class="change__bottom"> <a href="#" class="btn-change js-account-link">
 							Изменить тип аккаунта 
@@ -586,28 +586,34 @@
         <div class="popup-reg__body">
           <!-- BEGIN tabs -->
           <div class="tabs">
-            <ul class="tabs__control">
-              <li class="tabs__control-item"> <a href="#" class="tabs__link is-active" data-link="step-1">ШАГ 1</a> </li>
-              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-2" disabled>ШАГ 2</a> </li>
-              <li class="tabs__control-item"> <a href="#" class="tabs__link" data-link="step-3" disabled>ШАГ 3</a> </li>
+            <!-- BEGIN tabs-control -->
+            <ul class="tabs-control">
+              <li class="tabs-control__item"> <a href="#" class="tabs-control__link is-active" data-link="step-1">ШАГ 1</a> </li>
+              <li class="tabs-control__item"> <a href="#" class="tabs-control__link" data-link="step-2" disabled>ШАГ 2</a> </li>
+              <li class="tabs-control__item"> <a href="#" class="tabs-control__link" data-link="step-3" disabled>ШАГ 3</a> </li>
             </ul>
-            <div class="tabs__content">
+            <!-- END tabs-control -->
+            <!-- BEGIN tabs-content -->
+            <div class="tabs-content">
               <form action="/" method="GET" id="main-form">
-                <div class="tabs__content-item form-step-1 is-active" data-content="step-1">
-                  <div class="form__row form__row_right"> <button type="button" class="btn-category js-category" data-user-name="webmaster">
-						<div class="btn-category__inner">
-							<span>вебмастер</span>
-						</div>
-					</button> <button type="button" class="btn-category js-category" data-user-name="advertiser">
-						<div class="btn-category__inner">
-							<span>рекламодатель</span>
-						</div>
-					</button> <input type="text" name="user" id="form-user" style="display: none;"> </div>
+                <!-- BEGIN tabs-content__item-->
+                <div class="tabs-content__item is-active" data-content="step-1">
+                  <div class="form__action"> <button type="button" class="btn-category js-category" data-user-name="webmaster">
+			<div class="btn-category__inner">
+				<span>вебмастер</span>
+			</div>
+		</button> <button type="button" class="btn-category js-category" data-user-name="advertiser">
+			<div class="btn-category__inner">
+				<span>рекламодатель</span>
+			</div>
+		</button> <input type="text" name="user" id="form-user" style="display: none;"> </div>
                   <div class="form__bottom">
                     <a href="#" class="btn-main js-next-step" data-step="step-2" disabled> <span>Далее</span> </a>
                   </div>
                 </div>
-                <div class="tabs__content-item form-step-2" data-content="step-2">
+                <!-- END tabs-content__item-->
+                <!-- BEGIN tabs-content__item-->
+                <div class="tabs-content__item" data-content="step-2">
                   <div class="form__row form__row_required">
                     <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
                       <div class="error">Не верно введен email</div>
@@ -623,13 +629,15 @@
                     <a href="#" type="button" class="btn-main js-next-step" data-step="step-3" disabled> <span>Далее</span> </a>
                   </div>
                 </div>
-                <div class="tabs__content-item form-step-3" data-content="step-3">
+                <!-- END tabs-content__item-->
+                <!-- BEGIN tabs-content__item-->
+                <div class="tabs-content__item" data-content="step-3">
                   <div class="form__row form__row_required">
                     <div class="form__col-1"> <select class="select-default">
-							<option value="Skype" selected>Skype</option>
-							<option value="Jabber">Jabber</option>
-							<option value="ICQ">ICQ</option>
-						</select> </div>
+				<option value="Skype" selected>Skype</option>
+				<option value="Jabber">Jabber</option>
+				<option value="ICQ">ICQ</option>
+			</select> </div>
                     <div class="form__col-2">
                       <div class="field"> <input type="text" name="contact" class="input" placeholder="контакт"> </div>
                     </div>
@@ -644,8 +652,10 @@
                     <a href="#" class="btn-main" disabled> <span>Регистрация</span> </a>
                   </div>
                 </div>
+                <!-- END tabs-content__item -->
               </form>
             </div>
+            <!-- END  tabs-content-->
           </div>
           <!-- END tabs -->
         </div>
