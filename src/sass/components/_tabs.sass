@@ -1,14 +1,28 @@
 .tabs
 	text-align: left
 	+clr
-	&__control
-		+sm-min
-			float: left
-			width: 142px
-			min-height: 1px
-		+sm
-			margin-left: -15px
-	&__control-item
+.tabs-content
+	position: relative
+	+sm-min
+		float: right
+		width: 594px
+		padding-left: 30px
+	+sm
+		margin-left: -20px
+	+xs
+		margin-left: 0
+	&__item
+		// display: none
+		&.is-active
+			display: block
+.tabs-control
+	+sm-min
+		float: left
+		width: 142px
+		min-height: 1px
+	+sm
+		margin-left: -15px
+	&__item
 		&:not(:first-of-type)
 			+sm-min
 				margin-top: 20px
@@ -17,15 +31,6 @@
 			display: inline-block
 			vertical-align: top
 			padding-left: 15px
-	&__content
-		position: relative
-		+sm-min
-			float: right
-			width: 594px
-	&__content-item
-		display: none
-		&.is-active
-			display: block
 	&__link
 		font-size: 24px
 		line-height: 1.2
@@ -46,14 +51,14 @@
 			left: 0
 			right: 0
 			bottom: 0
-			height: 10px
-			transform: scaleY(0.5)
+			height: 4px
+			transform: scaleY(1)
 			transition: all 0.3s
 			background-color: rgba(#fff, 0.4)
-			+sm
-				height: 6px
 		&.is-active
 			color: #fff
 			&:after
-				transform: scaleY(1)
+				transform: scaleY(2)
 				background-color: #fff
+				+sm
+					transform: scaleY(1.5)

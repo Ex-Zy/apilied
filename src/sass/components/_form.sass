@@ -1,0 +1,198 @@
+.form
+	position: relative
+	&__bottom
+		text-align: right
+		margin-top: 40px
+		+sm
+			margin-top: 30px
+	&__row
+		position: relative
+		+clr
+		+sm
+			width: 50%
+			display: inline-block
+			vertical-align: top
+			padding-left: 20px
+		+xs
+			width: 100%
+			display: block
+			padding-left: 0
+		&:not(:first-of-type)
+			+sm-min
+				margin-top: 20px
+	&__action
+		text-align: right
+		counter-reset: list
+		+xs-min
+			margin-left: -30px
+		&:not(:first-of-type)
+			padding-top: 60px
+		.btn-category
+			&__inner
+				&:before
+					counter-increment: list
+					content: '0' counter(list)
+					position: absolute
+					top: 0
+					left: 20px
+					z-index: 1
+					background-color: $violet
+					font-size: 18px
+					padding: 0 18px
+					margin-top: -6px
+	&__row_required
+		+sm-min
+			&:before
+				content: '*'
+				font-size: 30px
+				line-height: 1
+				position: absolute
+				top: 15px
+				right: 100%
+				margin-right: 14px
+				color: rgba(#fff, 0.4)
+	&__capcha
+		margin-top: 31px
+		+sm
+			text-align: right
+			margin-top: 30px
+	&__col-1
+		+sm-min
+			width: 41%
+			float: left
+			padding-right: 27px
+	&__col-2
+		+sm-min
+			width: 59%
+			float: right
+// .form-step-1
+// 	.form__row
+// 		counter-reset: list
+// 		&:not(:first-of-type)
+// 			padding-top: 60px
+// 		.btn-category
+// 			&__inner
+// 				&:before
+// 					counter-increment: list
+// 					content: '0' counter(list)
+// 					position: absolute
+// 					top: 0
+// 					left: 20px
+// 					z-index: 1
+// 					background-color: $violet
+// 					font-size: 18px
+// 					padding: 0 18px
+// 					margin-top: -6px
+// .form-step-2
+// 	.form__row
+// 		&:not(:first-of-type)
+// 			margin-top: 12px
+.field
+	position: relative
+	border-bottom: 4px solid rgba(255, 255, 255, 0.4)
+	&.is-error
+		.error
+			display: inline-block
+.input
+	background: none
+	+roboto-bold
+	font-size: 30px
+	line-height: 1.2
+	padding: 12px 0
+	display: block
+	width: 100%
+	color: #fff
+	+placeholder-color(rgba(#fff, 0.4))
+	+sm
+		font-size: 20px
+.error
+	display: none
+	padding: 10px 28px 
+	background-color: #eb2121
+	border-radius: 19px
+	+roboto-bold
+	font-size: 16px
+	color: #fff
+	+trans
+.change
+	+xs-min
+		float: right
+	&__top
+		padding-top: 8px
+	&__bottom
+		padding-top: 22px
+		+sm
+			padding-top: 10px
+.select-default
+	display: none
+.select
+	position: relative
+	+roboto-bold
+	font-size: 30px
+	position: relative
+	border-bottom: 4px solid #fff
+	+sm
+		font-size: 18px
+	&.is-open .select__list
+		display: block
+
+.select__text
+	background-color: transparent
+	color: #fff
+	padding: 9px 0
+	display: block
+	position: relative
+	cursor: pointer
+	+sm
+		line-height: 1.6
+		padding: 10px 0
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		margin-top: -3px
+		right: 20px
+		border: 6px solid transparent
+		border-top: 6px solid #fff
+		z-index: 1
+		user-select: none
+.select__list
+	display: none
+	list-style: none
+	position: absolute
+	left: 0
+	right: 0
+	top: 100%
+	margin-top: 4px
+	box-shadow: 0 0 60px rgba(1, 2, 4, 0.13);
+	overflow-x: hidden
+	overflow-y: auto
+	z-index: 10
+.select li
+	padding: 8px 20px
+	cursor: pointer
+	background-color: $violet
+	transition: background-color 0.3s
+	font-size: 24px
+	color: rgba(#fff, 0.4)
+	+sm
+		font-size: 18px
+	+hover
+		color: #fff
+.capcha
+	max-width: 274px
+	display: inline-block
+	vertical-align: top
+.info
+	+roboto-bold
+	font-size: 24px
+	max-width: 380px
+	text-align: right
+	display: inline-block
+	padding-top: 17px
+	+sm
+		padding-top: 8px
+		font-size: 18px
+	+xs
+		display: none

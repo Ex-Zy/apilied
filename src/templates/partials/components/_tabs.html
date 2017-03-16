@@ -1,93 +1,11 @@
 <!-- BEGIN tabs -->
 <div class="tabs">
-	<ul class="tabs__control">
-		<li class="tabs__control-item">
-			<a href="#" class="tabs__link is-active" data-link="step-1">ШАГ 1</a>
-		</li>
-		<li class="tabs__control-item">
-			<a href="#" class="tabs__link" data-link="step-2" disabled>ШАГ 2</a>
-		</li>
-		<li class="tabs__control-item">
-			<a href="#" class="tabs__link" data-link="step-3" disabled>ШАГ 3</a>
-		</li>
-	</ul>
-	<div class="tabs__content">
-		<form action="/" method="GET" id="main-form">
-			<div class="tabs__content-item form-step-1 is-active" data-content="step-1">
-				<div class="form__row form__row_right">
-					<button type="button" class="btn-category js-category" data-user-name="webmaster">
-						<div class="btn-category__inner">
-							<span>вебмастер</span>
-						</div>
-					</button>
-					<button type="button" class="btn-category js-category" data-user-name="advertiser">
-						<div class="btn-category__inner">
-							<span>рекламодатель</span>
-						</div>
-					</button>
-					<input type="text" name="user" id="form-user" style="display: none;">
-				</div>
-				<div class="form__bottom">
-					<a href="#" class="btn-main js-next-step" data-step="step-2" disabled>
-						<span>Далее</span>
-					</a>
-				</div>
-			</div>
-			<div class="tabs__content-item form-step-2" data-content="step-2">
-				<div class="form__row form__row_required">
-					<div class="field">
-						<input type="email" name="mail" class="input" placeholder="email" required>
-						<div class="error">Не верно введен email</div>
-					</div>
-				</div>
-				<div class="form__row form__row_required">
-					<div class="field">
-						<input type="password" name="password" class="input" placeholder="пароль" required>
-					</div>
-				</div>
-				<div class="form__row form__row_required">
-					<div class="field">
-						<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
-					</div>
-				</div>
-				<div class="form__bottom">
-					<a href="#" type="button" class="btn-main js-next-step" data-step="step-3" disabled>
-						<span>Далее</span>
-					</a>
-				</div>
-			</div>
-			<div class="tabs__content-item form-step-3" data-content="step-3">
-				<div class="form__row form__row_required">
-					<div class="form__col-1">
-						<select class="select-default">
-							<option value="Skype" selected>Skype</option>
-							<option value="Jabber">Jabber</option>
-							<option value="ICQ">ICQ</option>
-						</select>
-					</div>
-					<div class="form__col-2">
-						<div class="field">
-							<input type="text" name="contact" class="input" placeholder="контакт">
-						</div>
-					</div>
-				</div>
-				<div class="form__row form__row_required">
-					<div class="field">
-						<input type="text" name="webmoney" class="input" placeholder="Webmoney (WMR)">
-					</div>
-				</div>
-				<div class="form__capcha">
-					<div class="capcha">
-						<img src="img/capcha.png" alt="">
-					</div>
-				</div>
-				<div class="form__bottom">
-					<a href="#" class="btn-main" disabled>
-						<span>Регистрация</span>
-					</a>
-				</div>
-			</div>
-		</form>
-	</div>
+
+	{# tabs-control #}
+	{% include "partials/components/tabs/_tabs-control.html" %}
+
+	{# tabs-content #}
+	{% include "partials/components/tabs/_tabs-content.html" %}
+	
 </div>
 <!-- END tabs -->
