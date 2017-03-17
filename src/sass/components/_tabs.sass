@@ -12,7 +12,7 @@
 	+xs
 		margin-left: 0
 	&__item
-		// display: none
+		display: none
 		&.is-active
 			display: block
 .tabs-control
@@ -22,19 +22,9 @@
 		min-height: 1px
 	+sm
 		margin-left: -15px
-	&__item
-		&:not(:first-of-type)
-			+sm-min
-				margin-top: 20px
-		+sm
-			width: 33.3333%
-			display: inline-block
-			vertical-align: top
-			padding-left: 15px
 	&__link
 		font-size: 24px
 		line-height: 1.2
-		color: #fff
 		display: block
 		padding-bottom: 36px
 		color: rgba(#fff, 0.4)
@@ -42,8 +32,15 @@
 		position: relative
 		cursor: default
 		+sm
+			width: 33.3333%
+			display: inline-block
+			vertical-align: top
+			padding-left: 15px
 			font-size: 18px
 			padding-bottom: 20px
+		&:not(:first-of-type)
+			+sm-min
+				margin-top: 20px
 		&:after
 			content: ''
 			display: block
@@ -55,6 +52,8 @@
 			transform: scaleY(1)
 			transition: all 0.3s
 			background-color: rgba(#fff, 0.4)
+			+sm
+				left: 15px
 		&.is-active
 			color: #fff
 			&:after

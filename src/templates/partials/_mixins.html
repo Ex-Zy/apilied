@@ -22,3 +22,28 @@
 	<div class="border border4"></div>
 </div>
 {% endmacro %}
+
+{# input #}
+{% macro input(option) %}
+<div class="field">
+	{% if option == "email" %}
+		<input type="email" name="email" class="input" placeholder="email" required="">
+	{% elif option == "password" %}
+		<input type="password" name="password" class="input" placeholder="пароль" required>
+	{% elif option == "confirm" %}
+		<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
+	{% elif option == "contact"  %}
+		<input type="text" name="contact" class="input" placeholder="контакт">
+	{% elif option == "webmoney" %}
+		<input type="text" name="webmoney" class="input" placeholder="Webmoney (WMR)">
+	{% endif %}
+</div>
+{% endmacro %}
+
+{% macro select() %}
+	<select class="select-default">
+		<option value="Skype" selected>Skype</option>
+		<option value="Jabber">Jabber</option>
+		<option value="ICQ">ICQ</option>
+	</select>
+{% endmacro %}

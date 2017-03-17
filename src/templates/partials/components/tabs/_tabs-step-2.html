@@ -1,20 +1,13 @@
 <!-- BEGIN tabs-content__item-->
-<div class="tabs-content__item" data-content="step-2">
+<div class="tabs-content__item js-content-item" data-content="step-2">
 	<div class="form__row form__row_required">
-		<div class="field">
-			<input type="email" name="mail" class="input" placeholder="email" required>
-			<div class="error">Не верно введен email</div>
-		</div>
+		{{mixins.input("email")}}
 	</div>
 	<div class="form__row form__row_required">
-		<div class="field">
-			<input type="password" name="password" class="input" placeholder="пароль" required>
-		</div>
+		{{mixins.input("password")}}
 	</div>
 	<div class="form__row form__row_required">
-		<div class="field">
-			<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
-		</div>
+		{{mixins.input("confirm")}}
 	</div>
 	<div class="form__bottom">
 		<a href="#" type="button" class="btn-main js-next-step" data-step="step-3" disabled>

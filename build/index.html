@@ -562,42 +562,41 @@
       <!-- END description -->
     </div>
     <!-- END content -->
-    <!-- BEGIN popup -->
-    <div class="popup popup-reg js-popup" data-popup="registration">
-      <!-- BEGIN popup-reg__window -->
-      <div class="popup-reg__window">
-        <div class="popup-reg__top">
-          <div class="popup-reg__col-1">
-            <div class="popup-reg__title">Регистрация</div>
-            <div class="popup-reg__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
+    <!-- BEGIN popup-checkin -->
+    <div class="popup-checkin js-popup" data-popup="registration">
+      <!-- BEGIN popup-checkin__window -->
+      <div class="popup-checkin__window">
+        <!-- BEGIN popup-checkin__top  -->
+        <div class="popup-checkin__top">
+          <div class="popup-checkin__col-1">
+            <div class="popup-checkin__title">Регистрация</div>
+            <div class="popup-checkin__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
           </div>
-          <div class="popup-reg__col-2"> <span class="info" style="display: none;">Выберите тип аккаунта</span>
+          <div class="popup-checkin__col-2"> <span class="info" style="display: none;">Выберите тип аккаунта</span>
             <div class="change">
               <div class="change__top"> <button type="button" class="btn-variation js-account-btn" data-account="Рекламодатель">Вебмастер</button> </div>
               <div class="change__bottom"> <a href="#" class="btn-change js-account-link">
-							Изменить тип аккаунта 
-							
+					Изменить тип аккаунта 
+					
 <svg class="icon icon-change"><use xlink:href="img/sprite.svg#icon-change"></use></svg>
 
-						</a> </div>
+				</a> </div>
             </div>
           </div>
         </div>
-        <div class="popup-reg__body">
+        <!-- END popup-checkin__top  -->
+        <!-- BEGIN popup-chechin__body -->
+        <div class="popup-checkin__body">
           <!-- BEGIN tabs -->
           <div class="tabs">
             <!-- BEGIN tabs-control -->
-            <ul class="tabs-control">
-              <li class="tabs-control__item"> <a href="#" class="tabs-control__link is-active" data-link="step-1">ШАГ 1</a> </li>
-              <li class="tabs-control__item"> <a href="#" class="tabs-control__link" data-link="step-2" disabled>ШАГ 2</a> </li>
-              <li class="tabs-control__item"> <a href="#" class="tabs-control__link" data-link="step-3" disabled>ШАГ 3</a> </li>
-            </ul>
+            <div class="tabs-control"> <a href="step-1" class="tabs-control__link js-control-link is-active">ШАГ 1</a> <a href="step-2" class="tabs-control__link js-control-link">ШАГ 2</a> <a href="step-3" class="tabs-control__link js-control-link">ШАГ 3</a> </div>
             <!-- END tabs-control -->
             <!-- BEGIN tabs-content -->
             <div class="tabs-content">
               <form action="/" method="GET" id="main-form">
                 <!-- BEGIN tabs-content__item-->
-                <div class="tabs-content__item is-active" data-content="step-1">
+                <div class="tabs-content__item js-content-item is-active" data-content="step-1">
                   <div class="form__action"> <button type="button" class="btn-category js-category" data-user-name="webmaster">
 			<div class="btn-category__inner">
 				<span>вебмастер</span>
@@ -613,11 +612,9 @@
                 </div>
                 <!-- END tabs-content__item-->
                 <!-- BEGIN tabs-content__item-->
-                <div class="tabs-content__item" data-content="step-2">
+                <div class="tabs-content__item js-content-item" data-content="step-2">
                   <div class="form__row form__row_required">
-                    <div class="field"> <input type="email" name="mail" class="input" placeholder="email" required>
-                      <div class="error">Не верно введен email</div>
-                    </div>
+                    <div class="field"> <input type="email" name="email" class="input" placeholder="email" required=""> </div>
                   </div>
                   <div class="form__row form__row_required">
                     <div class="field"> <input type="password" name="password" class="input" placeholder="пароль" required> </div>
@@ -631,13 +628,13 @@
                 </div>
                 <!-- END tabs-content__item-->
                 <!-- BEGIN tabs-content__item-->
-                <div class="tabs-content__item" data-content="step-3">
+                <div class="tabs-content__item js-content-item" data-content="step-3">
                   <div class="form__row form__row_required">
                     <div class="form__col-1"> <select class="select-default">
-				<option value="Skype" selected>Skype</option>
-				<option value="Jabber">Jabber</option>
-				<option value="ICQ">ICQ</option>
-			</select> </div>
+		<option value="Skype" selected>Skype</option>
+		<option value="Jabber">Jabber</option>
+		<option value="ICQ">ICQ</option>
+	</select> </div>
                     <div class="form__col-2">
                       <div class="field"> <input type="text" name="contact" class="input" placeholder="контакт"> </div>
                     </div>
@@ -649,7 +646,7 @@
                     <div class="capcha"> <img src="img/capcha.png" alt=""> </div>
                   </div>
                   <div class="form__bottom">
-                    <a href="#" class="btn-main" disabled> <span>Регистрация</span> </a>
+                    <a href="finish.html" class="btn-main" disabled> <span>Регистрация</span> </a>
                   </div>
                 </div>
                 <!-- END tabs-content__item -->
@@ -659,18 +656,22 @@
           </div>
           <!-- END tabs -->
         </div>
+        <!-- END popup-chechin__body -->
       </div>
-      <!-- END popup-reg__window -->
+      <!-- END popup-checkin__window -->
     </div>
-    <!-- END popup -->
-    <!-- BEGIN popup -->
-    <div class="popup popup-login js-popup" data-popup="login">
+    <!-- END popup-checkin -->
+    <!-- BEGIN popup-login -->
+    <div class="popup-login js-popup" data-popup="login">
       <!-- BEGIN popup-login__window -->
       <div class="popup-login__window">
+        <!-- BEGIN popup-login__top -->
         <div class="popup-login__top">
           <div class="popup-login__title">Авторизация</div>
           <div class="popup-login__sub"> <a href="#" class="btn-back js-close-popup">вернуться на главную</a> </div>
         </div>
+        <!-- END popup-login__top -->
+        <!-- BEGIN popup-login__body -->
         <div class="popup-login__body">
           <form action="/" method="POST" id="main-form">
             <div class="form__row form__row_required">
@@ -682,27 +683,31 @@
               <div class="field"> <input type="password" name="password" class="input" placeholder="пароль" required> </div>
             </div>
             <div class="form__bottom"> <button type="submit" class="btn-main">
-						<span>Войти</span>
-					</button> </div>
+				<span>Войти</span>
+			</button> </div>
           </form>
         </div>
+        <!-- END popup-login__body -->
       </div>
       <!-- END popup-login__window -->
     </div>
-    <!-- END popup -->
+    <!-- END popup-login -->
     <!-- BEGIN popup-offers -->
-    <div class="popup popup-offers js-popup" data-popup="offers">
+    <div class="popup-offers js-popup" data-popup="offers">
       <!-- BEGIN popup__window -->
       <div class="popup__window">
+        <!-- BEGIN popup__top -->
         <div class="popup__top">
           <div class="popup__top-title">Топ офферов</div>
           <div class="popup__top-button"> <button type="button" class="btn-close js-close-popup">
-					ЗАКРЫТЬ
-					
+			ЗАКРЫТЬ
+			
 <svg class="icon icon-close"><use xlink:href="img/sprite.svg#icon-close"></use></svg>
 
-				</button> </div>
+		</button> </div>
         </div>
+        <!-- END popup__top -->
+        <!-- BEGIN popup__body -->
         <div class="popup__body">
           <div class="popup__caption">
             <div class="popup__caption-col popup__caption-col_1">НАЗВАНИЕ</div>
@@ -878,6 +883,7 @@
             </div>
           </div>
         </div>
+        <!-- END popup__body -->
       </div>
       <!-- END popup__window -->
     </div>

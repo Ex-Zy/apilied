@@ -1,0 +1,40 @@
+<!-- BEGIN popup__body -->
+<div class="popup__body">
+	<div class="popup__caption">
+		<div class="popup__caption-col popup__caption-col_1">НАЗВАНИЕ</div>
+		<div class="popup__caption-col popup__caption-col_2">ГЕО</div>
+		<div class="popup__caption-col popup__caption-col_3">ОТЧИСЛЕНИЯ</div>
+	</div>
+
+	{% for item in items.offersList %}
+
+		<div class="popup__row">
+
+			<div class="popup__col popup__col_1">
+				<div class="product">
+					<div class="product__media">
+						<img src="img/{{item.prodImg}}" alt="">
+					</div>
+					<div class="product__desc">
+						{{item.prodDesc}}
+					</div>
+				</div>
+			</div>
+
+			<div class="popup__col popup__col_2">
+				<div class="flags">
+					{% for unit in item.flagsIconClass %}
+						<i class="{{unit}}"></i>
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="popup__col popup__col_3">
+				<div class="price">{{item.prodPrice}}</div>
+			</div>
+			
+		</div>
+
+	{% endfor %}
+</div>
+<!-- END popup__body -->
