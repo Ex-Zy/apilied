@@ -1,7 +1,5 @@
-'use strict';
-
 //popup
-$('.js-open-popup').click(function (e) {
+$('.js-open-popup').click(function(e) {
 	e.preventDefault();
 
 	var link = $(this).data('link');
@@ -10,7 +8,7 @@ $('.js-open-popup').click(function (e) {
 	popup.addClass('is-active');
 	$("body").addClass("is-hidden");
 });
-$(".js-close-popup").click(function () {
+$(".js-close-popup").click(function (){
 	$(this).parents(".js-popup").removeClass('is-active');
 	$("body").removeClass("is-hidden");
 	return false;

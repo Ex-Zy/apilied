@@ -1044,6 +1044,14 @@ a {
 .info-list__title {
   color: #ff1799;
   font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Roboto Regular", Arial, sans-serif;
+  font-weight: normal;
+}
+
+.info-list a {
+  font-family: inherit;
+  font-weight: normal;
 }
 
 .contact-list {
@@ -1106,7 +1114,7 @@ a {
 
 .profile {
   max-width: 411px;
-  min-height: 521px;
+  min-height: 540px;
   display: block;
   margin: auto;
   padding: 45px 32px 50px;
@@ -1182,7 +1190,7 @@ a {
   top: 0;
   left: 0;
   bottom: 0;
-  z-index: 90;
+  z-index: -1;
   overflow-x: hidden;
   overflow-y: auto;
   background: #10192b;
@@ -1190,7 +1198,6 @@ a {
   -ms-transform: translate(-100%, 0);
   transform: translate(-100%, 0);
   transition: 0.3s ease 0.5s;
-  z-index: 5;
   text-align: left;
 }
 
@@ -2156,6 +2163,30 @@ a {
   clear: both;
 }
 
+.form__row.is-focused:before {
+  color: #fff;
+}
+
+.form__row.is-focused .field {
+  border-bottom-color: #fff;
+}
+
+.form__row.is-focused .input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form__row.is-focused .input::-moz-placeholder {
+  color: #fff;
+}
+
+.form__row.is-focused .input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form__row.is-focused .input::placeholder {
+  color: #fff;
+}
+
 .form__action {
   text-align: right;
   counter-reset: list;
@@ -2185,10 +2216,7 @@ a {
 .field {
   position: relative;
   border-bottom: 4px solid rgba(255, 255, 255, 0.4);
-}
-
-.field.is-error .error {
-  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .input {
@@ -2201,6 +2229,7 @@ a {
   display: block;
   width: 100%;
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .input::-webkit-input-placeholder {
@@ -2534,11 +2563,7 @@ a {
     margin-top: 20px;
   }
 
-  .form__row:not(:first-of-type) {
-    margin-top: 20px;
-  }
-
-  .form__row_required:before {
+  .form__row:before {
     content: '*';
     font-size: 30px;
     line-height: 1;
@@ -2547,6 +2572,11 @@ a {
     right: 100%;
     margin-right: 14px;
     color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .form__row:not(:first-of-type) {
+    margin-top: 20px;
   }
 
   .form__col-1 {
@@ -2827,11 +2857,15 @@ a {
   }
 
   .footer__content {
-    max-width: 370px;
+    max-width: 330px;
+  }
+
+  .payments {
+    display: block;
   }
 
   .payments__item {
-    margin-left: 10px;
+    margin: 0 20px 0 0;
   }
 
   .info-list__item {
@@ -3064,6 +3098,10 @@ a {
   .footer__col2 {
     float: none;
     clear: both;
+  }
+
+  .footer__content {
+    max-width: 500px;
   }
 
   .info-list__item {
