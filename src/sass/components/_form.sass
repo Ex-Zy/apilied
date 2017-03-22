@@ -8,6 +8,24 @@
 	&__row
 		position: relative
 		+clr
+		+sm-min
+			&:before
+				content: '*'
+				font-size: 30px
+				line-height: 1
+				position: absolute
+				top: 0
+				right: 100%
+				margin-right: 14px
+				color: rgba(#fff, 0.4)
+				+trans
+		&.is-focused
+			&:before
+				color: #fff
+			.field
+				border-bottom-color: #fff
+			.input
+				+placeholder-color(#fff)
 		+sm
 			width: 50%
 			display: inline-block
@@ -40,17 +58,6 @@
 					font-size: 18px
 					padding: 0 18px
 					margin-top: -6px
-	&__row_required
-		+sm-min
-			&:before
-				content: '*'
-				font-size: 30px
-				line-height: 1
-				position: absolute
-				top: 0
-				right: 100%
-				margin-right: 14px
-				color: rgba(#fff, 0.4)
 	&__capcha
 		margin-top: 31px
 		+sm
@@ -68,9 +75,7 @@
 .field
 	position: relative
 	border-bottom: 4px solid rgba(255, 255, 255, 0.4)
-	&.is-error
-		.error
-			display: inline-block
+	+trans
 .input
 	background: none
 	+roboto-bold
@@ -80,6 +85,7 @@
 	display: block
 	width: 100%
 	color: #fff
+	+trans
 	+placeholder-color(rgba(#fff, 0.4))
 	+sm
 		font-size: 20px

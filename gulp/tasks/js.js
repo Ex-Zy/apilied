@@ -3,7 +3,7 @@ var include = require("gulp-include");
 // var uglify = require('gulp-uglify');
 var config = require('../config');
 var browserSync = require('browser-sync');
-var babel = require('gulp-babel');
+// var babel = require('gulp-babel');
 reload = browserSync.reload;
 
 
@@ -12,7 +12,7 @@ gulp.task('js', function () {
         .pipe(include())
         // .on('error', function(){notify("Javascript include error");})
         //.pipe(uglify())
-        .pipe(babel())
+        // .pipe(babel())
         .pipe(gulp.dest(config.dest.js+'/'))
         .pipe(reload({stream: true}));
 });

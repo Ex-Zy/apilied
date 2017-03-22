@@ -1,7 +1,5 @@
-'use strict';
-
 // scroll navigation
-$('.navigation a').on('click', function (e) {
+$('.navigation a').on('click', function(e) {
 	e.preventDefault();
 
 	$('.navigation a').add('.js-sidebar').removeClass('is-active');

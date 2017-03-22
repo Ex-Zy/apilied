@@ -1,23 +1,45 @@
-var touch = 'ontouchstart' in window;
-
-if(!touch) {
-	$('body').addClass('is-no-touch');
-
-	showSidebar();
-} else {
-	$('body').addClass('is-touch');
-
-	$('.js-menu').click(function() {
-		$('.js-sidebar').toggleClass('is-active');
-	});
+function Menu(elements){
+	this._menu = elements.menu;
+	this._sidebar = elements.sidebar;
 }
 
-function showSidebar() {
-	$('.js-menu').add('.js-sidebar').on('mouseenter', function() {
-		$('.js-sidebar').addClass('is-active');
-	});
+Menu.prototype = {
+	_showOnHoverSidebar: function(e) {
+		this._menu.add(this._sidebar).on('mouseenter', function(){
+			this._sidebar.addClass('is-active');
+		}.bind(this));
+	},
+	_hideOnHoverSidebar: function() {
+		this._menu.on('mouseleave', function() {
+			this._sidebar.removeClass('is-active');
+		}.bind(this));
+	},
+	_toggleOnClickSidebar: function() {
+		this._menu.click(function() {
+			this._sidebar.toggleClass('is-active');
+		}.bind(this));
+	},
+	_isTouch: function() {
+		var touch = 'ontouchstart' in window;
+		return touch;
+	},
+	init: function() {
+		var notTouch = !this._isTouch();
 
-	$('.js-menu').add('.js-sidebar').on('mouseleave', function() {
-		$('.js-sidebar').removeClass('is-active');
-	});
+		if(notTouch) {
+			$('body').addClass('is-no-touch');
+			this._showOnHoverSidebar();
+			this._hideOnHoverSidebar();
+		} else {
+			$('body').addClass('is-touch');
+			this._toggleOnClickSidebar();
+		}
+	}
 }
+
+var menu = new Menu({
+	menu: $('.js-menu'),
+	sidebar: $('.js-sidebar')
+});
+
+menu.init();
