@@ -1154,6 +1154,7 @@ a {
   font-size: 14px;
   color: #ff1799;
   margin-top: 10px;
+  text-transform: uppercase;
   font-family: "Roboto Bold", Arial, sans-serif;
   font-weight: normal;
   overflow: hidden;
@@ -1623,6 +1624,7 @@ a {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.2;
+  text-transform: lowercase;
 }
 
 .offer {
@@ -3309,9 +3311,17 @@ a {
     padding: 40px 20px;
   }
 
+  .webmasters__col + .webmasters__col {
+    margin-top: 10px;
+  }
+
   .webmasters__btn .btn-primary {
     font-size: 20px;
     padding: 20px 30px;
+  }
+
+  .commercial__col + .commercial__col {
+    margin-top: 10px;
   }
 
   .commercial__btn .btn-primary {
