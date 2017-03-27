@@ -208,7 +208,8 @@ $(function() {
 		this.inputUser        = elements.inputUser;
 		this.form             = elements.form;
 		this.input            = elements.input;
-		this.changeLink       = elements.change;
+		this.changeLink       = elements.changeLink;
+		this.changeBtn        = elements.changeBtn;
 	}
 	
 	Tabs.prototype = {
@@ -254,12 +255,25 @@ $(function() {
 			});
 		},
 		_changeAccount: function() {
-			
+			var btn = this.changeBtn;
+			var link = this.changeLink;
+	
+			link.click(function(e) {
+				e.preventDefault();
+	
+				var link = $(this);
+				var btnText = btn.html();
+				var linkData = link.attr('data-account');
+	
+				link.attr('data-account', btnText);
+				btn.html(linkData);
+	 		});
 		},
 		init: function() {
 			this._selectProfile();
 			this._nextStep();
 			this._focusOnInput();
+			this._changeAccount();
 		}
 	};
 	
@@ -272,12 +286,12 @@ $(function() {
 		inputUser         : $('#input-user'),
 		form              : $('#main-form'),
 		input             : $('.input'),
-		changeLink        : $('.js-account-link')
+		changeLink        : $('.js-account-link'),
+		changeBtn         : $('.js-account-btn')
 	});
 	
 	tabs.init();
 	
-	console.log(tabs);
 	// scroll navigation
 	$('.navigation a').on('click', function(e) {
 		e.preventDefault();
