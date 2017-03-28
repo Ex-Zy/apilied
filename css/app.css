@@ -2190,6 +2190,17 @@ a {
   color: #fff;
 }
 
+.form__row.is-error .input {
+  -webkit-transform: scale(0.5) translate(-50%, -50%);
+  -ms-transform: scale(0.5) translate(-50%, -50%);
+  transform: scale(0.5) translate(-50%, -50%);
+}
+
+.form__row.is-error .error {
+  visibility: visible;
+  opacity: 1;
+}
+
 .form__action {
   text-align: right;
   counter-reset: list;
@@ -2232,6 +2243,9 @@ a {
   display: block;
   width: 100%;
   color: #fff;
+  -webkit-transform: scale(1) translate(0, 0);
+  -ms-transform: scale(1) translate(0, 0);
+  transform: scale(1) translate(0, 0);
   transition: all 0.3s ease;
 }
 
@@ -2253,7 +2267,9 @@ a {
 
 .error {
   display: none;
-  padding: 10px 28px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 8px 28px;
   background-color: #eb2121;
   border-radius: 19px;
   font-family: "Roboto Bold", Arial, sans-serif;
