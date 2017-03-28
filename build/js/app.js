@@ -208,8 +208,10 @@ $(function() {
 		this.inputUser        = elements.inputUser;
 		this.form             = elements.form;
 		this.input            = elements.input;
+		this.change           = elements.change;
 		this.changeLink       = elements.changeLink;
 		this.changeBtn        = elements.changeBtn;
+		this.info             = elements.info;
 	}
 	
 	Tabs.prototype = {
@@ -232,6 +234,7 @@ $(function() {
 			var btnNextStep = this.btnNextStep;
 			var allLinks    = this.links;
 			var allitems    = this.items;
+			var that        = this;
 	
 			btnNextStep.click(function(e) {
 				e.preventDefault();
@@ -241,9 +244,15 @@ $(function() {
 				var link = allLinks.filter('[data-tabs-link="'+ data +'"]');
 				var item = allitems.filter('[data-tabs-content="'+ data +'"]');
 	
-				btn.removeAttr('disabled');
-				allLinks.add(allitems).removeClass('is-active');
-				link.add(item).addClass('is-active');
+				if(that.form.hasClass('step-1-ready')) {
+					btn.removeAttr('disabled');
+					allLinks.add(allitems).removeClass('is-active');
+					link.add(item).addClass('is-active');
+					that.change.css({'display': 'block'});
+					that.info.css({'display': 'none'});
+				}
+	
+				
 			});
 		},
 		_focusOnInput: function() {
@@ -286,8 +295,10 @@ $(function() {
 		inputUser         : $('#input-user'),
 		form              : $('#main-form'),
 		input             : $('.input'),
+		change            : $('.change'),
 		changeLink        : $('.js-account-link'),
-		changeBtn         : $('.js-account-btn')
+		changeBtn         : $('.js-account-btn'),
+		info              : $('.info')
 	});
 	
 	tabs.init();

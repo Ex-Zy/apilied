@@ -28,6 +28,7 @@
 <div class="field">
 	{% if option == "email" %}
 		<input type="email" name="email" class="input" placeholder="email" required="">
+		<div class="error">Не верно введен email</div>
 	{% elif option == "password" %}
 		<input type="password" name="password" class="input" placeholder="пароль" required>
 	{% elif option == "confirm" %}
