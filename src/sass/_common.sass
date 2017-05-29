@@ -1,3 +1,6 @@
+html, body
+	height: 100%
+	overflow: hidden
 body
 	background-color: $section-bg-dark
 	line-height: 1.4
@@ -6,7 +9,6 @@ body
 	color: #fff
 	&.is-hidden
 		overflow: hidden
-
 a
 	text-decoration: none
 	color: inherit
@@ -16,8 +18,12 @@ a
 //title
 .title-primary
 	+roboto-light
-	+css-lock(40, 72, 900, 1920)
+	+css-lock(60, 120, 900, 1920)
 	line-height: 1
+	+css-lock(30, 120, 600, 1920, 'margin-bottom')
+	// margin-bottom: 120px
+	+sm
+		// margin-bottom: 40px
 	+xs
 		font-size: 32px
 	&_centered
@@ -81,3 +87,74 @@ a
 	+s(rum)
 .i-icon-uk
 	+s(uk)
+
+//заглушка для ie <= 9
+.opened#reject .info
+	min-width: 650px
+	
+.glitch
+	position: relative
+	display: table
+	margin-left: auto
+	margin-right: auto 
+	+textGlitch(glitch, 5, inherit, $section-bg-dark, red, $violet, 99999, 90)
+// 	&:before,
+// 	&:after
+// 		content: attr(data-text)
+// 		position: absolute
+// 		top: 0
+// 		left: 0
+// 		width: 100%
+// 		height: 100%
+// 	&:before
+// 		left: -2px
+// 		text-shadow: -1px 0 red
+// 		background: $section-bg-dark
+// 		clip: rect(44px, 850px, 56px, 0)
+// 		animation: glitch-anim-1 2s infinite linear alternate-reverse
+// 	&:after
+// 		left: -2px
+// 		text-shadow: -1px 0 blue
+// 		clip: rect(17px, 850px, 42px, 0)
+// 		animation: glitch-anim-2 2s infinite linear alternate
+// 		background: $section-bg-dark
+// @keyframes glitch-anim-1
+// 	0%
+// 		clip: rect(70px, 850px, 76px, 0)
+// 	20%
+// 		clip: rect(29px, 850px, 16px, 0)
+// 	40%
+// 		clip: rect(76px, 850px, 3px, 0)
+// 	60%
+// 		clip: rect(42px, 850px, 78px, 0)
+// 	80%
+// 		clip: rect(15px, 850px, 13px, 0)
+// 	100%
+// 		clip: rect(53px, 850px, 5px, 0)
+// @keyframes glitch-anim-2
+// 	0%
+// 		clip: rect(50px, 850px, 55px, 0)
+// 	20%
+// 		clip: rect(21px, 850px, 30px, 0)
+// 	40%
+// 		clip: rect(22px, 850px, 77px, 0)
+// 	60%
+// 		clip: rect(38px, 850px, 32px, 0)
+// 	80%
+// 		clip: rect(12px, 850px, 20px, 0)
+// 	100%
+// 		clip: rect(70px, 850px, 80px, 0)
+
+#wrapper 
+	width: 100%
+	padding: 0
+	margin: 0 auto
+	max-width: 100%
+	/*overflow: hidden*/
+	text-align: center
+	+vcenter
+canvas 
+	// padding: 0 40px 0 0
+	margin: 20px auto 0
+	text-align: center
+	max-width: 100%

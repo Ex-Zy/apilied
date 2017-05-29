@@ -11,6 +11,7 @@ var config = {
         root         : 'src',
         templates    : 'src/templates',
         templatesData: 'src/templates/data',
+        pagelist     : 'src/index.yaml',
         sass         : 'src/sass',
         // path for sass files that will be generated automatically via some of tasks
         sassGen      : 'src/sass/generated',
@@ -33,7 +34,7 @@ var config = {
         css  : destPath + '/css',
         js   : destPath + '/js',
         img  : destPath + '/img',
-        fonts: destPath + '/css/fonts',
+        fonts: destPath + '/fonts',
         lib  : destPath + '/lib'
     },
 

@@ -1,0 +1,9 @@
+import "./partial/initParallax.js";
+import "./partial/menu.js";
+import "./partial/popup.js";
+import "./partial/select.js";
+import "./partial/scrolling.js";
+import "./partial/doc.js";
+import "./partial/formRegistration.js";
+import "./partial/formLogin.js";
+import "./partial/scrollbar.js";

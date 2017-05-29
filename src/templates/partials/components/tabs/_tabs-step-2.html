@@ -1,18 +1,24 @@
 <!-- BEGIN tabs-content__item-->
 <div class="tabs-content__item js-content-item" data-tabs-content="second">
 	<div class="form__row">
-		{{mixins.input("email")}}
+		<div class="field">
+			<input type="email" name="email" class="input" placeholder="email" id="mail-check-in" autocomplete="off">
+		</div>
 	</div>
 	<div class="form__row">
-		{{mixins.input("password")}}
+		<div class="field">
+			<input type="password" name="password" class="input" placeholder="пароль" id="password-check-in">
+		</div>
 	</div>
 	<div class="form__row">
-		{{mixins.input("confirm")}}
+		<div class="field">
+			<input type="password" name="password_confirm" class="input" placeholder="подтверждение пароля" id="confirm-check-in">
+		</div>
 	</div>
 	<div class="form__bottom">
-		<a href="#" type="button" class="btn-main js-next-step" data-step="third" disabled>
+		<button type="button" class="btn-main js-next-step" data-step="third">
 			<span>Далее</span>
-		</a>
+		</button>
 	</div>
 </div>
 <!-- END tabs-content__item-->

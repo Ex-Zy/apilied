@@ -11,27 +11,32 @@
     <link rel="stylesheet" media="all" href="css/app.css">
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
-        <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js"></script>
+            <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js">
     <![endif]-->
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
 
     <!-- BEGIN content -->
-    <div class="out">
+    <div class="out {% if scrollbarOut %}{{scrollbarOut}}{% endif %}">
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
-
-    {# popup-registration #}
-    {% include "../partials/components/popup/popup-checkin/_popup-checkin.html" %}
-    {# popup-login #}
-    {% include "../partials/components/popup/popup-login/_popup-login.html" %}
-    {# popup-offers #}
-    {% include "../partials/components/popup/popup-offers/_popup-offers.html" %}
-        
+    
+    {% if injectPopupsForPage %}
+        {# popup-registration #}
+        {% include "../partials/components/popup/popup-checkin/_popup-checkin.html" %}
+        {# popup-login #}
+        {% include "../partials/components/popup/popup-login/_popup-login.html" %}
+        {# popup-offers #}
+        {% include "../partials/components/popup/popup-offers/_popup-offers.html" %}
+    {% endif %}
+    
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/app.js"></script>
+    {% if addCapchaForPage %}
+    <script src='https://www.google.com/recaptcha/api.js?hl=ru' async defer></script>
+    {% endif %}
     <!-- END scripts -->
 
   </body>

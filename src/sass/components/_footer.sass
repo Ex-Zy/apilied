@@ -1,6 +1,5 @@
 .footer
 	position: relative
-	background-color: #03162d
 	text-align: left
 	&__in
 		max-width: 1570px
@@ -80,7 +79,7 @@
 		+sm
 			padding: 20px 20px 0 0
 		&:not(:first-child)
-			+sm-min
+			+md-min
 				&::before
 					content: ''
 					position: absolute
@@ -91,12 +90,8 @@
 					width: 2px
 					background-color: #ffffff
 					opacity: 0.05
-	&__item_blue
-		.contact-list span,
-		.info-list__title
-			color: $blue
 	&__title
-		color: $pink
+		color: #0189ff
 		font-size: 24px
 		text-transform: uppercase
 		+roboto-reg
@@ -119,6 +114,6 @@
 	span
 		width: 72px
 		padding-right: 10px
-		color: $pink
+		color: #0189ff
 		+md
 			max-width: 55px

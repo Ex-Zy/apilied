@@ -1,23 +1,29 @@
 .company
-	line-height: 1
-	max-width: 430px
-	display: inline-block
-	vertical-align: middle
-	+md
-		max-width: 360px
+	position: relative
+	text-align: center
+	+vcenter
+	+panton-bold
+	max-width: 700px
+	min-width: 340px
+	margin-top: -((100px / 1880px) * 100%)
+	+sm
+		margin-top: -100px
 	+xs
-		max-width: 250px
-	&__logo
-		+hide-text
-	&__text
-		+css-lock(24, 32, 900, 1920, "font-size")
-		margin-top: 5px
+		min-width: 300px
+	&__pretitle
+		+css-lock(28, 36, 900, 1920)
+		letter-spacing: 0.2em
+		color: #fff
+		font-family: Arial, Helvetica, sans-serif
+		+sm
+			font-size: 24px
 		+xs
 			font-size: 20px
-	&__button
-		margin-top: 46px
-	img
-		@extend %img
-		+lg
-			width: 80%
-			margin: auto
+	&__title
+		max-width: 530px
+		width: 100%
+		padding-top: 15px
+		margin: auto
+		+hide-text
+		svg
+			@extend %img

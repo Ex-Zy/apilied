@@ -27,24 +27,23 @@
 {% macro input(option) %}
 <div class="field">
 	{% if option == "email" %}
-		<input type="email" name="email" class="input" placeholder="email" required="">
-		<div class="error">Не верно введен email</div>
+		<input type="email" name="email" class="input" placeholder="email" autocomplete="off">
 	{% elif option == "password" %}
-		<input type="password" name="password" class="input" placeholder="пароль" required>
+		<input type="password" name="password" class="input" placeholder="пароль">
 	{% elif option == "confirm" %}
-		<input type="password" name="confirm-password" class="input" placeholder="подтверждение пароля" required>
+		<input type="password" name="password_confirm" class="input" placeholder="подтверждение пароля">
 	{% elif option == "contact"  %}
-		<input type="text" name="contact" class="input" placeholder="контакт">
+		<input type="text" name="contact" class="input" id="contact-check-in" placeholder="контакт">
 	{% elif option == "webmoney" %}
-		<input type="text" name="webmoney" class="input" placeholder="Webmoney (WMR)">
+		<input type="text" name="wallet" class="input" id="webmoney-check-in" placeholder="Webmoney (WMR)" autocomplete="off">
 	{% endif %}
 </div>
 {% endmacro %}
 
 {% macro select() %}
-	<select class="select-default">
-		<option value="Skype" selected>Skype</option>
-		<option value="Jabber">Jabber</option>
-		<option value="ICQ">ICQ</option>
+	<select class="select-default" name="contact_type">
+		<option value="skype" selected>Skype</option>
+		<option value="jabber">Jabber</option>
+		<option value="icq">ICQ</option>
 	</select>
 {% endmacro %}

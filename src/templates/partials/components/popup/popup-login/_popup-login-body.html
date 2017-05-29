@@ -1,19 +1,18 @@
 <!-- BEGIN popup-login__body -->
 <div class="popup-login__body">
-	<form action="/" method="POST" id="main-form">
-		<div class="form__row form__row_required">
+	<form action="/" method="POST" id="js-form-login" autocomplete="off">
+		<div class="form__row">
 			<div class="field">
-				<input type="email" name="mail" class="input" placeholder="email" required>
-				<div class="error">Не верно введен email</div>
+				<input type="email" name="login" class="input" id="login-mail" placeholder="email">
 			</div>
 		</div>
-		<div class="form__row form__row_required">
+		<div class="form__row">
 			<div class="field">
-				<input type="password" name="password" class="input" placeholder="пароль" required>
+				<input type="password" name="password" class="input" id="login-password" placeholder="пароль">
 			</div>
 		</div>
 		<div class="form__bottom">
-			<button type="submit" class="btn-main">
+			<button type="button" class="btn-main js-submit">
 				<span>Войти</span>
 			</button>
 		</div>

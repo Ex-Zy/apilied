@@ -8,18 +8,18 @@
 			{{mixins.input("contact")}}
 		</div>
 	</div>
-	<div class="form__row">
-		{{mixins.input("webmoney")}}	
+	<div class="form__row js-toggle-visibility">
+		{{mixins.input("webmoney")}}
 	</div>
 	<div class="form__capcha">
-		<div class="capcha">
-			<img src="img/capcha.png" alt="">
+		<div class="recaptcha-error">
+			<div class="g-recaptcha" id="google-capcha" data-sitekey="6LcJIiAUAAAAAC4BLXKsV0as16wKvS2Dj6Htc3_1" data-callback="onSuccess"></div>
 		</div>
 	</div>
 	<div class="form__bottom">
-		<a href="finish.html" class="btn-main" disabled>
+		<button type="button" class="btn-main js-submit">
 			<span>Регистрация</span>
-		</a>
+		</button>
 	</div>
 </div>
 <!-- END tabs-content__item -->

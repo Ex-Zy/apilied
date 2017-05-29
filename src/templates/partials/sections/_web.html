@@ -7,7 +7,7 @@
 	<!-- BEGIN inner -->
 	<div class="inner">
 		
-		<h2 class="title-primary title-primary_centered">Вебмастерам</h2>
+		<h2 class="title-primary glitch title-primary_centered" data-text="Вебмастерам">Вебмастерам</h2>
 
 		<!-- BEGIN webmasters -->
 		<div class="webmasters">
@@ -34,25 +34,24 @@
 						</li>
 					{% endfor %}
 				</ul>
-				<div class="webmasters__btn">
-					<a href="#" class="btn-primary btn-primary_blue js-open-popup" data-link="registration">РЕГИСТРАЦИЯ</a>
-				</div>
+			</div>
+			<div class="webmasters__col">
+				<ul class="list">
+					{% for item in units.webmastersList.unit3 %}
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
 		<!-- END webmasters -->
 
 	</div>
 	<!-- END inner -->
-
-	<!-- BEGIN picture-wrp -->
-	<div class="picture-wrp">
-		<!-- BEGIN picture-man -->
-		<div class="picture-man">
-			<img src="img/man.png" alt="">
-		</div>	
-		<!-- END picture-man -->
-	</div>
-	<!-- END picture-wrp -->
 
 	<!-- BEGIN diagram-webmaster -->
 	<div class="diagram-webmaster">
@@ -71,4 +70,4 @@
 	<!-- END diagram-commercial -->
 
 </section>
-<!-- END web -->
+<!-- END web -->			

@@ -1,5 +1,5 @@
 <!-- BEGIN tabs-content__item-->
-<div class="tabs-content__item js-content-item is-active" data-tabs-content="first">
+<div class="tabs-content__item js-content-item" data-tabs-content="first">
 	<div class="form__action">
 		<button type="button" class="btn-category js-category" data-user-name="webmaster">
 			<div class="btn-category__inner">
@@ -11,12 +11,14 @@
 				<span>рекламодатель</span>
 			</div>
 		</button>
-		<input type="text" name="user" id="input-user" style="display: none;">
+		<div class="field">
+			<input type="text" name="user_type" id="input-user" class="input" style="display: none;">
+		</div>
 	</div>
 	<div class="form__bottom">
-		<a href="#" class="btn-main js-next-step" data-step="second" disabled>
+		<button class="btn-main js-next-step" data-step="second">
 			<span>Далее</span>
-		</a>
+		</button>
 	</div>
 </div>
 <!-- END tabs-content__item-->

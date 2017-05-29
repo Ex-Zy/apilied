@@ -1,36 +1,62 @@
 .topper
 	position: fixed
 	top: 0
-	left: 0
 	right: 0
-	background-color: transparent
-	z-index: 100
-	transition: background-color 0.3s
-	&.is-fixed
-		background-color: #10192B 
-	&__left
-		float: left
-		font-size: 0
-		padding: 6px 0 0 12px
+	left: 0
+	z-index: 11
+	padding: 20px 0
+	transition: transform 0.3s ease-in-out
+	background-color: $section-bg-dark
+	+sm
+		padding: 0
+	&__in
+		max-width: 1880px
+		position: relative
+		padding: 70px 20px 0
+		margin: auto
 		+xs
-			padding: 0
-	&__right
-		float: right
-		+xs
-			display: none
-	.inner
-		padding-top: 18px
-		padding-bottom: 18px
-		+rmin(1901)
-			max-width: none
-		+xs
-			padding-top: 10px
-			padding-bottom: 14px
+			padding: 60px 20 0
 .logo
-	+panton
-	font-size: 36px
-	line-height: 1
-	display: inline-block
-	vertical-align: middle
-	position: relative
-	z-index: 6
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	margin: auto
+	width: 112px
+	+sm
+		display: none
+.entry
+	position: absolute
+	font-size: 0
+	top: 0
+	right: 48px
+	padding: 14px 0 0
+	+sm
+		right: 20px
+		padding: 20px 0 0
+		display: none
+	&__item
+		display: inline-block
+		vertical-align: top
+		&:not(:last-of-type)
+			margin-right: 40px
+			+lg-min
+				margin-right: 90px
+	&__link
+		font-size: 16px
+		color: #fff
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -12px
+			width: 0
+			height: 4px
+			background-color: #0189ff
+			+trans
+		&.is-active,
+		&:hover
+			color: #0189ff
+			&:after
+				width: 22px

@@ -19,7 +19,8 @@
 				margin-right: 14px
 				color: rgba(#fff, 0.4)
 				+trans
-		&.is-focused
+		&.is-focused,
+		&.is-success
 			&:before
 				color: #fff
 			.field
@@ -27,11 +28,11 @@
 			.input
 				+placeholder-color(#fff)
 		&.is-error
-			.input
-				transform: scale(0.5) translate(-50%, -50%)
-			.error
-				visibility: visible
-				opacity: 1
+			.field
+				border-bottom-color: #fff
+				// +placeholder-color(#fff)
+		&.is-hidden
+			display: none
 		+sm
 			width: 50%
 			display: inline-block
@@ -47,6 +48,9 @@
 	&__action
 		text-align: right
 		counter-reset: list
+		.field
+			height: 0
+			border: 0
 		+xs-min
 			margin-left: -30px
 		&:not(:first-of-type)
@@ -69,6 +73,9 @@
 		+sm
 			text-align: right
 			margin-top: 30px
+			padding-left: 20px
+		+xs
+			padding-left: 0
 	&__col-1
 		+sm-min
 			width: 41%
@@ -87,28 +94,54 @@
 	+roboto-bold
 	font-size: 30px
 	line-height: 1.2
+	// line-height: 60px
 	padding: 12px 0
 	display: block
 	width: 100%
 	color: #fff
-	transform: scale(1) translate(0, 0)
+	&:invalid
+		box-shadow: none
 	+trans
 	+placeholder-color(rgba(#fff, 0.4))
 	+sm
 		font-size: 20px
-.error
-	display: none
-	visibility: hidden
-	opacity: 0
-	padding: 8px 28px 
-	background-color: #eb2121
-	border-radius: 19px
-	+roboto-bold
-	font-size: 16px
-	color: #fff
+		// line-height: 52px
+		// padding: 8px 0
+label.is-error,
+.warning-msg
+	background-color: #fff
+	border-radius: 3px
+	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.2), -1px 0px 4px rgba(0, 0, 0, 0.2), 1px 0px 4px rgba(0, 0, 0, 0.2)
+	color: #000
+	display: block
+	font: 14px/1.6 Arial, Helvetica, sans-serif
+	margin-top: 10px
+	max-width: 300px
+	padding: 15px 15px 15px 40px
+	position: absolute
+	right: 0
+	text-align: left
+	top: 100%
+	z-index: 20
 	+trans
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		left: 10px
+		top: 19px
+		+s(warning)
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		bottom: 100%
+		left: 10px
+		+arr(11, 7, #fff, t)
 .change
 	display: none
+	&.is-visible
+		display: block
 	+xs-min
 		float: right
 	&__top
@@ -126,11 +159,15 @@
 	font-size: 24px
 	max-width: 380px
 	text-align: right
-	display: inline-block
+	display: none
 	padding-top: 17px
+	&.is-visible
+		display: block
 	+sm
 		padding-top: 8px
 		font-size: 18px
+		max-width: none
+		text-align: left
 	+xs
 		display: none
 .select-default
@@ -139,13 +176,12 @@
 	position: relative
 	+roboto-bold
 	font-size: 30px
-	position: relative
 	border-bottom: 4px solid #fff
 	+sm
 		font-size: 18px
-	&.is-open .select__list
-		display: block
-
+	&.is-open 
+		.select__list
+			display: block
 .select__text
 	background-color: transparent
 	color: #fff

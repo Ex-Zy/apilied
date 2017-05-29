@@ -10,8 +10,9 @@ function build(cb) {
         'svgo',
         'sass',
         'nunjucks',
-        'js',
+        'webpack',
         'copy',
+        'list-pages',
         cb
     );
 }

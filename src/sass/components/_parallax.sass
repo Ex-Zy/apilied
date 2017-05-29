@@ -1,0 +1,22 @@
+.parallax-bg
+	@extend %parallax
+	&__item
+		@extend %parallax-item
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			margin: auto
+			background: url(../img/parallax-bg.png) no-repeat
+			width: 1186px
+			height: 741px
+.parallax-company
+	z-index: 2
+	@extend %parallax
+	&__item
+		@extend %parallax-item
+		// transition: all 0.1s

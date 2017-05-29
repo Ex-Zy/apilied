@@ -1,13 +1,16 @@
+import {HTMLBODY, OUT, SIDEBAR, ACTIVE,} from '../_global.js'
+
 // scroll navigation
 $('.navigation a').on('click', function(e) {
-	e.preventDefault();
 
-	$('.navigation a').add('.js-sidebar').removeClass('is-active');
-	$(this).addClass('is-active');
+	$('.navigation a').add(SIDEBAR).removeClass(ACTIVE);
+	$(this).addClass(ACTIVE);
 
-	var section = $(this).attr('href');
-	$('html, body').animate({
-		scrollTop: $(section).offset().top
+	let section = $(this).attr('href');
+	let top = OUT.scrollTop();
+
+	OUT.animate({
+		scrollTop: top + ($(section).offset().top - $('.js-scroll').height())
 	}, 500);
 	return false;
 });

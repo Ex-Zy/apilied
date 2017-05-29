@@ -1,26 +1,33 @@
 .list
+	display: inline-block
+	vertical-align: top
+	+xs
+		max-width: 400px
 	&__item
-		&:not(:last-child)
-			margin-bottom: 10px
-			+xs-min
-				margin-bottom: 22px
-	&__item_top-vertical
-		.list__item-icon,
-		.list__item-text
-			vertical-align: top
-	&__item-icon,
-	&__item-text
+		+md-min
+			max-width: 360px
+			&:not(:first-of-type)
+				margin-top: 40px
+		+md
+			&:not(:first-of-type)
+				margin-top: 15px
+		+xs-min
+			display: table
+	&__item-icon
 		display: table-cell
 		vertical-align: middle
-	&__item-icon
 		+xs
 			display: none
 	&__item-text
 		+roboto-light
-		font-size: 18px
+		font-size: 22px
 		line-height: 1.2
 		text-transform: lowercase
-		+xs-min
+		+md-min
 			padding-left: 20px
 		+md
-			line-height: 1.6
+			font-size: 18px
+		+xs-min
+			display: table-cell
+			vertical-align: middle
+			padding-left: 15px

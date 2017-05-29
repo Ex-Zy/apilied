@@ -1,0 +1,8 @@
+ProjectTitle: Apilead
+page: ready
+
+PageList:
+- file: main.html
+  ready: 100
+- file: finish.html
+  ready: 100

@@ -7,29 +7,19 @@
 	<!-- BEGIN inner -->
 	<div class="inner">
 		
-		<h2 class="title-primary title-primary_centered">Рекламодателям</h2>
+		<h2 class="title-primary glitch title-primary_centered" data-text="Рекламодателям">Рекламодателям</h2>
 
 		<!-- BEGIN commercial -->
 		<div class="commercial">
 			<div class="commercial__col">
 				<ul class="list">
 					{% for item in units.commercialList.unit1 %}
-						{% if loop.index0  === 0 %} 
-							<li class="list__item list__item_top-vertical">
-								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
-								<div class="list__item-text">
-									{{item.text}}
-								</div>
-							</li>
-						{% else %}
-							<li class="list__item">
-								<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
-								<div class="list__item-text">
-									{{item.text}}
-								</div>
-							</li>
-						{% endif %}
-						
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>
 					{% endfor %}
 				</ul>
 			</div>
@@ -44,25 +34,24 @@
 						</li>
 					{% endfor %}
 				</ul>
-				<div class="commercial__btn">
-					<a href="#" class="btn-primary js-open-popup" data-link="registration">РЕГИСТРАЦИЯ</a>
-				</div>
+			</div>
+			<div class="commercial__col">
+				<ul class="list">
+					{% for item in units.commercialList.unit3 %}
+						<li class="list__item">
+							<div class="list__item-icon">{{mixins.icon(item.icon)}}</div>
+							<div class="list__item-text">
+								{{item.text}}
+							</div>
+						</li>
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
 		<!-- END commercial -->
 		
 	</div>
 	<!-- END inner -->
-
-	<!-- BEGIN picture-wrp -->
-	<div class="picture-wrp">
-		<!-- BEGIN picture-human -->
-		<div class="picture-human">
-			<img src="img/human.png" alt="">
-		</div>	
-		<!-- END picture-human -->
-	</div>
-	<!-- END picture-wrp -->
 	
 	<!-- BEGIN diagram-commercial -->
 	<div class="diagram-commercial">

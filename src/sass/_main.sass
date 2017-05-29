@@ -1,6 +1,10 @@
 .out
 	min-width: 320px
+	height: 100%
 	overflow: hidden
+	.ps__scrollbar-y-rail
+		top: 0 !important
+		bottom: 0 !important
 .inner
 	@extend %inner
 	position: relative
@@ -8,21 +12,27 @@
 	+sm
 		padding: 0 10px
 .perfomance
-	background-color: #7200d4
 	.inner
 		height: 100vh
 		min-height: 450px
 		+vertical
+	&__button
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 10
+		padding-top: 260px
+		+lg
+			padding-top: 290px
+		+sm
+			padding-top: 180px
 .work
 	.inner
-		min-height: 100vh
-		padding-bottom: 106px
-		+md
-			padding-top: 80px
-			padding-bottom: 80px
+		padding-top: 80px
+		padding-bottom: 80px
 .web
-	background-color: #03162d
 	position: relative 
+	text-align: center
 	+md-min
 		&:before
 			content: ''
@@ -36,22 +46,17 @@
 			height: 1218px
 			z-index: 2
 	.inner
-		padding-top: 84px
+		padding-top: 120px
 		padding-bottom: 112px
-		height: 100vh
-		min-height: 850px
 		z-index: 2
+		+md-min
+			height: 100vh
+			min-height: 950px
+			max-height: 1400px
 		+md
-			min-height: auto
-			height: auto
 			padding-top: 50px
 			padding-bottom: 50px
-	.title-primary
-		margin-bottom: 30px
-		+sm-min
-			margin-bottom: 81px
 .recl
-	background-color: #121c30
 	position: relative
 	+md-min
 		&:before
@@ -66,33 +71,23 @@
 			height: 1218px
 			z-index: 1
 	.inner
-		padding-top: 112px
+		padding-top: 120px
 		padding-bottom: 112px
-		height: 100vh
-		min-height: 850px
 		z-index: 4
+		+md-min
+			min-height: 900px 
 		+md
-			min-height: auto
-			height: auto
 			padding-top: 50px
 			padding-bottom: 50px
-	.title-primary
-		margin-bottom: 30px
-		+sm-min
-			margin-bottom: 81px
 .top-offers
-	background: #131d31 url(../img/bg-sec5.jpg) no-repeat center top
-	background-size: cover
 	.inner
 		padding-top: 110px
 		padding-bottom: 110px
 		+md
-			min-height: auto
 			padding-top: 50px
 			padding-bottom: 50px
 .description
 	text-align: center
-	background-color: $section-bg-dark 
 	.inner
 		padding-top: 86px
 		padding-bottom: 97px

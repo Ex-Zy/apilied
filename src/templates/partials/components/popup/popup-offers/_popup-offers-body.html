@@ -1,40 +1,38 @@
 <!-- BEGIN popup__body -->
 <div class="popup__body">
-	<div class="popup__caption">
-		<div class="popup__caption-col popup__caption-col_1">НАЗВАНИЕ</div>
-		<div class="popup__caption-col popup__caption-col_2">ГЕО</div>
-		<div class="popup__caption-col popup__caption-col_3">ОТЧИСЛЕНИЯ</div>
-	</div>
-
-	{% for item in items.offersList %}
-
-		<div class="popup__row">
-
-			<div class="popup__col popup__col_1">
-				<div class="product">
-					<div class="product__media">
-						<img src="img/{{item.prodImg}}" alt="">
-					</div>
-					<div class="product__desc">
-						{{item.prodDesc}}
-					</div>
-				</div>
-			</div>
-
-			<div class="popup__col popup__col_2">
-				<div class="flags">
-					{% for unit in item.flagsIconClass %}
-						<i class="{{unit}}"></i>
-					{% endfor %}
-				</div>
-			</div>
-
-			<div class="popup__col popup__col_3">
-				<div class="price">{{item.prodPrice}}</div>
-			</div>
-			
+	<div class="popup__inner-wrap">
+		<div class="popup__caption">
+			<div class="popup__caption-col popup__caption-col_1">Название</div>
+			<div class="popup__caption-col popup__caption-col_2">Гео</div>
+			<div class="popup__caption-col popup__caption-col_3">Цена на лендинге</div>
+			<div class="popup__caption-col popup__caption-col_4">Отчисления</div>
 		</div>
 
-	{% endfor %}
+		{% for item in items.offersList %}
+
+			<div class="popup__row">
+
+				<div class="popup__col popup__col_1">
+					<div class="product">
+						<div class="product__desc">
+							{{item.prodDesc}}
+						</div>
+					</div>
+				</div>
+
+				<div class="popup__col popup__col_2">
+					{% for unit in item.flagsIconClass %}
+						<div class="info-product">
+							<div class="info-product__col info-product__col_1"><i class="{{unit}}"></i></div>
+							<div class="info-product__col info-product__col_2">{{item.prodPrice}}</i></div>
+							<div class="info-product__col info-product__col_3">{{item.prodPrice}}</div>
+						</div>
+					{% endfor %}
+				</div>
+				
+			</div>
+
+		{% endfor %}
+	</div>
 </div>
 <!-- END popup__body -->

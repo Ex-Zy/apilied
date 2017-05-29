@@ -2,47 +2,39 @@
 	position: relative
 	z-index: 5
 	font-size: 0
-	+lg-min
-		padding-left: (316px / 1850px) * 100%
+	max-width: 1140px
+	margin: auto
+	+md
+		max-width: none
+		margin: -15px -20px 0 0
+		text-align: left
+	+xs
+		margin: -15px 0 0
 	&__col
 		display: inline-block
 		vertical-align: top
-		+lg
-			text-align: right
-			width: 50%
-		+md
-			text-align: left
-		+sm
-			width: 100%
-			text-align: center
-		+ .commercial__col
-			+sm-min
-				padding-left: 56px
-			+lg
+		+md-min
+			width: 33.333%
+			padding: 0 15px
+			&:nth-of-type(1)
 				text-align: left
-			+sm
-				margin-top: 22px
+				.list__item
+					&:last-of-type
+						.list__item-text,
+						.list__item-icon
+							vertical-align: top
+			&:nth-of-type(2)
 				text-align: center
-			+xs
-				margin-top: 10px
-	&__btn
-		margin-top: 56px
-		+lg-min
-			padding-left: 47px
-		+sm
-			text-align: center
-			margin-top: 40px
-		.btn-primary
-			line-height: 1
-			padding: 27px 72px
-			+xs
-				font-size: 20px
-				padding: 20px 30px
-	.list
-		max-width: 384px
-		display: inline-block
-		text-align: left
-		+lg
-			max-width: 500px
-		+sm
+			&:nth-of-type(3)
+				text-align: right
+		+md
+			width: 50%
+			margin-top: 15px
+			padding-right: 20px
+		+xs
 			width: 100%
+			padding-right: 0
+			text-align: center
+	.list
+		+xs-min
+			text-align: left

@@ -2,54 +2,41 @@
 	position: relative
 	z-index: 5
 	font-size: 0
-	+rmin(1601)
-		padding-left: 38%
+	max-width: 1140px
+	margin: auto
+	+md
+		max-width: none
+		margin: -15px -20px 0 0
+		text-align: left
+	+xs
+		margin: -15px 0 0
 	&__col
 		display: inline-block
 		vertical-align: top
-		width: 50%
-		+rmin(1601)
-			max-width: 534px
-			&:nth-of-type(1)
-				max-width: 380px
-		+lg
-			&:nth-of-type(1)
-				text-align: right
-		+md
+		+md-min
+			width: 33.333%
+			padding: 0 15px
 			&:nth-of-type(1)
 				text-align: left
-		+sm
-			width: 100%
-			text-align: center
-			&:nth-of-type(1)
+				.list__item
+					&:first-of-type
+						.list__item-text,
+						.list__item-icon
+							vertical-align: top
+						.list__item-icon
+							padding-top: 12px
+			&:nth-of-type(2)
 				text-align: center
-
-		+ .webmasters__col
-			+sm-min
-				padding-left: 66px
-			+sm
-				margin-top: 22px
-			+xs
-				margin-top: 10px
-		.list
-			text-align: left
-			display: inline-block
-			+lg
-				max-width: 450px
-			+md
-				max-width: 500px
-				width: 100%
-	&__btn
-		margin-top: 56px
-		padding-left: 47px
-		.btn-primary
-			padding: 27px 72px
-			line-height: 1
-			+xs
-				font-size: 20px
-				padding: 20px 30px
-		+lg
-			padding-left: 0
-		+sm
+			&:nth-of-type(3)
+				text-align: right
+		+md
+			width: 50%
+			margin-top: 15px
+			padding-right: 20px
+		+xs
+			width: 100%
+			padding-right: 0
 			text-align: center
-			margin-top: 40px
+	.list
+		+xs-min
+			text-align: left

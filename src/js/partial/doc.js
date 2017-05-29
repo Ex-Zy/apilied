@@ -1,8 +1,12 @@
-$(document).click(function(e) {
-	var notSidebarAndNotMenu = !$(e.target).closest('.js-sidebar').length &&
-							   !$(e.target).closest('.js-menu').length;
+import {ACTIVE, DOC, SIDEBAR, MENU} from '../_global.js'
 
-	if(notSidebarAndNotMenu) {
-		$('.js-sidebar').removeClass('is-active');
+DOC.click((e) => {
+	// Если кликаем не на сайдбаре и меню
+	if(
+		!$(e.target).closest(SIDEBAR).length && 
+		!$(e.target).closest(MENU).length
+	) {
+		SIDEBAR.removeClass(`${ACTIVE}`);
 	}
+
 });

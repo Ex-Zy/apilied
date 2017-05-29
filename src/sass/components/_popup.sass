@@ -10,49 +10,69 @@
 	&__window
 		display: block
 		margin: auto
-		max-width: 808px
+		max-width: 932px
 		width: 100%
-		box-shadow: 0 0 21px #000000
-		border: 1px solid #29293c
-		background-color: #1b1b28
 	&__body
 		font-size: 16px
+		overflow-x: auto
+		+sm-min
+			padding-top: 50px
 	&__caption
 		padding: 22px 0
 		display: table
 		width: 100%
-		font-size: 14px
+		font-size: 18px
+		color: $disable
 		line-height: 1.2
+	&__inner-wrap
+		min-width: 700px
 	&__top
-		background-color: #181823
 		text-align: left
-		padding: 9px 44px
+		line-height: 1.4
 		position: relative 
 	&__top-title
-		+css-lock(22, 30, 900, 1920)
+		font-size: 48px
 		+roboto-light
+		+sm
+			font-size: 26px
+	&__top-link
+		padding-top: 8px
 	&__row
-		background-color: #1B1B28
-		padding: 12px 0px 
 		display: table
 		width: 100%
-		&:nth-child(even)
-			background-color: #181823
+		font-size: 22px
+		padding: 36px 0
+		&:not(:last-of-type)
+			border-bottom: 2px solid $disable
+		+sm
+			font-size: 16px
+			padding: 20px 0
 	&__col,
 	&__caption-col
 		display: table-cell
 		vertical-align: middle
 		text-align: left
+		padding-right: 30px
+	&__col
 		&_1
-			width: 46%
-			padding-left: 44px
+			width: 36%
 		&_2
-			width: 35%
+			padding-right: 0
+	&__caption-col
+		&_1
+			width: 36%
+		&_2
+			width: 24%
 		&_3
-			width: 19%
-			padding-right: 52px
+			width: 20%
+		&_4
+			width: 20%
+			text-align: right
+			padding-right: 0
 .popup-offers
 	@extend %popup
+	.ps__scrollbar-y-rail .ps__scrollbar-y
+		background-color: #925fff
 	+md
 		padding: 60px 20px
 	+xs
@@ -62,42 +82,28 @@
 		opacity: 1
 	+sm
 		padding: 60px 10px
-		.popup__window
-			min-width: auto
-			overflow-x: auto
-		.popup__col_1,
-		.popup__caption-col_1
-			padding-left: 15px
-		.popup__col_3,
-		.popup__caption-col_3
-			padding-right: 15px
-		.popup__top
-			padding: 9px 15px
-			min-width: 500px
-		.popup__body
-			min-width: 500px
 .product
 	display: table
-	&__media
-		display: table-cell
-		vertical-align: middle
-		width: 36px
-		height: 36px
-		overflow: hidden
-		img
-			display: block
-			max-width: 100%
-			max-height: 100%
-			margin: auto
+	font-size: 24px
+	+roboto-reg
+	+sm
+		font-size: 20px
 	&__desc
 		display: table-cell
 		vertical-align: middle
-		padding-left: 22px
 .flags
 	font-size: 0
-	i
-		&:not(:last-of-type)
-			margin-right: 16px
+	&__in
+		margin-top: -30px
+	&__link
+		font-size: 14px
+		margin-top: 10px
+		display: inline-block
+		line-height: 1
+	&__row
+		padding-top: 30px
+	i, span
+		display: block
 .popup-checkin
 	@extend %popup
 	padding: 100px
@@ -112,6 +118,7 @@
 		max-width: 864px
 		width: 100%
 		margin: auto
+		
 	&__top
 		text-align: left
 		+clr
@@ -167,3 +174,21 @@
 		font-size: 48px
 		+sm
 			font-size: 26px
+.info-product
+	display: table
+	width: 100%
+	padding: 5px 0
+	&__col
+		display: table-cell
+		vertical-align: middle
+		padding-right: 30px
+		&_1
+			width: (224px / 597px) * 100%
+		&_2
+			width: (186px / 597px) * 100%
+		&_3
+			width: (186px / 597px) * 100%
+			padding-right: 0
+			text-align: right
+	i, span
+		font-size: 12px
