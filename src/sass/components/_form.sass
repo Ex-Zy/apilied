@@ -93,9 +93,8 @@
 	background: none
 	+roboto-bold
 	font-size: 30px
-	line-height: 1.2
-	// line-height: 60px
-	padding: 12px 0
+	height: 60px
+	line-height: 60px
 	display: block
 	width: 100%
 	color: #fff
@@ -105,7 +104,8 @@
 	+placeholder-color(rgba(#fff, 0.4))
 	+sm
 		font-size: 20px
-		// line-height: 52px
+		line-height: 52px
+		height: 52px
 		// padding: 8px 0
 label.is-error,
 .warning-msg
@@ -185,13 +185,14 @@ label.is-error,
 .select__text
 	background-color: transparent
 	color: #fff
-	padding: 9px 0
+	height: 60px
+	line-height: 60px
 	display: block
 	position: relative
 	cursor: pointer
 	+sm
-		line-height: 1.6
-		padding: 10px 0
+		height: 52px
+		line-height: 52px
 	&:after
 		content: ''
 		display: block
@@ -216,7 +217,9 @@ label.is-error,
 	overflow-y: auto
 	z-index: 10
 .select li
-	padding: 8px 20px
+	height: 60px
+	line-height: 60px
+	padding: 0 20px
 	cursor: pointer
 	background-color: $violet
 	transition: background-color 0.3s
@@ -224,6 +227,8 @@ label.is-error,
 	color: rgba(#fff, 0.4)
 	+sm
 		font-size: 18px
+		height: 52px
+		line-height: 52px
 	+hover
 		color: #fff
 

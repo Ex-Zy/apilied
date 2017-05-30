@@ -88,6 +88,9 @@
 	transition: height 0.3s
 	+sm
 		left: 20px
+	+xs
+		width: 28px
+		height: 20px
 	&:before,
 	&:after
 		content: ''
@@ -97,6 +100,8 @@
 		height: 4px
 		width: 100%
 		background-color: $blue-top
+		+xs
+			height: 2px
 	&:before
 		top: 0
 	&:after
@@ -108,6 +113,8 @@
 		height: 4px
 		background-color: $blue-top
 		transition: width 0.3s
+		+xs
+			height: 2px
 .btn-main
 	@extend %button-basic
 	padding: 21px 17px

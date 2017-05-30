@@ -104,18 +104,18 @@
   }
 
   &:hover {
-    @include in-scrolling($theme);
+    // @include in-scrolling($theme);
 
     > .ps__scrollbar-x-rail,
     > .ps__scrollbar-y-rail {
-      opacity: map_get($theme, rail-container-hover-opacity);
+      // opacity: map_get($theme, rail-container-hover-opacity);
     }
 
     > .ps__scrollbar-x-rail:hover {
-      @include scrollbar-rail-hover($theme);
+      // @include scrollbar-rail-hover($theme);
 
       > .ps__scrollbar-x {
-        @include scrollbar-hover($theme);
+        // @include scrollbar-hover($theme);
       }
     }
 

@@ -6,7 +6,7 @@
 	+md
 		padding: 60px 20px
 	+xs
-		padding: 60px 10px
+		padding: 100px 10px
 	&__window
 		display: block
 		margin: auto
@@ -14,7 +14,7 @@
 		width: 100%
 	&__body
 		font-size: 16px
-		overflow-x: auto
+		overflow: hidden
 		+sm-min
 			padding-top: 50px
 	&__caption
@@ -25,7 +25,7 @@
 		color: $disable
 		line-height: 1.2
 	&__inner-wrap
-		min-width: 700px
+		padding-right: 20px
 	&__top
 		text-align: left
 		line-height: 1.4
@@ -47,6 +47,8 @@
 		+sm
 			font-size: 16px
 			padding: 20px 0
+		+xs
+			padding: 10px 0
 	&__col,
 	&__caption-col
 		display: table-cell
@@ -71,12 +73,15 @@
 			padding-right: 0
 .popup-offers
 	@extend %popup
-	.ps__scrollbar-y-rail .ps__scrollbar-y
+	.popup__body
+		min-width: 700px
+	.ps__scrollbar-y-rail .ps__scrollbar-y,
+	.ps__scrollbar-x-rail .ps__scrollbar-x
 		background-color: #925fff
 	+md
 		padding: 60px 20px
 	+xs
-		padding: 60px 10px
+		padding: 100px 10px
 	&.is-active
 		visibility: visible
 		opacity: 1
@@ -110,7 +115,7 @@
 	+md
 		padding: 60px 20px
 	+xs
-		padding: 60px 10px
+		padding: 100px 10px
 	&.is-active
 		visibility: visible
 		opacity: 1
@@ -150,7 +155,7 @@
 	+md
 		padding: 60px 20px
 	+xs
-		padding: 60px 10px
+		padding: 100px 10px
 	&.is-active
 		visibility: visible
 		opacity: 1
