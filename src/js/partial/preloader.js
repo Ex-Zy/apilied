@@ -4,5 +4,7 @@ let time = 500;
 let speed = 600;
 
 WIN.on('load', () => {
-	PRELOADER.delay(time).fadeOut(speed);
+	setTimeout(function() {
+		PRELOADER.delay(time).fadeOut(speed);
+	}, 300);
 });
