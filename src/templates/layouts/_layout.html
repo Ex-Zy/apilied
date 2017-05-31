@@ -10,8 +10,11 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/app.css">
     <!--[if lte IE 9]>
-        <link rel="stylesheet" href="https://rawgit.com/codefucker/finalReject/master/reject/reject.css" media="all" />
-            <script type="text/javascript" src="https://rawgit.com/codefucker/finalReject/master/reject/reject.min.js">
+        <style>
+            .parking {
+                display: block;
+            }
+        </style>
     <![endif]-->
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
@@ -47,6 +50,13 @@
         </script>
     </div>
     <!-- END preloader -->
+
+    <!-- BEGIN parking -->
+    <div class="parking">
+        <h2 class="parking__title">Похоже, тебе нужен браузер посвежее...</h2>
+        <img src="img/travolta-crunched.gif" alt="">
+    </div>
+    <!-- END parking -->
 
     <!-- BEGIN content -->
     <div class="out {% if scrollbarOut %}{{scrollbarOut}}{% endif %}">
