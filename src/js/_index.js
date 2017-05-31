@@ -7,3 +7,4 @@ import "./partial/doc.js";
 import "./partial/formRegistration.js";
 import "./partial/formLogin.js";
 import "./partial/scrollbar.js";
+import "./partial/preloader.js";
