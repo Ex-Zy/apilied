@@ -37,7 +37,14 @@
           <span></span>
           <span></span>
         </div>
-        <h2 class="preloader__title js-preloader-title" style="display: none;">СЕКУНДОЧКУ, ОБГОНЯЕМ ДРУГИЕ СЕТИ</h2>
+        <h2 class="preloader__title js-preloader-title is-hidden">СЕКУНДОЧКУ, ОБГОНЯЕМ ДРУГИЕ СЕТИ</h2>
+        <script>
+            var showTitle = function() {
+                var title = document.querySelector('.js-preloader-title');
+                if(!!title) title.classList.remove('is-hidden');
+            }
+            setTimeout(showTitle, 500);
+        </script>
     </div>
     <!-- END preloader -->
 
