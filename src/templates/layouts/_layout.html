@@ -17,65 +17,35 @@
   </head>
   <body>
 
-    <!-- BEGIN content -->
-    <div class="out {% if scrollbarOut %}{{scrollbarOut}}{% endif %}">
-      {% block content %}{% endblock %}
-    </div>
-    <!-- END content -->
-
-    <!-- <div class="preloader js-preloader">
-       <div class="preloader__canvas">
-          <div class="element">
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-             <div class="element__object"></div>
-          </div>
-       </div>
-    </div> -->
-
-    <div class="new-preloader js-preloader">
-        <div class="body">
+    <!-- BEGIN preloader -->
+    <div class="preloader js-preloader">
+        <div class="preloader__body">
           <span>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
           </span>
-          <div class="base">
+          <div class="preloader__base">
             <span></span>
-            <div class="face"></div>
+            <div class="preloader__face"></div>
           </div>
         </div>
-        <div class="longfazers">
+        <div class="preloader__longfazers">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <h1 class="preloader-title">СЕКУНДОЧКУ, ОБГОНЯЕМ ДРУГИЕ СЕТИ</h1>
+        <h2 class="preloader__title js-preloader-title" style="display: none;">СЕКУНДОЧКУ, ОБГОНЯЕМ ДРУГИЕ СЕТИ</h2>
     </div>
+    <!-- END preloader -->
+
+    <!-- BEGIN content -->
+    <div class="out {% if scrollbarOut %}{{scrollbarOut}}{% endif %}">
+      {% block content %}{% endblock %}
+    </div>
+    <!-- END content -->
     
     {% if injectPopupsForPage %}
         {# popup-registration #}
