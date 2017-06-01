@@ -2,13 +2,18 @@
 	position: fixed
 	top: 0
 	left: 0
+	bottom: 0
 	z-index: 90
 	overflow: hidden
 	background-color: #17161c
 	box-shadow: none
 	transition: transform 0.3s ease-in-out
 	transform: translate(-100%, 0)
-	padding-top: 70px
+	padding-top: 110px
+	+sm
+		padding-top: 70px
+	+xs
+		padding-top: 40px
 	&.is-active
 		transform: translate(0, 0)
 		transition-delay: 0s
@@ -16,12 +21,12 @@
 	&__in
 		width: 356px
 		height: 100vh
-		padding: 100px 20px 100px 100px
+		padding: 0 20px 100px 100px
 		+sm
-			padding: 60px 20px 60px 60px
+			padding: 0 20px 60px 60px
 			width: 280px
 		+xs
-			padding: 40px 20px 140px 40px
+			padding: 0 20px 140px 40px
 	.ps__scrollbar-y
 		background-color: #252525 !important
 .navigation

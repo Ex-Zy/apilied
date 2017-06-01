@@ -29,9 +29,17 @@ class Menu {
 	}
 
 	_toggleOnClickSidebar() {
-		this._menu.click(() => {
-			this._sidebar.toggleClass(ACTIVE);
+		var that = this;
+		this._menu.on('touchend click', function(event) {
+			that._eventHandler(event, $(this));
+			that._sidebar.toggleClass(ACTIVE);
 		});
+	}
+
+	_eventHandler(event, selector) {
+		event.stopPropagation(); // Stop event bubbling.
+		event.preventDefault(); // Prevent default behaviour
+		if (event.type === 'touchend') selector.off('click'); // If event type was touch turn off clicks to prevent phantom clicks.
 	}
 
 	_init() {

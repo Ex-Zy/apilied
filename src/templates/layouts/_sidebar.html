@@ -1,0 +1,29 @@
+{% import '../data/dataSidebarNav.html' as items %}
+<!-- BEGIN sidebar -->
+<div class="sidebar js-sidebar">
+	<!-- BEGIN sidebar__in -->
+	<div class="sidebar__in js-scrollbar-sidebar">
+		<ul class="navigation">
+			{% for navItem in items.navList %}
+				<li class="navigation__item">
+					{% if loop.index0 == activeLink %}
+						<a href="#{{navItem.id}}" class="is-active">{{navItem.link}}</a>
+					{% else %}
+						<a href="#{{navItem.id}}">{{navItem.link}}</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+		<ul class="authorization">
+			<li class="authorization__item">
+				<a href="#" class="authorization__btn js-open-popup" data-link="login">ВОЙТИ</a>
+			</li>
+			<li class="authorization__item">
+				<a href="#" class="authorization__btn js-open-popup" data-link="registration">СОЗДАТЬ АККАУНТ</a>
+			</li>
+		</ul>
+	</div>
+	<!-- END sidebar__in -->
+
+</div>
+<!-- END sidebar -->
