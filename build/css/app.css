@@ -382,19 +382,19 @@ a { text-decoration: none; color: inherit; font-family: "Roboto Regular", Arial,
 
 .glitch { position: relative; display: table; margin-left: auto; margin-right: auto; color: inherit; position: relative; }
 
-@keyframes glitch-anim-1 { 0% { clip: rect(15px, 99999px, 12px, 0); }
-  20% { clip: rect(12px, 99999px, 10px, 0); }
-  40% { clip: rect(6px, 99999px, 59px, 0); }
-  60% { clip: rect(9px, 99999px, 21px, 0); }
-  80% { clip: rect(90px, 99999px, 78px, 0); }
-  100% { clip: rect(32px, 99999px, 43px, 0); } }
+@keyframes glitch-anim-1 { 0% { clip: rect(82px, 99999px, 52px, 0); }
+  20% { clip: rect(69px, 99999px, 60px, 0); }
+  40% { clip: rect(34px, 99999px, 54px, 0); }
+  60% { clip: rect(42px, 99999px, 60px, 0); }
+  80% { clip: rect(64px, 99999px, 64px, 0); }
+  100% { clip: rect(6px, 99999px, 60px, 0); } }
 
-@keyframes glitch-anim-2 { 0% { clip: rect(4px, 99999px, 62px, 0); }
-  20% { clip: rect(58px, 99999px, 90px, 0); }
-  40% { clip: rect(19px, 99999px, 58px, 0); }
-  60% { clip: rect(33px, 99999px, 41px, 0); }
-  80% { clip: rect(25px, 99999px, 76px, 0); }
-  100% { clip: rect(37px, 99999px, 88px, 0); } }
+@keyframes glitch-anim-2 { 0% { clip: rect(53px, 99999px, 77px, 0); }
+  20% { clip: rect(66px, 99999px, 27px, 0); }
+  40% { clip: rect(84px, 99999px, 40px, 0); }
+  60% { clip: rect(57px, 99999px, 72px, 0); }
+  80% { clip: rect(88px, 99999px, 81px, 0); }
+  100% { clip: rect(25px, 99999px, 45px, 0); } }
 
 .glitch:before, .glitch:after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; background: #17161c; clip: rect(0, 0, 0, 0); }
 
@@ -428,11 +428,11 @@ a { text-decoration: none; color: inherit; font-family: "Roboto Regular", Arial,
 
 .web { position: relative; text-align: center; }
 
-.web .inner { padding-top: 120px; padding-bottom: 112px; z-index: 2; }
+.web .inner { z-index: 2; }
 
 .recl { position: relative; }
 
-.recl .inner { padding-top: 120px; padding-bottom: 112px; z-index: 4; }
+.recl .inner { z-index: 4; }
 
 .top-offers .inner { padding-top: 110px; padding-bottom: 110px; }
 
@@ -702,7 +702,7 @@ a { text-decoration: none; color: inherit; font-family: "Roboto Regular", Arial,
 
 .advantages-text { position: relative; max-width: 400px; line-height: 1.2; margin-right: 9.18919%; display: inline-block; vertical-align: middle; }
 
-.advantages-text__title { font-family: "Roboto Medium", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 48px; font-size: 48px; font-size: calc(28px + (48 - 28) * ((100vw - 900px) / (1920 - 900))); letter-spacing: -0.01em; text-transform: capitalize; margin-bottom: 20px; margin-bottom: 20px; margin-bottom: calc(10px + (20 - 10) * ((100vw - 900px) / (1920 - 900))); }
+.advantages-text__title { font-family: "Roboto Medium", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 46px; font-size: 46px; font-size: calc(28px + (46 - 28) * ((100vw - 900px) / (1920 - 900))); letter-spacing: -0.01em; margin-bottom: 20px; margin-bottom: 20px; margin-bottom: calc(10px + (20 - 10) * ((100vw - 900px) / (1920 - 900))); }
 
 .advantages-text__bottom { font-size: 28px; font-size: 28px; font-size: calc(20px + (28 - 20) * ((100vw - 900px) / (1920 - 900))); line-height: 1.2; }
 
@@ -1013,11 +1013,11 @@ label.is-error:before, .warning-msg:before { content: ''; display: block; positi
 
  .web:before { content: ''; display: block; position: absolute; background: url(../img/lines-bg.png) no-repeat center; background-size: cover; top: 0; right: 0; left: 38px; height: 1218px; z-index: 2; }
 
- .web .inner { height: 100vh; min-height: 950px; max-height: 1400px; }
+ .web .inner { padding-top: 120px; padding-bottom: 450px; padding-bottom: calc(200px + (450 - 200) * ((100vw - 600px) / (1920 - 600))); }
 
  .recl:before { content: ''; display: block; position: absolute; background: url(../img/lines-bg.png) no-repeat center; background-size: cover; top: 0; right: 0; left: 38px; height: 1218px; z-index: 1; }
 
- .recl .inner { min-height: 900px; }
+ .recl .inner { padding-top: 120px; padding-bottom: 450px; padding-bottom: calc(200px + (450 - 200) * ((100vw - 900px) / (1920 - 900))); }
 
  .payments__item + .payments__item { margin-left: 22px; }
 
@@ -1087,15 +1087,33 @@ label.is-error:before, .warning-msg:before { content: ''; display: block; positi
 
  .company__pretitle { font-size: 36px; }
 
- .advantages-text__title { font-size: 48px; }
+ .advantages-text__title { font-size: 46px; }
 
  .advantages-text__title { margin-bottom: 20px; }
 
  .advantages-text__bottom { font-size: 28px; } }
 
+@media only screen and (min-width: 1201px) and (max-width: 900px) {
+
+ .recl .inner { padding-bottom: 200px; } }
+
+@media only screen and (min-width: 1201px) and (max-width: 600px) {
+
+ .web .inner { padding-bottom: 200px; } }
+
 @media only screen and (max-width: 900px) and (min-width: 601px) {
 
  .popup-login__body { margin-left: -20px; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+ .ps { overflow: auto !important; } }
+
+@media only screen and (min-width: 1201px) and (min-width: 1920px) {
+
+ .web .inner { padding-bottom: 450px; }
+
+ .recl .inner { padding-bottom: 450px; } }
 
 @media only screen and (max-width: 1700px) {
 
@@ -1122,10 +1140,6 @@ label.is-error:before, .warning-msg:before { content: ''; display: block; positi
  .advantages-graph__small { display: block; }
 
  .advantages-graph__big { display: none; } }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
- .ps { overflow: auto !important; } }
 
 @media only screen and (max-width: 1200px) {
 
@@ -1327,6 +1341,10 @@ label.is-error:before, .warning-msg:before { content: ''; display: block; positi
 
  .select li { font-size: 18px; height: 52px; line-height: 52px; } }
 
+@media (max-width: 600px) {
+
+ .title-primary { margin-bottom: 30px; } }
+
 @media only screen and (max-width: 600px) {
 
  .btn-menu { width: 28px; height: 20px; }
@@ -1392,9 +1410,5 @@ label.is-error:before, .warning-msg:before { content: ''; display: block; positi
  .form__capcha { padding-left: 0; }
 
  .info { display: none; } }
-
-@media (max-width: 600px) {
-
- .title-primary { margin-bottom: 30px; } }
 
 /*# sourceMappingURL=app.css.map */

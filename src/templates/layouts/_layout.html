@@ -19,44 +19,12 @@
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
-
-    <!-- BEGIN preloader -->
-    <div class="preloader js-preloader">
-        <div class="preloader__body">
-          <span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <div class="preloader__base">
-            <span></span>
-            <div class="preloader__face"></div>
-          </div>
-        </div>
-        <div class="preloader__longfazers">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <h2 class="preloader__title js-preloader-title is-hidden">СЕКУНДОЧКУ, ОБГОНЯЕМ ДРУГИЕ СЕТИ</h2>
-        <script>
-            var showTitle = function() {
-                var title = document.querySelector('.js-preloader-title');
-                if(!!title) title.classList.remove('is-hidden');
-            }
-            setTimeout(showTitle, 300);
-        </script>
-    </div>
-    <!-- END preloader -->
-
-    <!-- BEGIN parking -->
-    <div class="parking">
-        <h2 class="parking__title">Похоже, тебе нужен браузер посвежее...</h2>
-        <img src="img/travolta-crunched.gif" alt="">
-    </div>
-    <!-- END parking -->
+    
+    {# Preloader for loading page#}
+    {% include "../partials/components/_preloader.html" %}
+    
+    {# Dummy block for ie #}
+    {% include "../partials/components/_parking.html" %}
 
     <!-- BEGIN content -->
     <div class="out {% if scrollbarOut %}{{scrollbarOut}}{% endif %}">
@@ -75,9 +43,11 @@
     
     <!-- BEGIN scripts -->
     <script src="js/app.js"></script>
+
     {% if addCapchaForPage %}
     <script src='https://www.google.com/recaptcha/api.js?hl=ru' async defer></script>
     {% endif %}
+    
     <!-- END scripts -->
 
   </body>

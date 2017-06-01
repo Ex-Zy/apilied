@@ -48,13 +48,10 @@
 			height: 1218px
 			z-index: 2
 	.inner
-		padding-top: 120px
-		padding-bottom: 112px
 		z-index: 2
 		+md-min
-			height: 100vh
-			min-height: 950px
-			max-height: 1400px
+			padding-top: 120px
+			+css-lock(200, 450, 600, 1920, 'padding-bottom')
 		+md
 			padding-top: 50px
 			padding-bottom: 50px
@@ -73,11 +70,10 @@
 			height: 1218px
 			z-index: 1
 	.inner
-		padding-top: 120px
-		padding-bottom: 112px
 		z-index: 4
 		+md-min
-			min-height: 900px 
+			padding-top: 120px
+			+css-lock(200, 450, 900, 1920, 'padding-bottom')
 		+md
 			padding-top: 50px
 			padding-bottom: 50px
