@@ -6,3 +6,7 @@ PageList:
   ready: 100
 - file: finish.html
   ready: 100
+- file: restore.html
+  ready: 75
+- file: restoreConfirm.html
+  ready: 60

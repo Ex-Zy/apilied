@@ -11,15 +11,14 @@
 	<div class="form__row js-toggle-visibility">
 		{{mixins.input("webmoney")}}
 	</div>
+  <!--ЗАМЕНИТЬ БЛОК form__capcha Ex-Zy -->
 	<div class="form__capcha">
 		<div class="recaptcha-error">
-			<div class="g-recaptcha" id="google-capcha" data-sitekey="6LcJIiAUAAAAAC4BLXKsV0as16wKvS2Dj6Htc3_1" data-callback="onSuccess"></div>
+      <div class="g-recaptcha" id="capcha-registration"></div>
 		</div>
 	</div>
 	<div class="form__bottom">
-		<button type="button" class="btn-main js-submit">
-			<span>Регистрация</span>
-		</button>
+		{{mixins.button('btn-main js-submit', null, null ,'Регистрация')}}
 	</div>
 </div>
 <!-- END tabs-content__item -->

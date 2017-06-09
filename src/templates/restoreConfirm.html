@@ -1,0 +1,43 @@
+---
+title: Восстановление пароля
+addCapchaForPage: true
+preloaderOnPage: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<!-- BEGIN page -->
+<div class="page">
+	<div class="page__content">
+		<div class="page__top">
+			<h1 class="page__title title-secondary">Введи новый пароль</h1>
+			<div class="page__sub">
+				<a href="index.html" class="btn-back">вернуться на главную</a>
+			</div>
+		</div>
+		<div class="page__body form">
+			<form action="/" method="POST" id="js-form-restore" autocomplete="off">
+				<div class="form__row">
+					<div class="field">
+						<input type="password" name="restore-mail" class="input" placeholder="пароль" id="password-check-in">
+					</div>
+				</div>
+				<div class="form__row">
+					<div class="field">
+						<input type="password" name="password_confirm" class="input" placeholder="подтверждение пароля" id="confirm-check-in">
+					</div>
+				</div>
+        <div class="form__capcha">
+          <div class="recaptcha-error">
+            <div class="g-recaptcha" id="capcha-restore-confirm"></div>
+          </div>
+        </div>
+				<div class="form__bottom">
+					{{mixins.button('btn-main js-submit', null, null ,'Изменить')}}
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- END page -->
+{% endblock %}

@@ -1,6 +1,6 @@
-var tooltip = function(input, text) {
-	var text = text || 'Текст tooltip-а не передан';
-	var field = input.closest('.field');
+let tooltip = function(input, text) {
+	text = text || 'Текст tooltip-а не передан';
+	let field = input.closest('.field');
 
 	return {
 		add: function() {

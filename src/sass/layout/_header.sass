@@ -4,18 +4,19 @@
 	right: 0
 	left: 0
 	z-index: 11
-	padding: 20px 0
 	transition: transform 0.3s ease-in-out
 	background-color: $section-bg-dark
-	+sm
-		padding: 0
+	+sm-min
+		padding: 20px 0
 	&__in
-		max-width: 1880px
 		position: relative
-		padding: 70px 20px 0
-		margin: auto
+		+xs-min
+			padding: 70px 12px 0
+			max-width: 1880px
+			margin: auto
 		+xs
-			padding: 50px 20px 0
+			padding: 10px 8px
+			+clr
 .logo
 	position: absolute
 	top: 0

@@ -1,0 +1,32 @@
+---
+title: Восстановление пароля
+preloaderOnPage: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<!-- BEGIN page -->
+<div class="page">
+	<div class="page__content">
+		<div class="page__top">
+			<h1 class="page__title title-secondary">Забыл пароль?</h1>
+			<div class="page__sub">
+				<a href="index.html" class="btn-back">вернуться на главную</a>
+			</div>
+		</div>
+		<div class="page__body">
+			<form action="/" method="POST" id="js-form-restore" autocomplete="off">
+				<div class="form__row">
+					<div class="field">
+						<input type="email" name="restore-mail" class="input" id="restore-mail" placeholder="email">
+					</div>
+				</div>
+				<div class="form__bottom">
+					{{mixins.button('btn-main js-submit', null, null ,'Напомнить')}}
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- END page -->
+{% endblock %}

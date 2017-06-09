@@ -19,10 +19,12 @@
     {# {% include "../partials/_media-tags.html" %} #}
   </head>
   <body>
-    
-    {# Preloader for loading page#}
-    {% include "../partials/components/_preloader.html" %}
-    
+
+    {# Preloader for loading page #}
+    {% if preloaderOnPage %}
+        {% include "../partials/components/_preloader.html" %}
+    {% endif %}
+
     {# Dummy block for ie #}
     {% include "../partials/components/_parking.html" %}
 
@@ -31,7 +33,7 @@
       {% block content %}{% endblock %}
     </div>
     <!-- END content -->
-    
+
     {% if injectPopupsForPage %}
         {# popup-registration #}
         {% include "../partials/components/popup/popup-checkin/_popup-checkin.html" %}
@@ -40,14 +42,15 @@
         {# popup-offers #}
         {% include "../partials/components/popup/popup-offers/_popup-offers.html" %}
     {% endif %}
-    
+
     <!-- BEGIN scripts -->
     <script src="js/app.js"></script>
 
     {% if addCapchaForPage %}
-    <script src='https://www.google.com/recaptcha/api.js?hl=ru' async defer></script>
+    <!--Заменить скрипт Ex-Zy -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderCaptcha&render=explicit" async defer></script>
     {% endif %}
-    
+
     <!-- END scripts -->
 
   </body>

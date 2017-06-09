@@ -24,6 +24,7 @@ export const {
 
 	SIDEBAR,
 	MENU,
+	POPUP,
 	POPUP_OPEN,
 	POPUP_CLOSE,
 	PRELOADER
@@ -56,6 +57,7 @@ export const {
 
 	SIDEBAR: $('.js-sidebar'),
 	MENU: $('.js-menu'),
+	POPUP: $('.js-popup'),
 	POPUP_OPEN: $('.js-open-popup'),
 	POPUP_CLOSE: $('.js-close-popup'),
 	PRELOADER: $('.js-preloader')

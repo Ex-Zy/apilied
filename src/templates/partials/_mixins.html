@@ -48,8 +48,8 @@
 	</select>
 {% endmacro %}
 
- {% macro button(classes, dataLink, text) %}
- <button type="button" class="{{classes}}" data-link="{{dataLink}}">
+ {% macro button(classes, dataAttr, dataText, text) %}
+ <button type="button" class="{{classes}}" {% if dataAttr and dataText %} {{dataAttr}}="{{dataText}}" {% endif %}>
  	<span>{{text}}</span>
  </button>
  {% endmacro %}

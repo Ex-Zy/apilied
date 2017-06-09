@@ -1,7 +1,7 @@
-import {HTMLBODY, OUT, SIDEBAR, ACTIVE,} from '../_global.js'
+import {OUT, SIDEBAR, ACTIVE,} from '../_global.js'
 
 // scroll navigation
-$('.navigation a').on('click', function(e) {
+$('.navigation a').on('click', function() {
 
 	$('.navigation a').add(SIDEBAR).removeClass(ACTIVE);
 	$(this).addClass(ACTIVE);

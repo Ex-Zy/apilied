@@ -1,8 +1,8 @@
 import {
 	BODY,
-	ACTIVE, 
-	TOUCH, 
-	NO_TOUCH, 
+	ACTIVE,
+	TOUCH,
+	NO_TOUCH,
 	isTouch,
 	SIDEBAR,
 	MENU
@@ -29,7 +29,7 @@ class Menu {
 	}
 
 	_toggleOnClickSidebar() {
-		var that = this;
+		let that = this;
 		this._menu.on('touchend click', function(event) {
 			that._eventHandler(event, $(this));
 			that._sidebar.toggleClass(ACTIVE);
@@ -55,7 +55,7 @@ class Menu {
 
 }
 
-var menu = new Menu({
+let menu = new Menu({
 	menu: MENU,
 	sidebar: SIDEBAR
 });

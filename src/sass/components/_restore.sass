@@ -1,0 +1,32 @@
+.page
+	padding: 100px
+	position: relative
+	min-height: 100%
+	background-color: $violet 
+	+md
+		padding: 60px 20px
+	+xs
+		padding: 100px 10px
+	&__content
+		max-width: 600px
+		width: 100%
+		margin: auto
+	&__title
+		font-size: 48px
+		+roboto-reg
+		+sm
+			font-size: 26px
+	&__sub
+		padding-top: 8px
+	&__body
+		padding-top: 20px
+		+sm-min
+			padding-top: 40px
+			padding-left: 26px
+		+sm
+			+xs-min
+				margin-left: -20px
+	.form__row
+		width: 100%
+		&:before
+			display: none
